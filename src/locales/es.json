@@ -1,0 +1,94 @@
+{
+  "option": {
+    "home": "Inicio",
+    "library": "Biblioteca",
+    "maintenance": "Mantenimiento",
+    "profile": "Perfil",
+    "sync": "Sincronizar"
+  },
+  "diagnostic": {
+    "problemForecasting": "Pronóstico de Problemas",
+    "carUsefulLife": "Vida Útil del Vehículo",
+    "rapidDiagnostic": "Diagnóstico Rápido",
+    "recentRepairs": "Reparaciones Recientes",
+    "lastScan": "Último Escaneo",
+    "aboutVehicle": "Sobre tu Vehículo",
+    "tapToScan": "Toca para escanear"
+  },
+  "title": "Si tiene fallas críticas en el sistema eléctrico de su auto, aquí están las ubicaciones de mecánicos especializados cerca de usted:",
+  "button": "¿Se reparó alguna falla?",
+  "login": {
+    "title": "Iniciar Sesión",
+    "dni": "DNI",
+    "password": "Contraseña",
+    "loginButton": "Iniciar Sesión",
+    "registerButton": "Crear Cuenta"
+  },
+  "register": {
+    "title": "Crear Cuenta",
+    "dni": "DNI",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "phoneNumber": "Número de Teléfono",
+    "genderLabel": "Género",
+    "genderMale": "Masculino",
+    "genderFemale": "Femenino",
+    "registerButton": "Crear Cuenta",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?"
+  },
+  "planPro": {
+    "phrase": "Prueba VEHIX por solo S/. 100.000 con el PLAN PRO",
+    "title":     "Plan PRO",
+    "planTerm": "Incluye los beneficios del Plan Estándar",
+    "benefit1": "Técnica personalizada a los requerimientos del vehículo",
+    "benefit2": "Análisis predictivo",
+    "benefit3": "Datos estadísticos mostrados",
+    "benefit4": "Visualización avanzada del estado del vehículo",
+    "benefit5": "Detección y lectura de códigos de error",
+    "benefit6": "Escáner VEHIX gratis (Incluye envío)"
+  },
+
+  "planStandard": {
+    "title":   "Plan Estándar",
+    "phrase": "Prueba VEHIX desde S/. 65.00 con el PLAN ESTÁNDAR",
+    "planTerm": "Ideal para propietarios que buscan un soporte básico en el cuidado de su vehículo.",
+    "benefit1": "Acceso a la aplicación web y móvil",
+    "benefit2": "Alertas de mantenimiento preventivo",
+    "benefit3": "Registro y visualización del historial técnico del vehículo",
+    "benefit4": "Visualización del estado del vehículo",
+    "benefit5": "Detección y lectura de códigos de error",
+    "benefit6": "Escáner VEHIX gratis (Incluye envío)"
+  },
+  "payment": {
+    "contactInformation": "Información de Contacto",
+    "email": "Correo Electrónico",
+
+    "mailingAddress": "Dirección de Envío",
+    "address": "Dirección",
+    "street": "Ingresa tu calle o avenida",
+    "city": "Ingresa tu ciudad",
+    "country": "Ingresa tu país",
+    "floor": "Ingresa tu piso o departamento",
+    "province": "Ingresa tu provincia o estado",
+    "postalCode": "Ingresa tu código postal",
+      "phoneNumber": "Número de Teléfono",
+
+    "paymentMethod": "Método de Pago",
+    "description": "Todas las transacciones son seguras y protegidas.",
+    "cardNumber": "Número de Tarjeta (16 dígitos)",
+    "expirationDate": "Fecha de Expiración (MM/AA)",
+    "cvv": "Código de Seguridad / CVV (3 dígitos)",
+    "completeOrder": "Finalizar Compra",
+
+
+    "summaryOrder": "Order Summary",
+    "vehixScanner": "VEHIX Scanner",
+    "free": "Free",
+    "vehixPlanPro": "VEHIX Plan PRO",
+    "subTotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total"
+  }
+}
