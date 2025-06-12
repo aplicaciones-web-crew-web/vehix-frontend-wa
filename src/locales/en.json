@@ -1,0 +1,97 @@
+{
+  "option": {
+    "home": "Home",
+    "library": "Library",
+    "maintenance": "Maintenance",
+    "profile": "Profile",
+    "sync": "Sync"
+  },
+  "diagnostic": {
+    "problemForecasting": "Problem Forecasting",
+    "carUsefulLife": "Car Useful Life",
+    "rapidDiagnostic": "Rapid Diagnostic",
+    "recentRepairs": "Recent Repairs",
+    "lastScan": "Last Scan",
+    "aboutVehicle": "About Your Vehicle",
+    "tapToScan": "Tap to scan"
+  },
+  "title": "If your car has critical electrical system failures, here are the locations of specialized mechanics near you:",
+  "button": "Was any issue fixed?",
+  "login": {
+    "title": "Log-in",
+    "dni": "DNI",
+    "password": "Password",
+    "loginButton": "Login",
+    "registerButton": "Create Account"
+  },
+  "register": {
+    "title": "Create Account",
+    "dni": "DNI",
+    "name": "Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "password": "Password",
+    "phoneNumber": "Phone Number",
+    "genderLabel": "Gender",
+    "genderMale": "Male",
+    "genderFemale": "Female",
+    "registerButton": "Create Account",
+    "alreadyHaveAccount": "Already have an account?"
+  },
+
+  "planPro": {
+    "phrase": "Try VEHIX for only S/. 100.000 with PLAN PRO",
+    "title":     "Plan PRO",
+    "planTerm": "Includes the benefits of the Standard Plan",
+    "benefit1": "Technical library customized to the vehicle's requirements",
+    "benefit2": "Predictive analysis",
+    "benefit3": "Statistical data displayed",
+    "benefit4": "Advanced vehicle status display",
+    "benefit5": "Detecting and reading error codes",
+    "benefit6": "Free VEHIX Scanner (Includes shipping)"
+  },
+
+  "planStandard": {
+    "title":    "Plan Standard",
+    "phrase": "Test VEHIX from S/. 65.00 with PLAN STANDARD",
+    "planTerm": "Ideal for owners looking for basic support in caring for their vehicle.",
+    "benefit1": "Access to the web and mobile application",
+    "benefit2": "Preventive maintenance alerts",
+    "benefit3": "Recording and viewing vehicle technical history",
+    "benefit4": "Assistance with tips and recommendations from the basic automotive care library",
+    "benefit5": "Real-time vehicle scanning",
+    "benefit6": "VEHIX Scanner (30% discount, does not include shipping)"
+  },
+
+  "payment": {
+    "contactInformation": "Contact Information",
+    "email": "Enter your email",
+
+    "mailingAddress": "Mailing Address",
+    "address": "Enter your address",
+    "street": "Enter your street",
+    "city": "Enter your city",
+    "country": "Enter your country",
+    "floor": "Enter your floor, door, etc",
+    "province": "Enter your province",
+    "postalCode": "Enter your postal code",
+    "phoneNumber": "Enter your phone number",
+
+    "paymentMethod": "Payment Method",
+    "description": "All transactions are secure and encrypted",
+    "cardNumber": "Card Number (16 digits)",
+    "expirationDate": "Expiration Date (MM/YY)",
+    "cvv": "Security code / CVV (3 digits)",
+    "completeOrder": "Finish Purchase",
+
+    "summaryOrder": "Order Summary",
+    "vehixScanner": "VEHIX Scanner",
+    "free": "Free",
+    "vehixPlanPro": "VEHIX Plan PRO",
+    "vehixPlanStandard": "VEHIX Standard Plan",
+    "subTotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total"
+  }
+
+}
