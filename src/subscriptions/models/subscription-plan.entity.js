@@ -2,6 +2,7 @@
  * @class Plan
  * @description Represents a Subscription Plan
  * with the details of the failure.
+ * @author Julca Minaya Sergio Gino, u202318274
  */
 export class SubscriptionPlan {
 
