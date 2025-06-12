@@ -10,9 +10,9 @@ export class Payment {
                     id= 0,
                     userId= 0,
                     planId = 0,
-                    amount = 0,
                     date = '',
-                    status = ''
+                    status = '',
+                    amount = 0.00,
                 }) {
         this.id = id;
         this.userId = userId;
