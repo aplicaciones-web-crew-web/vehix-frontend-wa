@@ -11,8 +11,6 @@ export class FaultGeneratorService {
      */
     static generateRawFailures() {
         const quantityFailures = Math.floor(Math.random() * 6) + 5; // entre 5 y 10
-        const shuffled = [...listFailures].sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, quantityFailures);
     }
 }
 
