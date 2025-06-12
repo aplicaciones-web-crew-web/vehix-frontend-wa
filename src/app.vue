@@ -9,7 +9,7 @@ export default {
       drawer: false,
       items: [
         {label: 'option.home',       to: '/home', icon: 'pi pi-home'},
-        {label: 'option.library',      to: '/library', icon: 'pi pi-book'}, // Corregido a /library
+        {label: 'option.library',      to: '/library', icon: 'pi pi-book'},
         {label: 'option.maintenance', to: '/maintenance', icon: 'pi pi-cog'},
         {label: 'option.sync', to: '/sync', icon: 'pi pi-sync'},
         {label: 'option.profile', to: '/profile', icon: 'pi pi-user'},

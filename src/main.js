@@ -15,11 +15,11 @@ const MyPreset = definePreset(Aura, {
             200: '#222222',
             300: '#2a2a2a',
             400: '#333333',
-            500: '#000000',  // negro puro
+            500: '#000000',
             600: '#111111',
             700: '#1a1a1a',
             800: '#2a2a2a',
-            900: '#ffffff',  // texto blanco de contraste
+            900: '#ffffff',
             950: '#000000',
         }
     },
