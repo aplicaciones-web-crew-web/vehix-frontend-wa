@@ -1,25 +1,22 @@
 <script>
-import {SubscriptionsPlansApiService} from "../services/subscriptions-plans-api.service.js";
+import {SubscriptionPlanApiService} from "../services/subscription-plan-api.service.js";
 import {SubscriptionPlanAssembler} from "../services/subscription-plan.assembler.js";
 import {Button as PvButton} from "primevue";
 
 export default {
   name: "subscription-plan-list",
+  props: {
+    plans: {
+      type: Array,
+      required: true,
+    }
+  },
   components: {PvButton},
   data() {
     return {
-      subscriptionPlans: [],
-      subscriptionsPlansApiService: null,
+      subscriptionsPlans: [],
+      subscriptionPlanService: null,
     }
-  },
-  created() {
-    this.subscriptionsPlansApiService = new SubscriptionsPlansApiService();
-    this.subscriptionsPlansApiService.getAll().then(response => {
-      this.subscriptionPlans = SubscriptionPlanAssembler.toEntitiesFromResponse(response);
-      console.log("Plans loaded successfully");
-    }).catch(error => {
-      console.error("Plans data loading error: ", error);
-    });
   },
   methods: {
     /**
@@ -27,40 +24,40 @@ export default {
      * @param {string} planName - The name of the subscription plan.
      * @returns {string} - The translation key for the plan.
      */
-    getTranslationKey(planName) {
+    getPlanInJsonFormatToTranslate(planName) {
       if (planName.toLowerCase().includes('standard')) return 'planStandard';
       if (planName.toLowerCase().includes('pro')) return 'planPro';
       return '';
     },
 
     planSelected(plan) {
-      this.$router.push({name: 'payment-management', query: {planName: plan.name}})
+      this.$emit("plan-selected", plan);
     }
-
   }
 
 }
+
 </script>
 
 <template>
   <div class="subscription-plan-list-container">
     <pv-card
-        v-for="plan in subscriptionPlans"
+        v-for="plan in plans"
         :key="plan.id"
         class="subscription-card"
     >
       <template #title>
-        {{ $t(getTranslationKey(plan.name) + '.title') }}
+        {{ $t(getPlanInJsonFormatToTranslate(plan.name) + '.title') }}
       </template>
 
       <template #subtitle>
-        {{ $t(getTranslationKey(plan.name) + '.planTerm') }}
+        {{ $t(getPlanInJsonFormatToTranslate(plan.name) + '.planTerm') }}
       </template>
 
       <template #content>
         <ul>
           <li v-for="i in 6" :key="i">
-            {{ $t(`${getTranslationKey(plan.name)}.benefit${i}`) }}
+            {{ $t(`${getPlanInJsonFormatToTranslate(plan.name)}.benefit${i}`) }}
           </li>
         </ul>
         <pv-button @click="planSelected(plan)">$/. {{ plan.price }} / month</pv-button>

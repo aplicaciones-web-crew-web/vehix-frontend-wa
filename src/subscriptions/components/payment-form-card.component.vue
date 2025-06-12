@@ -1,17 +1,27 @@
 <script>
 import AlertCard from "../../shared/components/alert-card.component.vue";
 import {isNumeric, isValidEmail} from "../../shared/utils/validation.util.js";
-import {PaymentsApiService} from "../services/payments-api.service.js";
-import {PaymentAssembler} from "../services/payment.assembler.js";
-
+import {UserSessionService} from "../../shared/services/user-session.service.js";
 
 export default {
   name: "payment-form-card",
   components: {AlertCard},
+  props: {
+    plan: {
+      type: Object,
+      default: null
+    },
+    amount: {
+      type: Number,
+      default: 0
+    }
+  },
   data() {
     return {
-      email: '',
 
+      userId: '',
+
+      email: '',
       address: '',
       street: '',
       city: '',
@@ -20,11 +30,9 @@ export default {
       province: '',
       postalCode: '',
       phoneNumber: '',
-
       cardNumber: '',
       cvv: '',
 
-      currentAlert: null,
 
       today: null,
       currentYear: null,
@@ -33,25 +41,17 @@ export default {
       maxDate: null,
       expirationDate: '',
 
-
-      payments: [],
-      paymentApiService: null
+      currentAlert: null,
     }
   },
   created() {
+    this.userId = UserSessionService.getUserId();
     this.today = new Date();
     this.currentYear = this.today.getFullYear();
     this.currentMonth = this.today.getMonth();
     this.minDate = new Date(this.currentYear, this.currentMonth, 1);
     this.maxDate = new Date(this.currentYear + 5, this.currentMonth + 1, 0);
 
-    this.paymentApiService = new PaymentsApiService();
-    this.paymentApiService.getAll().then(response => {
-      this.payments = PaymentAssembler.toEntitiesFromResponse(response);
-      console.log("Payments loaded successfully:", this.payments);
-    }).catch(error => {
-      console.error("Payment data loading error: ", error);
-    })
   },
   methods: {
     /**
@@ -77,6 +77,12 @@ export default {
       console.log('AlertCard closed by:', action);
     },
 
+
+    /**
+     * To validate if the filled fields are not empty
+     * @returns {boolean} - Returns true if all fields are filled, false otherwise.
+     * @author U202318274 Julca Minaya Sergio Gino
+     */
     validateFilledFields() {
       if (!this.email || !this.address || !this.street || !this.city || !this.country || !this.floor || !this.province || !this.postalCode || !this.phoneNumber || !this.cardNumber || !this.expirationDate || !this.cvv) {
         this.displayAlert("Empty Fields", "Complete all inputs", "warn");
@@ -84,6 +90,7 @@ export default {
       }
       return true;
     },
+
     /**
      * To validate if the inputs are filled with only numbers
      * @returns {boolean} - Returns true if all inputs are filled, false otherwise.
@@ -97,14 +104,24 @@ export default {
       return true;
     },
 
+    /**
+     * To validate if the email is valid
+     * @returns {boolean} - Returns true if the email is valid, false otherwise.
+     * @author U202318274 Julca Minaya Sergio Gino
+     */
     validateEmail() {
-        if (!isValidEmail(this.email)) {
-          this.displayAlert("Invalid Input", "Please enter a valid email", "warn");
-          return false;
-        }
-        return true;
+      if (!isValidEmail(this.email)) {
+        this.displayAlert("Invalid Input", "Please enter a valid email", "warn");
+        return false;
+      }
+      return true;
     },
 
+    /**
+     * Resets all input fields to their initial state.
+     * This method is called when the form needs to be cleared.
+     * @author U202318274 Julca Minaya Sergio Gino
+     */
     resetFields() {
       this.email = '';
       this.address = '';
@@ -120,86 +137,83 @@ export default {
       this.cvv = '';
     },
 
-    validatePayment() {
+
+    submitForm() {
       if (!this.validateFilledFields()) return;
       if (!this.validateOnlyNumbers()) return;
       if (!this.validateEmail()) return;
-      const payment = PaymentAssembler.toEntityFromResource( {
-        userId: ,
-        planId: ,
-        amount: ,
-        date: new Date(),
-        status : 'PENDING',
-      })
-      this.paymentApiService.create(payment).then(() => {
-        this.displayAlert("Payment Successful", "Your payment has been processed successfully.", "success");
-        this.resetFields();
-      }).catch(error => {
-        console.error("Payment processing error: ", error);
-        this.displayAlert("Payment Error", "There was an error processing your payment. Please try again.", "error");
-      });
-
-
+      const paymentData = {
+        userId: this.userId,
+        planId: this.plan.id,
+        date: new Date().toISOString(),
+        status: "COMPLETED",
+        amount: this.amount,
+      }
+      this.displayAlert("Payment Successful", "Your payment has been successfully processed.", "success");
+      this.$emit("submit", paymentData);
     },
+
 
   }
 }
 </script>
 
 <template>
-  <alert-card
-      v-if="currentAlert"
-      :key="currentAlert.title + currentAlert.message + currentAlert.type"
-      :title="currentAlert.title"
-      :message="currentAlert.message"
-      :type="currentAlert.type"
-      :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
-  ></alert-card>
-  <pv-card class="contact-information-card">
-    <template #content>
-      <div class="contact-fields">
-        <div class="contact-information-container">
-          <h1>{{ $t('payment.contactInformation') }}</h1>
-          <pv-input-text :placeholder="$t('payment.email')" v-model="email"></pv-input-text>
-        </div>
+  <div>
+    <alert-card
+        v-if="currentAlert"
+        :key="currentAlert.title + currentAlert.message + currentAlert.type"
+        :title="currentAlert.title"
+        :message="currentAlert.message"
+        :type="currentAlert.type"
+        :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
+    ></alert-card>
+    <pv-card class="contact-information-card">
+      <template #content>
+        <div class="contact-fields">
+          <div class="contact-information-container">
+            <h1>{{ $t('payment.contactInformation') }}</h1>
+            <pv-input-text :placeholder="$t('payment.email')" v-model="email"></pv-input-text>
+          </div>
 
-        <div class="address-container">
-          <h1>{{ $t('payment.mailingAddress') }}</h1>
-          <div class="separator-container">
-            <pv-input-text :placeholder="$t('payment.address')" v-model="address"></pv-input-text>
-            <pv-input-text :placeholder="$t('payment.street')" v-model="street"></pv-input-text>
+          <div class="address-container">
+            <h1>{{ $t('payment.mailingAddress') }}</h1>
+            <div class="separator-container">
+              <pv-input-text :placeholder="$t('payment.address')" v-model="address"></pv-input-text>
+              <pv-input-text :placeholder="$t('payment.street')" v-model="street"></pv-input-text>
+            </div>
+            <div class="separator-container">
+              <pv-input-text :placeholder="$t('payment.city')" v-model="city"></pv-input-text>
+              <pv-input-text :placeholder="$t('payment.country')" v-model="country"></pv-input-text>
+            </div>
+            <div class="separator-container">
+              <pv-input-text :placeholder="$t('payment.floor')" v-model="floor"></pv-input-text>
+              <pv-input-text :placeholder="$t('payment.province')" v-model="province"></pv-input-text>
+            </div>
+            <div class="separator-container">
+              <pv-input-text :placeholder="$t('payment.postalCode')" v-model="postalCode"></pv-input-text>
+              <pv-input-text :placeholder="$t('payment.phoneNumber')" v-model="phoneNumber"></pv-input-text>
+            </div>
           </div>
-          <div class="separator-container">
-            <pv-input-text :placeholder="$t('payment.city')" v-model="city"></pv-input-text>
-            <pv-input-text :placeholder="$t('payment.country')" v-model="country"></pv-input-text>
-          </div>
-          <div class="separator-container">
-            <pv-input-text :placeholder="$t('payment.floor')" v-model="floor"></pv-input-text>
-            <pv-input-text :placeholder="$t('payment.province')" v-model="province"></pv-input-text>
-          </div>
-          <div class="separator-container">
-            <pv-input-text :placeholder="$t('payment.postalCode')" v-model="postalCode"></pv-input-text>
-            <pv-input-text :placeholder="$t('payment.phoneNumber')" v-model="phoneNumber"></pv-input-text>
-          </div>
-        </div>
 
-        <div class="payment-method-container">
-          <h1>{{ $t('payment.paymentMethod') }}</h1>
-          <h5>{{ $t('payment.description') }}</h5>
-          <pv-input-text :placeholder="$t('payment.cardNumber')" v-model="cardNumber"></pv-input-text>
-          <!--ExpirationDate-->
-          <pv-expiration-date :placeholder="$t('payment.expirationDate')" show-icon v-model="expirationDate"
-                              view="month" date-format="mm/yy" :min-date="minDate" :max-date="maxDate"
-                              :manual-input="false"></pv-expiration-date>
-          <pv-input-text :placeholder="$t('payment.cvv')" v-model="cvv"></pv-input-text>
-        </div>
+          <div class="payment-method-container">
+            <h1>{{ $t('payment.paymentMethod') }}</h1>
+            <h5>{{ $t('payment.description') }}</h5>
+            <pv-input-text :placeholder="$t('payment.cardNumber')" v-model="cardNumber"></pv-input-text>
+            <!--ExpirationDate-->
+            <pv-expiration-date :placeholder="$t('payment.expirationDate')" show-icon v-model="expirationDate"
+                                view="month" date-format="mm/yy" :min-date="minDate" :max-date="maxDate"
+                                :manual-input="false"></pv-expiration-date>
+            <pv-input-text :placeholder="$t('payment.cvv')" v-model="cvv"></pv-input-text>
+          </div>
 
-        <div class="button-complete-payment-container">
-          <pv-button @click="validatePayment()">{{ $t('payment.paymentMethod') }}</pv-button>
+          <div class="button-complete-payment-container">
+            <pv-button @click="submitForm()">{{ $t('payment.paymentMethod') }}</pv-button>
+          </div>
         </div>
-      </div>
-    </template>
-  </pv-card>
+      </template>
+    </pv-card>
+  </div>
 </template>
 
 <style>

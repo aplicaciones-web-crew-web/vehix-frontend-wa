@@ -15,13 +15,13 @@ export default {
 </script>
 
 <template>
-<pv-toolbar class="toolbar-container">
-  <template #center>
-    <h1>VEHIX</h1>
-    <h3 v-if="selectedPlan==='Plan Standard'">{{$t('planStandard.phrase')}}</h3>
-    <h3 v-else-if="selectedPlan==='Plan Pro'">{{$t('planPro.phrase')}}</h3>
-  </template>
-</pv-toolbar>
+  <pv-toolbar class="toolbar-container">
+    <template #center>
+      <h1>VEHIX</h1>
+      <h3 v-if="selectedPlan==='Plan Standard'">{{$t('planStandard.phrase')}}</h3>
+      <h3 v-else-if="selectedPlan==='Plan Pro'">{{$t('planPro.phrase')}}</h3>
+    </template>
+  </pv-toolbar>
 </template>
 
 <style>
