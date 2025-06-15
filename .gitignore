@@ -24,6 +24,6 @@ dist-ssr
 *.sw?
 
 #Backend
-db.json
+#db.json
 .env.production
 .env.development
