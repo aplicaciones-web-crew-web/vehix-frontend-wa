@@ -33,6 +33,7 @@ const VehicleRegistrationManagementComponent = () => import('../assets-and-resou
 const ResourceView = () => import('../assets-and-resources-management/pages/library.component.vue');
 
 const routes = [
+    {path: '/', redirect: '/login'},
     {path: '/login', name: 'log-in-management', component: LogInManagementComponent, meta: {title: 'Login'}},
     {path: '/home', name: 'home', component: HomeComponent, meta: {title: 'Home'}},
     {path: '/library', name: 'library', component: LibraryComponent, meta: {title: 'Library'},},
