@@ -14,12 +14,12 @@ const ProfileComponent = () => import('../public/pages/profile.component.vue');
 const SyncComponent = () => import('../public/pages/sync.component.vue');
 const TapScanComponent = () => import('../monitoring/pages/tap-scan.vue');
 const MechanicComponent = () => import('../monitoring/pages/Mechanic.vue');
-const AuditComponent = () => import('../domain/assets-and-resource-management/audit/page/audit-page.vue');
-const Useful_life = () => import('../domain/analytics/car-usefull-life/pages/useful_life.vue');
+//const AuditComponent = () => import('../analytics/audit/pages/audit.component.vue');
+//const Useful_life = () => import('../analytics/car-usefull-life/pages/useful_life.vue');
 const FailureManagementComponent = () => import('../monitoring/pages/failure-management.component.vue');
 const PaymentManagementComponent = () => import('../subscriptions/pages/payment-management.component.vue');
 const SubscriptionPlanManagementComponent = () => import('../subscriptions/pages/subscription-plan-management.component.vue');
-const vehicleRegistrationManagementComponent = () => import('../assets-and-resources-management/pages/vehicle-registration-management.component.vue');
+const VehicleRegistrationManagementComponent = () => import('../assets-and-resources-management/pages/vehicle-registration-management.component.vue');
 /**
  * Application routes configuration
  * @type {RouteConfig[]}
@@ -41,19 +41,18 @@ const routes = [
     {path: '/sync', name: 'sync', component: SyncComponent, meta: {title: 'Sync'}},
     {path: '/diagnostic/tap-scan', name: 'tap-scan', component: TapScanComponent, meta: {title: 'Tap Scan'}},
     {path: '/mechanic', name: 'mechanic', component: MechanicComponent, meta: {title: 'Mechanic Help'}},
-    {path: '/diagnostic/audit-page', name: 'audit-page', component: AuditComponent, meta: {title: 'Audit Page'}},
-    {path: '/diagnostic/useful_life', name: 'useful_life', component: Useful_life, meta: {title: 'Useful Life'}},
+    //{path: '/diagnostic/audit-page', name: 'audit-page', component: AuditComponent, meta: {title: 'Audit Page'}},
+    //{path: '/diagnostic/useful_life', name: 'useful_life', component: Useful_life, meta: {title: 'Useful Life'}},
     {path: '/car-failures', name: 'car_failures', component: FailureManagementComponent, meta: {title: 'Failure Management'}},
     {path: '/payment-management', name: 'payment-management', component: PaymentManagementComponent, meta: {title: 'Payment Management'}},
     {path: '/subscriptions', name: 'subscription-plan-management', component: SubscriptionPlanManagementComponent, meta: {title: 'Subscription Plan Management'}},
-    {path: '/vehicle-registration-management', name: 'vehicle-registration-management', component: vehicleRegistrationManagementComponent, meta: {title: 'Vehicle Registration Management'}},
+    {path: '/vehicle-registration-management', name: 'vehicle-registration-management', component: VehicleRegistrationManagementComponent, meta: {title: 'Vehicle Registration Management'}},
     { path: '/technical', name: 'technical', component: ResourceView, props: { titleKey: 'card.technical' }, meta: { title: 'Technical' } },
     { path: '/news', name: 'news', component: ResourceView, props: { titleKey: 'card.news' }, meta: { title: 'News' } },
     { path: '/advances', name: 'advances', component: ResourceView, props: { titleKey: 'card.advances' }, meta: { title: 'Advances' } },
     { path: '/videos', name: 'videos', component: ResourceView, props: { titleKey: 'card.videos' }, meta: { title: 'Videos' } },
     { path: '/manuals', name: 'manuals', component: ResourceView, props: { titleKey: 'card.manuals' }, meta: { title: 'Manuals' } },
     { path: '/recommendations', name: 'recommendations', component: ResourceView, props: { titleKey: 'card.recommendations' }, meta: { title: 'Recommendations' } },
-
 ];
 
 /**

@@ -96,6 +96,28 @@
       "year": "2019",
       "Mileage": "2650",
       "userId": 1
+    },
+    {
+      "id": 5,
+      "userId": null,
+      "description": "Fabian",
+      "name": "Fabian",
+      "brand": "Kia",
+      "model": "Rio",
+      "mileage": "169337",
+      "year": "2012",
+      "image": "https://pngimg.com/d/kia_PNG20.png"
+    },
+    {
+      "id": 6,
+      "userId": null,
+      "description": "gyuihgyugbyuioh",
+      "name": "gyuihgyugbyuioh",
+      "brand": "Mercedes-Benz",
+      "model": "ML",
+      "mileage": "197767",
+      "year": "2001",
+      "image": "https://pngimg.com/d/mercedes_PNG1874.png"
     }
   ],
   "statusCheck": [
@@ -666,5 +688,4 @@
   "profile": {
     "name": "typicode"
   }
-
 }

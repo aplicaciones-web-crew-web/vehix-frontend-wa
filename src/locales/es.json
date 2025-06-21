@@ -175,5 +175,16 @@
     "recentAlertsContent": "No se encontraron alertas recientes, para escanear tu vehículo ve a la sección “Sincronizar” y busca un dispositivo",
     "vehicleStateAnalysis": "Análisis del Estado del Vehículo",
     "vehicleStateAnalysisContent": "No se encontró ningún vehículo, para conectarlo ve a la sección “Sincronizar” y busca un dispositivo"
+  },
+
+  "connectionGuide": {
+    "title": "Guía de Conexión del Vehículo",
+    "subtitle": "Para conectar tu vehículo a la aplicación VEHIX, sigue estos pasos:",
+    "step1": "1. Enciende tu vehículo.",
+    "step2": "2. Conecta el escáner VEHIX al puerto OBD-II de tu vehículo.",
+    "step3": "3. Activa el Bluetooth en tu dispositivo móvil.",
+    "step4": "4. Selecciona el escáner VEHIX de tu vehiculo en la aplicación.",
+    "step5": "5. Y listo, deja que la aplicación haga el trabajo.",
+    "availableDevices": "Dispositivos Disponibles"
   }
 }
