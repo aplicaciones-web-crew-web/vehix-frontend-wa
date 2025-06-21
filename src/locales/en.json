@@ -177,5 +177,16 @@
     "recentAlertsContent": "No alerts were found, to scan your vehicle go to the “Sync” section",
     "vehicleStateAnalysis": "Vehicle State",
     "vehicleStateAnalysisContent": "No vehicle was found, to connect it go to the “Sync” section and search for a device"
+  },
+
+  "connectionGuide": {
+    "title": "Connection Guide",
+    "subtitle": "To connect your vehicle, follow these steps:",
+    "step1": "1. Start the car",
+    "step2": "2. Connect the scanner to your vehicle's OBD-II port.",
+    "step3": "3. Activate Bluetooth on your smartphone.",
+    "step4": "4. Select your vehix scanner car",
+    "step5": "5. Done, let the app do the work.",
+    "availableDevices": "Available Devices"
   }
 }
