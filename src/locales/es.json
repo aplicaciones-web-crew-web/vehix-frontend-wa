@@ -92,6 +92,11 @@
     "shipping": "Shipping",
     "total": "Total"
   },
+
+  "vehicleRegistration": {
+    "vehicleName": "Ingresa el nombre de tu vehículo"
+},
+
   "card": {
     "technical": "ARTÍCULOS TÉCNICOS",
     "news": "NOTICIAS DEL MUNDO AUTOMOTRIZ",
@@ -157,4 +162,5 @@
       "Por último, no olvides actualizar el software si tu auto lo permite. Muchos vehículos hoy en día incluyen actualizaciones inalámbricas para navegación, entretenimiento o incluso funciones críticas del sistema. Mantenerte al día te asegura disfrutar de mejoras y correcciones de seguridad."
     ]
   }
+
 }

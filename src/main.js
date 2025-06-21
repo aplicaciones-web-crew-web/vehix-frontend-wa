@@ -5,7 +5,7 @@ import PrimeVue from 'primevue/config';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import Aura from '@primeuix/themes/aura';
-import { definePreset } from '@primevue/themes';
+import {definePreset} from '@primevue/themes';
 
 const MyPreset = definePreset(Aura, {
     semantic: {
@@ -65,7 +65,7 @@ import {
     Toast,
     ToastService,
     Toolbar,
-    DatePicker
+    DatePicker, ProgressSpinner
 } from "primevue";
 import i18n from "./i18n/index.js";
 import router from "./router/index.js";
@@ -85,6 +85,7 @@ createApp(App)
     .use(DialogService)
     .use(ToastService)
     .component('pv-expiration-date', DatePicker)
+    .component('pv-loading', ProgressSpinner)
     .component('pv-button', Button)
     .component('pv-card', Card)
     .component('pv-column', Column)

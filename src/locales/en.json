@@ -93,6 +93,11 @@
     "shipping": "Shipping",
     "total": "Total"
   },
+
+  "vehicleRegistration": {
+    "vehicleName": "Enter the name of your vehicle"
+  },
+  
   "card": {
     "technical": "TECHNICAL ARTICLES",
     "news": "AUTOMOTIVE WORLD NEWS",

@@ -13,9 +13,7 @@ export default{
 
 <template>
   <div class="w-full">
-    <h1>Welcome</h1>
-    <p>Welcome to Vehix</p>
-    Para ver la gestión de fallas, navega a la sección de <router-link to="/car-failures">Fallas de Auto</router-link>.
+    <!--Para ver la gestión de fallas, navega a la sección de <router-link to="/car-failures">Fallas de Auto</router-link>.-->
 
   </div>
 

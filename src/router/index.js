@@ -19,6 +19,7 @@ const Useful_life = () => import('../domain/analytics/car-usefull-life/pages/use
 const FailureManagementComponent = () => import('../monitoring/pages/failure-management.component.vue');
 const PaymentManagementComponent = () => import('../subscriptions/pages/payment-management.component.vue');
 const SubscriptionPlanManagementComponent = () => import('../subscriptions/pages/subscription-plan-management.component.vue');
+const vehicleRegistrationManagementComponent = () => import('../ARM/pages/vehicle-registration-management.component.vue');
 /**
  * Application routes configuration
  * @type {RouteConfig[]}
@@ -45,7 +46,7 @@ const routes = [
     {path: '/car-failures', name: 'car_failures', component: FailureManagementComponent, meta: {title: 'Failure Management'}},
     {path: '/payment-management', name: 'payment-management', component: PaymentManagementComponent, meta: {title: 'Payment Management'}},
     {path: '/subscriptions', name: 'subscription-plan-management', component: SubscriptionPlanManagementComponent, meta: {title: 'Subscription Plan Management'}},
-    // Assets and Resources Management Routes
+    {path: '/vehicle-registration-management', name: 'vehicle-registration-management', component: vehicleRegistrationManagementComponent, meta: {title: 'Vehicle Registration Management'}},
     { path: '/technical', name: 'technical', component: ResourceView, props: { titleKey: 'card.technical' }, meta: { title: 'Technical' } },
     { path: '/news', name: 'news', component: ResourceView, props: { titleKey: 'card.news' }, meta: { title: 'News' } },
     { path: '/advances', name: 'advances', component: ResourceView, props: { titleKey: 'card.advances' }, meta: { title: 'Advances' } },
