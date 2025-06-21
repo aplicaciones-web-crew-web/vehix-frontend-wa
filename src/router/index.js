@@ -30,6 +30,8 @@ const vehicleRegistrationManagementComponent = () => import('../ARM/pages/vehicl
  * - Profile page route (/profile)
  * - Sync page route (/sync)
  */
+const ResourceView = () => import('../assets-and-resources-management/pages/library.component.vue');
+
 const routes = [
     {path: '/login', name: 'log-in-management', component: LogInManagementComponent, meta: {title: 'Login'}},
     {path: '/home', name: 'home', component: HomeComponent, meta: {title: 'Home'}},
@@ -45,6 +47,13 @@ const routes = [
     {path: '/payment-management', name: 'payment-management', component: PaymentManagementComponent, meta: {title: 'Payment Management'}},
     {path: '/subscriptions', name: 'subscription-plan-management', component: SubscriptionPlanManagementComponent, meta: {title: 'Subscription Plan Management'}},
     {path: '/vehicle-registration-management', name: 'vehicle-registration-management', component: vehicleRegistrationManagementComponent, meta: {title: 'Vehicle Registration Management'}},
+    { path: '/technical', name: 'technical', component: ResourceView, props: { titleKey: 'card.technical' }, meta: { title: 'Technical' } },
+    { path: '/news', name: 'news', component: ResourceView, props: { titleKey: 'card.news' }, meta: { title: 'News' } },
+    { path: '/advances', name: 'advances', component: ResourceView, props: { titleKey: 'card.advances' }, meta: { title: 'Advances' } },
+    { path: '/videos', name: 'videos', component: ResourceView, props: { titleKey: 'card.videos' }, meta: { title: 'Videos' } },
+    { path: '/manuals', name: 'manuals', component: ResourceView, props: { titleKey: 'card.manuals' }, meta: { title: 'Manuals' } },
+    { path: '/recommendations', name: 'recommendations', component: ResourceView, props: { titleKey: 'card.recommendations' }, meta: { title: 'Recommendations' } },
+
 ];
 
 /**

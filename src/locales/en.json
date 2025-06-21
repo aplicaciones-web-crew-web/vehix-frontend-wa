@@ -96,6 +96,71 @@
 
   "vehicleRegistration": {
     "vehicleName": "Enter the name of your vehicle"
+  },
+  
+  "card": {
+    "technical": "TECHNICAL ARTICLES",
+    "news": "AUTOMOTIVE WORLD NEWS",
+    "advances": "SECTOR ADVANCES",
+    "videos": "VIDEOS & TUTORIALS",
+    "manuals": "MANUALS AND TECHNICAL GUIDES",
+    "recommendations": "RECOMMENDATIONS"
+  },
+  "resources": {
+    "title": "RESOURCES"
+  },
+  "more": {
+    "link": "Click to know more"
+  },
+  "videos": {
+    "list": [
+      "Tittle of Video 1",
+      "Tittle of Video 2",
+      "Tittle of Video 3",
+      "Tittle of Video 4",
+      "Tittle of Video 5",
+      "Tittle of Video 6"
+    ]
+  },
+  "articles": {
+    "text": [
+      "Modern vehicles are increasingly equipped with digital systems that go beyond traditional mechanics. From engine control modules to adaptive cruise control, today’s cars rely on software and sensors to deliver performance and safety. Understanding these technologies is essential for both drivers and technicians.",
+      "One of the most important developments is the use of real-time diagnostics. These systems monitor the vehicle continuously and detect deviations in behavior that may signal early-stage malfunctions. Platforms like VEHIX collect this data and turn it into actionable recommendations for preventive maintenance.",
+      "By learning how components like oxygen sensors, MAF sensors, and ignition coils function, users can better interpret diagnostic results. This level of knowledge empowers users to make informed decisions and minimize unnecessary repairs by understanding the root cause of warning codes.",
+      "Technical articles provide deeper insight into how each vehicle system works. Whether you're exploring the principles of fuel injection or the mechanics behind brake assist systems, these resources simplify complex topics for all skill levels. VEHIX helps make automotive knowledge more accessible.",
+      "Our content also includes breakdowns of fault codes, complete with explanations, causes, and suggested solutions. Users can follow step-by-step tutorials for routine checks and maintenance, avoiding costly visits to the workshop for simple tasks that can be done at home.",
+      "As vehicles become smarter, staying updated is key. This section keeps users informed about the latest technologies such as regenerative braking, hybrid powertrains, and the integration of artificial intelligence in diagnostics. VEHIX helps users not only maintain their vehicle but also understand it."
+    ]
+  },
+  "sectorAdvances": {
+    "text": [
+      "The automotive sector is advancing at an unprecedented pace, fueled by developments in electrification, connectivity, and artificial intelligence. Automakers are not just producing cars—they're designing smart mobility solutions that adapt to urban environments, user preferences, and environmental regulations. From EV platforms to autonomous driving systems, innovation is reshaping the very concept of transportation.",
+      "New manufacturing methods such as additive manufacturing (3D printing), digital twins, and modular platforms are revolutionizing how vehicles are built. These technologies allow for greater flexibility in production lines, reduce waste, and shorten development cycles. Manufacturers are now able to test and adjust designs virtually before moving into physical prototyping.",
+      "Collaboration across industries is also accelerating change. Tech companies, energy providers, and infrastructure developers are working alongside carmakers to create an integrated ecosystem that supports electric mobility, real-time traffic management, and data-driven maintenance solutions. This synergy is helping the industry evolve faster than ever before.",
+      "The rise of over-the-air (OTA) updates has become one of the most important milestones in recent years. Vehicles can now receive system upgrades, feature enhancements, and bug fixes remotely, without needing to visit a service center. This ability brings automotive software closer to the dynamic nature of smartphones and computers.",
+      "Advanced driver-assistance systems (ADAS) are also progressing rapidly, offering capabilities like lane-centering, traffic jam assist, and predictive cruise control. These systems use a combination of radar, lidar, and cameras to make driving safer and more comfortable. They are paving the way for full autonomy in the coming decade.",
+      "Additionally, artificial intelligence is being leveraged to analyze driving behavior, vehicle performance, and maintenance trends. Platforms like VEHIX are using this data to anticipate potential issues and offer preventive recommendations. This level of insight transforms how we maintain vehicles and improves decision-making for both individual drivers and fleet managers."
+    ]
+  },
+  "manual": {
+    "text": [
+      "Technical manuals are essential tools for understanding how a vehicle operates and how to properly maintain it. From oil change intervals to sensor calibration procedures, these documents provide the foundation for both professional repairs and user-led maintenance. VEHIX compiles these guides to give users quick, centralized access.",
+      "In addition to traditional repair instructions, these manuals include diagrams, torque specifications, electrical schematics, and manufacturer-recommended service routines.",
+      "This level of detail helps ensure safety and precision when performing technical tasks under the hood or on the vehicle's electronic systems.",
+      "Whether you're a certified mechanic or a car owner trying to solve a dashboard warning, VEHIX makes it easier to find the right documentation. Our technical library grows continuously, ensuring that even the most modern and complex vehicles are supported with clear, reliable guidance.",
+      "Understanding the inner workings of your vehicle doesn't have to be difficult. Our step-by-step technical guides are written in plain language and paired with visuals that make troubleshooting and repairs more approachable for non-experts. These resources are designed for real-world use, both at home and in the shop.",
+      "Each guide includes contextual information—like common symptoms, diagnostic flowcharts, and recommended tools—to support faster and more accurate repairs. This not only improves repair outcomes but also helps reduce costs by preventing unnecessary part replacements.",
+      "As vehicles become increasingly reliant on electronic systems, our guides evolve as well. We cover modern components such as hybrid drive systems, ADAS sensors, and CAN bus wiring. VEHIX helps bridge the knowledge gap, making sure that users have the information they need to work confidently and safely."
+    ]
+  },
+  "recommendations": {
+    "text": [
+      "To keep your vehicle running smoothly and avoid costly repairs, it's essential to follow regular maintenance schedules. Basic tasks like oil changes, tire rotations, and brake inspections can significantly extend your vehicle's lifespan and improve overall performance.",
+      "We also recommend checking fluid levels—including coolant, brake fluid, and windshield washer fluid—at least once a month. A simple visual inspection can help detect leaks or abnormal levels that might signal underlying issues before they become serious.",
+      "In addition, always listen to your vehicle. Unusual sounds, smells, or warning lights should never be ignored. Early attention to minor irregularities can help prevent more severe problems and ensure safer driving conditions for you and your passengers.",
+      "Cleaning and caring for both the interior and exterior of your car isn't just about aesthetics—it protects your investment. Regular washing and waxing help preserve the paint, while keeping the interior clean prevents wear on materials and improves your daily driving experience.",
+      "Tire care is another top priority. Make sure tires are properly inflated and balanced, and check for signs of uneven wear, which may indicate alignment or suspension problems. Replacing worn tires in time is key to maintaining optimal safety and control on the road.",
+      "Lastly, don't forget to update your software if your car supports it. Many vehicles today include over-the-air updates for navigation, entertainment, or even critical system functions. Staying current ensures you benefit from improved features and security fixes."
+    ]
   }
-
 }
