@@ -161,6 +161,19 @@
       "El cuidado de los neumáticos es otra prioridad. Asegúrate de que estén correctamente inflados y balanceados, y revisa si hay signos de desgaste irregular, lo que podría indicar problemas de alineación o suspensión. Reemplazar los neumáticos desgastados a tiempo es clave para mantener la seguridad y el control óptimos en la carretera.",
       "Por último, no olvides actualizar el software si tu auto lo permite. Muchos vehículos hoy en día incluyen actualizaciones inalámbricas para navegación, entretenimiento o incluso funciones críticas del sistema. Mantenerte al día te asegura disfrutar de mejoras y correcciones de seguridad."
     ]
-  }
+  },
+  "dashboard": {
+    "scanHistory": "Historial de Escaneos",
+    "scanHistoryContent":  "No se encontraron escaneos recientes, para escanear tu vehículo ve a la sección “Sincronizar” y busca un dispositivo",
+    "subscription": "Suscripción",
 
+    "vehicleStateSummary": "Resumen del Estado del Vehículo",
+    "vehicleStateSummaryContent": "No se encontró ningún vehículo, para conectarlo ve a la sección “Sincronizar” y busca un dispositivo",
+    "goToScan": "Ir a Escanear",
+
+    "recentAlerts": "Alertas Recientes",
+    "recentAlertsContent": "No se encontraron alertas recientes, para escanear tu vehículo ve a la sección “Sincronizar” y busca un dispositivo",
+    "vehicleStateAnalysis": "Análisis del Estado del Vehículo",
+    "vehicleStateAnalysisContent": "No se encontró ningún vehículo, para conectarlo ve a la sección “Sincronizar” y busca un dispositivo"
+  }
 }

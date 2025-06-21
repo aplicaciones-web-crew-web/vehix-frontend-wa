@@ -67,4 +67,14 @@ export class VehicleService {
     delete(id){
         return httpInstance.delete(`${this.resourceEndPoint}/${id}`);
     }
+
+    /**
+     * @description Fetches vehicles by userId from the FAKEApi.
+     * @param {string|number} userId - The ID of the user whose vehicles are to be fetched.
+     * @return {Promise<axios.AxiosResponse<any>>}
+     * @author u202318274 Julca Minaya Sergio Gino
+     */
+    getByUserId(userId){
+        return httpInstance.get(`${this.resourceEndPoint}?userId=${userId}`);
+    }
 }
