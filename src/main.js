@@ -65,7 +65,9 @@ import {
     Toast,
     ToastService,
     Toolbar,
-    DatePicker, ProgressSpinner
+    DatePicker,
+    ProgressSpinner,
+    ScrollPanel
 } from "primevue";
 import i18n from "./i18n/index.js";
 import router from "./router/index.js";
@@ -84,6 +86,7 @@ createApp(App)
     .use(ConfirmationService)
     .use(DialogService)
     .use(ToastService)
+    .component('pv-panel', ScrollPanel)
     .component('pv-expiration-date', DatePicker)
     .component('pv-loading', ProgressSpinner)
     .component('pv-button', Button)

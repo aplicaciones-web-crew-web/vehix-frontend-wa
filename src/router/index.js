@@ -12,14 +12,14 @@ const LibraryComponent = () => import('../public/pages/library.component.vue');
 const MaintenanceComponent = () => import('../public/pages/maintenance.component.vue');
 const ProfileComponent = () => import('../public/pages/profile.component.vue');
 const SyncComponent = () => import('../public/pages/sync.component.vue');
-const TapScanComponent = () => import('../domain/monitoring/pages/tap-scan.vue');
-const MechanicComponent = () => import('../domain/monitoring/pages/mechanic.vue');
+const TapScanComponent = () => import('../monitoring/pages/tap-scan.vue');
+const MechanicComponent = () => import('../monitoring/pages/Mechanic.vue');
 const AuditComponent = () => import('../domain/assets-and-resource-management/audit/page/audit-page.vue');
 const Useful_life = () => import('../domain/analytics/car-usefull-life/pages/useful_life.vue');
 const FailureManagementComponent = () => import('../monitoring/pages/failure-management.component.vue');
 const PaymentManagementComponent = () => import('../subscriptions/pages/payment-management.component.vue');
 const SubscriptionPlanManagementComponent = () => import('../subscriptions/pages/subscription-plan-management.component.vue');
-const vehicleRegistrationManagementComponent = () => import('../ARM/pages/vehicle-registration-management.component.vue');
+const vehicleRegistrationManagementComponent = () => import('../assets-and-resources-management/pages/vehicle-registration-management.component.vue');
 /**
  * Application routes configuration
  * @type {RouteConfig[]}

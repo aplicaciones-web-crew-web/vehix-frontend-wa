@@ -1,4 +1,4 @@
-import {Vehicle} from "../models/vehicle.entity.js";
+import {Vehicle} from "../model/vehicle.entity.js";
 
 /**
  * @description VehicleAssembler class to convert vehicle resources to entity objects.

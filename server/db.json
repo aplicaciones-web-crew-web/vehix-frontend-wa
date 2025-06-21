@@ -21,6 +21,17 @@
       "dni": "123",
       "gender": "male",
       "planId": 0
+    },
+    {
+      "id": 3,
+      "name": "Peror",
+      "lastName": "Peror",
+      "email": "Peror@sda.com",
+      "password": "4321",
+      "phoneNumber": "4321",
+      "dni": "4321",
+      "gender": "female",
+      "planId": 1
     }
   ],
   "plans": [
@@ -43,7 +54,48 @@
       "model": "Rush",
       "mileage": "2650",
       "year": "2019",
-      "Mileage": "2650"
+      "Mileage": "2650",
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "name": "Vitaly's vehicle",
+      "brand": "Toyota",
+      "model": "Rush",
+      "mileage": "2650",
+      "year": "2019",
+      "Mileage": "2650",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "Vitaly's vehicle",
+      "brand": "Toyota",
+      "model": "Rush",
+      "mileage": "2650",
+      "year": "2019",
+      "Mileage": "2650",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "name": "Vitaly's vehicle",
+      "brand": "Toyota",
+      "model": "Rush",
+      "mileage": "2650",
+      "year": "2019",
+      "Mileage": "2650",
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "name": "Vitaly's vehicle",
+      "brand": "Toyota",
+      "model": "Rush",
+      "mileage": "2650",
+      "year": "2019",
+      "Mileage": "2650",
+      "userId": 1
     }
   ],
   "statusCheck": [
@@ -61,6 +113,14 @@
     }
   ],
   "payments": [
+    {
+      "id": 1,
+      "userId": "3",
+      "planId": 1,
+      "amount": 115,
+      "date": "2025-06-21T07:41:12.098Z",
+      "status": "COMPLETED"
+    }
   ],
   "failures": [
     {
@@ -588,5 +648,23 @@
       "description": "Drive carefully and avoid sudden acceleration. Have a technician inspect the throttle position sensor and related components",
       "failuresTemplateID": 16
     }
-  ]
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+
 }

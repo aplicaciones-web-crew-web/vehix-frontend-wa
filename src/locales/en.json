@@ -162,5 +162,20 @@
       "Tire care is another top priority. Make sure tires are properly inflated and balanced, and check for signs of uneven wear, which may indicate alignment or suspension problems. Replacing worn tires in time is key to maintaining optimal safety and control on the road.",
       "Lastly, don't forget to update your software if your car supports it. Many vehicles today include over-the-air updates for navigation, entertainment, or even critical system functions. Staying current ensures you benefit from improved features and security fixes."
     ]
+  },
+
+  "dashboard": {
+    "scanHistory": "Scan History",
+    "scanHistoryContent": "No previous scans were recorded",
+    "subscription": "Subscription",
+
+    "vehicleStateSummary": "Vehicle State Summary",
+    "vehicleStateSummaryContent": "No vehicle was found, to connect it go to the “Sync” section and search for a device",
+    "goToScan": "Go to Sync",
+
+    "recentAlerts": "Recent Alerts",
+    "recentAlertsContent": "No alerts were found, to scan your vehicle go to the “Sync” section",
+    "vehicleStateAnalysis": "Vehicle State",
+    "vehicleStateAnalysisContent": "No vehicle was found, to connect it go to the “Sync” section and search for a device"
   }
 }
