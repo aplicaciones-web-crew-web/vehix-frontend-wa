@@ -1,7 +1,33 @@
 <!-- src/components/car-presentation.vue -->
 <script>
+import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
+import {VehicleService} from "../../assets-and-resources-management/services/vehicle.service.js";
+
 const userName = "Vitaly Baca"
-data
+export default {
+  name: "car-presentation",
+  data() {
+    return {
+      userName: userName,
+      vehicleId: 0,
+      vehicleService: null,
+      vehicles: [],
+      img: ""
+    };
+  },
+  created() {
+    this.vehicleId = VehicleSessionService.getVehicleId();
+    console.log("ID del vehículo de sesión:", this.vehicleId);
+    this.vehicleService = new VehicleService();
+    if (this.vehicleId) {
+      this.vehicleService.getById(this.vehicleId).then(response => {
+        this.img = response.data.image;
+      }).catch(error => {
+        console.error("Error loading vehicle: ", error);
+      });
+    }
+  }
+}
 </script>
 
 <template>
@@ -14,7 +40,7 @@ data
           <span style="--i:2;"></span>
         </div>
         <h2>{{ userName }}'s car</h2>
-        <img class="car-image" src="/toyota-rush-car.png" alt="Car image" />
+        <img class="car-image" :src=this.img alt="Car image"/>
       </div>
 
       <div class="legend">
@@ -131,8 +157,16 @@ data
   display: inline-block;
 }
 
-.red { background-color: #ff6b6b; }
-.yellow { background-color: #ffe066; }
-.green { background-color: #51cf66; }
+.red {
+  background-color: #ff6b6b;
+}
+
+.yellow {
+  background-color: #ffe066;
+}
+
+.green {
+  background-color: #51cf66;
+}
 
 </style>

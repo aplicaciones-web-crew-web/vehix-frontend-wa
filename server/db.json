@@ -58,6 +58,50 @@
     }
   ],
   "vehicles": [
+    {
+      "id": 1,
+      "userId": null,
+      "description": "FSD",
+      "name": "FSD",
+      "brand": "BMW",
+      "model": "3 Series",
+      "mileage": "181330",
+      "year": "2013",
+      "image": "https://www.bmwpeabody.com/assets/stock/colormatched_01/transparent/1280/cc_2025bmc22_01_1280/cc_2025bmc220011_01_1280_c4w.png?bg-color=FFFFFF"
+    },
+    {
+      "id": 2,
+      "userId": "1",
+      "description": "asd",
+      "name": "asd",
+      "brand": "Hyundai",
+      "model": "Accent",
+      "mileage": "111485",
+      "year": "2005",
+      "image": "https://mystrongad.com/BBY_BobBradyHyundai/Digital/Accent/2021/21-Hyundai-Accent-White-LG.png"
+    },
+    {
+      "id": 3,
+      "userId": null,
+      "description": "jnh",
+      "name": "jnh",
+      "brand": "Audi",
+      "model": "A4",
+      "mileage": "139222",
+      "year": "2008",
+      "image": "https://images.carprices.com/pricebooks_data/usa/colorized/2024/Audi/View2/A4/40_TFSI_quattro/8WCBZY_2D.png"
+    },
+    {
+      "id": 4,
+      "userId": null,
+      "description": "312312",
+      "name": "312312",
+      "brand": "Ford",
+      "model": "Ranger",
+      "mileage": "108288",
+      "year": "2000",
+      "image": "https://images.carprices.com/pricebooks_data/usa/colorized/2024/Ford/View2/Ranger/Lariat/R4J_E7.png"
+    }
   ],
   "statusCheck": [
     {
@@ -91,38 +135,149 @@
       "status": "COMPLETED"
     }
   ],
+  "failuresVehicles": [
+    {}
+  ],
   "failures": [
     {
       "id": 1,
-      "title": "Low system voltage",
-      "description": "The system detected low voltage levels, which could be caused by a malfunctioning speed sensor in the transmission. This may lead to power delivery issues. Suggested solution: Inspect the speed sensor and replace it if damaged.",
-      "solutions": "Inspect the speed sensor and replace it if damaged.",
-      "isSolved": true,
-      "vehicleId": 1
+      "suggestSolution": "Regularly inspect and replace spark plugs and ignition components; ensure proper fuel system maintenance.",
+      "badPracticeId": 1,
+      "odbErrorId": 1,
+      "urgency": "Critical"
     },
     {
       "id": 2,
-      "title": "Low coolant temperature",
-      "description": "This issue indicates that the oil level or oil pressure sensor is reporting abnormally low values, which can cause severe engine damage.",
-      "solutions": "Check the oil level and pressure sensor. If the problem persists, take the vehicle to a workshop immediately.",
-      "isSolved": false,
-      "vehicleId": 1
+      "suggestSolution": "Immediately address engine misfires and rich fuel conditions; repair any exhaust leaks to protect the catalytic converter.",
+      "badPracticeId": 2,
+      "odbErrorId": 2,
+      "urgency": "Moderate"
     },
     {
       "id": 3,
-      "title": "Low oil pressure",
-      "description": "This issue indicates that the oil level or oil pressure sensor is reporting abnormally low values, which can cause severe engine damage",
-      "solutions": "Check the oil level and pressure sensor. If the problem persists, take the vehicle to a workshop immediately.",
-      "isSolved": true,
-      "vehicleId": 1
+      "suggestSolution": "Secure wiring harnesses properly; promptly replace damaged wheel speed sensors or wiring, and address bearing issues.",
+      "badPracticeId": 3,
+      "odbErrorId": 3,
+      "urgency": "Critical"
     },
     {
       "id": 4,
-      "title": "Fuel sensor out of range",
-      "description": "The fuel level sensor is sending readings that are not within the expected values. This might affect fuel gauge accuracy.",
-      "solutions": "Check the fuel tank float or sensor. It may be stuck and require servicing or replacement.",
-      "isSolved": false,
-      "vehicleId": 1
+      "suggestSolution": "Do not ignore ABS or brake warning lights; seek immediate professional inspection for any braking system malfunctions.",
+      "badPracticeId": 4,
+      "odbErrorId": 4,
+      "urgency": "Critical"
+    },
+    {
+      "id": 5,
+      "suggestSolution": "Ensure all airbag system wiring connectors are secure; avoid physical damage to components and follow all safety protocols.",
+      "badPracticeId": 5,
+      "odbErrorId": 5,
+      "urgency": "Critical"
+    },
+    {
+      "id": 6,
+      "suggestSolution": "Adhere to oil change schedules and use the correct oil type/viscosity; promptly address low oil pressure warnings.",
+      "badPracticeId": 6,
+      "odbErrorId": 6,
+      "urgency": "Moderate"
+    },
+    {
+      "id": 7,
+      "suggestSolution": "Maintain a healthy vehicle battery and charging system; get persistent communication fault codes professionally diagnosed.",
+      "badPracticeId": 7,
+      "odbErrorId": 7,
+      "urgency": "Critical"
+    },
+    {
+      "id": 8,
+      "suggestSolution": "Ensure all aftermarket electrical installations are professional; maintain overall electrical system health to prevent module communication failures.",
+      "badPracticeId": 8,
+      "odbErrorId": 8,
+      "urgency": "Critical"
+    }
+  ],
+  "badPractices": [
+    {
+      "id": 1,
+      "descriptionBadPractice": "Ignoring routine spark plug replacement, neglecting ignition coil or wire wear, or poor fuel system maintenance (e.g., old fuel filter, faulty fuel pump)."
+    },
+    {
+      "id": 2,
+      "descriptionBadPractice": "Neglecting engine misfires, running with rich fuel mixtures, or ignoring exhaust leaks, which all contribute to premature catalytic converter failure."
+    },
+    {
+      "id": 3,
+      "descriptionBadPractice": "Not securing wiring harnesses, allowing physical damage to wheel speed sensor wiring, or ignoring signs of a damaged wheel bearing (which can affect the reluctor ring)."
+    },
+    {
+      "id": 4,
+      "descriptionBadPractice": "Driving with persistent ABS/brake system warning lights, ignoring intermittent brake system malfunctions, or exposing the ABS module/wiring to excessive moisture or physical impact."
+    },
+    {
+      "id": 5,
+      "descriptionBadPractice": "Improperly reconnecting wiring connectors under seats after maintenance or cleaning, physical damage to airbag wiring, or incorrectly replacing airbag system components."
+    },
+    {
+      "id": 6,
+      "descriptionBadPractice": "Ignoring persistent low oil pressure warnings, using incorrect oil viscosity, or neglecting oil changes which can lead to sensor fouling or failure due to sludge buildup."
+    },
+    {
+      "id": 7,
+      "descriptionBadPractice": "Ignoring battery and charging system issues (low voltage), improper electrical repairs leading to poor connections or damaged wiring, or not addressing other related communication fault codes."
+    },
+    {
+      "id": 8,
+      "descriptionBadPractice": "Exposing vehicle wiring to damage (e.g., during aftermarket installations), neglecting battery issues that cause low voltage to modules, or ignoring signs of module malfunction like power window or door lock failures."
+    }
+  ],
+  "odbErrors": [
+    {
+      "id": 1,
+      "ErrorCode": "P0300",
+      "ErrorCodeTitle": "Random/Multiple Cylinder Misfire Detected",
+      "ErrorType": "Powertrain"
+    },
+    {
+      "id": 2,
+      "ErrorCode": "P0420",
+      "ErrorCodeTitle": "Catalyst System Efficiency Below Threshold (Bank 1)",
+      "ErrorType": "Powertrain"
+    },
+    {
+      "id": 3,
+      "ErrorCode": "C0035",
+      "ErrorCodeTitle": "Left Front Wheel Speed Sensor Circuit",
+      "ErrorType": "Chassis"
+    },
+    {
+      "id": 4,
+      "ErrorCode": "C1214",
+      "ErrorCodeTitle": "Brake Control Relay Contact Circuit Open",
+      "ErrorType": "Chassis"
+    },
+    {
+      "id": 5,
+      "ErrorCode": "B0020",
+      "ErrorCodeTitle": "Right Front Passenger Airbag Deploy Circuit",
+      "ErrorType": "Body"
+    },
+    {
+      "id": 6,
+      "ErrorCode": "B1325",
+      "ErrorCodeTitle": "Oil Pressure Sensor Circuit",
+      "ErrorType": "Body"
+    },
+    {
+      "id": 7,
+      "ErrorCode": "U0100",
+      "ErrorCodeTitle": "Lost Communication with Engine Control Module (ECM/PCM)",
+      "ErrorType": "Network"
+    },
+    {
+      "id": 8,
+      "ErrorCode": "U0140",
+      "ErrorCodeTitle": "Lost Communication with Body Control Module (BCM)",
+      "ErrorType": "Network"
     }
   ],
   "report": [
@@ -229,28 +384,6 @@
       "description": "Fuel sensor out of range",
       "suggestion": "Check the fuel tank float or sensor. It could be stuck.",
       "urgency": "mild"
-    }
-  ],
-  "bad_practices": [
-    {
-      "id": 1,
-      "vehicleId": 1,
-      "description": "Not checking tire pressure regularly."
-    },
-    {
-      "id": 2,
-      "vehicleId": 1,
-      "description": "Driving with overloaded vehicle."
-    },
-    {
-      "id": 3,
-      "vehicleId": 1,
-      "description": "Ignoring seasonal temperature changes."
-    },
-    {
-      "id": 4,
-      "vehicleId": 1,
-      "description": "Ignoring early symptoms like strange noises or smells."
     }
   ],
   "vehicle_life_data": [
@@ -454,170 +587,6 @@
       "suggestSolutionsTemplateId": 16
     }
   ],
-  "badPracticesTemplate": [
-    {
-      "id": 1,
-      "description": "Frequently accelerating aggressively or ignoring the on engine icon.",
-      "failuresTemplateId": 1
-    },
-    {
-      "id": 2,
-      "description": "Ignoring the temperature gauge or driving with low coolant.",
-      "failuresTemplateId": 2
-    },
-    {
-      "id": 3,
-      "description": "Skipping regular oil changes or driving with the oil warning light on.",
-      "failuresTemplateId": 3
-    },
-    {
-      "id": 4,
-      "description": "Leaving lights or electronics on when the engine is off.",
-      "failuresTemplateId": 4
-    },
-    {
-      "id": 5,
-      "description": "Not securing the fuel cap after refueling.",
-      "failuresTemplateId": 5
-    },
-    {
-      "id": 6,
-      "description": "Rapid acceleration or towing heavy loads without proper maintenance.",
-      "failuresTemplateId": 6
-    },
-    {
-      "id": 7,
-      "description": "Using low-quality fuel or ignoring engine hesitation.",
-      "failuresTemplateId": 7
-    },
-    {
-      "id": 8,
-      "description": "Driving with a dirty air filter or ignoring rough engine performance.",
-      "failuresTemplateId": 8
-    },
-    {
-      "id": 9,
-      "description": "Using leaded fuel or ignoring engine misfires.",
-      "failuresTemplateId": 9
-    },
-    {
-      "id": 10,
-      "description": "Driving through deep water or mud frequently.",
-      "failuresTemplateId": 10
-    },
-    {
-      "id": 11,
-      "description": "Ignoring temperature warnings or not checking coolant levels.",
-      "failuresTemplateId": 11
-    },
-    {
-      "id": 12,
-      "description": "Ignoring brake warning lights or delaying brake maintenance.",
-      "failuresTemplateId": 12
-    },
-    {
-      "id": 13,
-      "description": "Neglecting regular tire pressure checks or hitting curbs.",
-      "failuresTemplateId": 13
-    },
-    {
-      "id": 14,
-      "description": "Running multiple electrical accessories for long periods with the engine off.",
-      "failuresTemplateId": 14
-    },
-    {
-      "id": 15,
-      "description": "Frequently running the tank near empty.",
-      "failuresTemplateId": 15
-    },
-    {
-      "id": 16,
-      "description": "Abruptly pressing or releasing the accelerator pedal.",
-      "failuresTemplateId": 16
-    }
-  ],
-  "suggestSolutionsTemplate": [
-    {
-      "id": 1,
-      "description": "Replace spark plugs as soon as possible.",
-      "failuresTemplateId": 1
-    },
-    {
-      "id": 2,
-      "description": "Turn off the engine immediately and allow it to cool down. Do not drive further. Contact an automotive technician to inspect the cooling system, including the thermostat and coolant levels.",
-      "failuresTemplateId": 2
-    },
-    {
-      "id": 3,
-      "description": "Check and top up engine oil to the recommended level. If the warning persists, contact a technician to check for leaks or oil pump issues.",
-      "failuresTemplateId": 3
-    },
-    {
-      "id": 4,
-      "description": "Test and replace the battery if needed. If the issue continues, contact a technician to check the alternator and charging system.",
-      "failuresTemplateId": 4
-    },
-    {
-      "id": 5,
-      "description": "Tighten the fuel cap until it clicks. If the warning remains, replace the cap or consult a mechanic.",
-      "failuresTemplateId": 5
-    },
-    {
-      "id": 6,
-      "description": "If you notice slipping or jerking, stop driving and avoid further damage. Contact a transmission specialist to diagnose and address possible transmission issues.",
-      "failuresTemplateId": 6
-    },
-    {
-      "id": 7,
-      "description": "Visit an automotive technician to diagnose the issue. The EGR valve or related components may need attention.",
-      "failuresTemplateId": 7
-    },
-    {
-      "id": 8,
-      "description": "Contact a technician to inspect the mass airflow sensor and air intake system before replacing any parts.",
-      "failuresTemplateId": 8
-    },
-    {
-      "id": 9,
-      "description": "Schedule a visit with a technician to check the catalytic converter and related systems. Replacement may be necessary if confirmed.",
-      "failuresTemplateId": 9
-    },
-    {
-      "id": 10,
-      "description": "Drive cautiously and avoid sudden braking. Have a technician inspect the wheel speed sensors and ABS system.",
-      "failuresTemplateId": 10
-    },
-    {
-      "id": 11,
-      "description": "If the engine overheats, turn it off and let it cool. Then, contact a technician to check the coolant temperature sensor and cooling system.",
-      "failuresTemplateId": 11
-    },
-    {
-      "id": 12,
-      "description": "Top up brake fluid if available. If the warning persists or braking feels weak, do not drive and have a technician inspect the brake system for leaks or worn parts.",
-      "failuresTemplateId": 12
-    },
-    {
-      "id": 13,
-      "description": "Inflate tires to the recommended pressure. If pressure drops repeatedly, have a technician check for punctures or valve issues.",
-      "failuresTemplateId": 13
-    },
-    {
-      "id": 14,
-      "description": "If warning lights appear or the car stalls, avoid driving further. Contact a technician to test the alternator and charging system.",
-      "failuresTemplateId": 14
-    },
-    {
-      "id": 15,
-      "description": "If the engine stalls or won't start, do not attempt to drive. Call a technician to diagnose the fuel system, including the fuel pump.",
-      "failuresTemplateId": 15
-    },
-    {
-      "id": 16,
-      "description": "Drive carefully and avoid sudden acceleration. Have a technician inspect the throttle position sensor and related components",
-      "failuresTemplateID": 16
-    }
-  ],
   "posts": [
     {
       "id": 1,
@@ -634,5 +603,27 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "bad_practices": [
+    {
+      "id": 1,
+      "vehicleId": 1,
+      "description": "Not checking tire pressure regularly."
+    },
+    {
+      "id": 2,
+      "vehicleId": 1,
+      "description": "Driving with overloaded vehicle."
+    },
+    {
+      "id": 3,
+      "vehicleId": 1,
+      "description": "Ignoring seasonal temperature changes."
+    },
+    {
+      "id": 4,
+      "vehicleId": 1,
+      "description": "Ignoring early symptoms like strange noises or smells."
+    }
+  ]
 }
