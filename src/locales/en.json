@@ -92,6 +92,10 @@
     "subTotal": "Subtotal",
     "shipping": "Shipping",
     "total": "Total"
+  },
+
+  "vehicleRegistration": {
+    "vehicleName": "Enter the name of your vehicle"
   }
 
 }

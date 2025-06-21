@@ -22,8 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-#Backend
-db.json
-.env.production
-.env.development

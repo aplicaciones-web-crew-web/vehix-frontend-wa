@@ -2,6 +2,7 @@
 import AlertCard from "../../shared/components/alert-card.component.vue";
 import {isNumeric, isValidEmail} from "../../shared/utils/validation.util.js";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
+import {UsersApiService} from "../../IAM/services/users-api.service.js";
 
 export default {
   name: "payment-form-card",
@@ -42,9 +43,13 @@ export default {
       expirationDate: '',
 
       currentAlert: null,
+
+      usersApiService: null
     }
   },
   created() {
+    this.usersApiService = new UsersApiService();
+
     this.userId = UserSessionService.getUserId();
     this.today = new Date();
     this.currentYear = this.today.getFullYear();
@@ -138,10 +143,14 @@ export default {
     },
 
 
-    submitForm() {
+    async submitForm() {
       if (!this.validateFilledFields()) return;
       if (!this.validateOnlyNumbers()) return;
       if (!this.validateEmail()) return;
+      const userResponse = await this.usersApiService.getById(this.userId);
+      const currentUserData = userResponse.data;
+      const updatedUserData = { ...currentUserData, planId: this.plan.id };
+
       const paymentData = {
         userId: this.userId,
         planId: this.plan.id,
@@ -149,8 +158,13 @@ export default {
         status: "COMPLETED",
         amount: this.amount,
       }
+
+      await this.usersApiService.update(this.userId, updatedUserData);
+
       this.displayAlert("Payment Successful", "Your payment has been successfully processed.", "success");
       this.$emit("submit", paymentData);
+      this.resetFields();
+      this.$router.push("/home")
     },
 
 
