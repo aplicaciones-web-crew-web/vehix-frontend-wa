@@ -13,7 +13,7 @@ export class FailureAssembler{
      */
     static toEntityFromResource(resource) {
         return new Failure({
-            id: resource.id ?? Date.now(), // si no hay id, genera uno temporal
+            id: resource.id ?? Date.now(),
             simpleName: resource.simpleName,
             technicalCode: resource.technicalCode,
             description: resource.description,
