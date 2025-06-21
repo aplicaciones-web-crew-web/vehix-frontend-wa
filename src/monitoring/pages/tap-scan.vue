@@ -23,6 +23,9 @@ export default {
 
   },
   methods:{
+  /*
+
+
     async loadVehicles() {
       try {
         const response = await this.vehicleService.getAll();
@@ -31,7 +34,7 @@ export default {
       } catch (error) {
         console.error("Error loading vehicles: ", error);
       }
-    },
+    },   */
   }
 }
 </script>
