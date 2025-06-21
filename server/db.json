@@ -32,6 +32,17 @@
       "dni": "4321",
       "gender": "female",
       "planId": 1
+    },
+    {
+      "id": 4,
+      "name": "jaundsauhdash",
+      "lastName": "jaundsauhdash",
+      "email": "jaundsauhdash@gmail.com",
+      "password": "92319",
+      "phoneNumber": "123",
+      "dni": "92319",
+      "gender": "male",
+      "planId": 2
     }
   ],
   "plans": [
@@ -47,78 +58,6 @@
     }
   ],
   "vehicles": [
-    {
-      "id": 1,
-      "name": "Vitaly's vehicle",
-      "brand": "Toyota",
-      "model": "Rush",
-      "mileage": "2650",
-      "year": "2019",
-      "Mileage": "2650",
-      "userId": 2
-    },
-    {
-      "id": 2,
-      "name": "Vitaly's vehicle",
-      "brand": "Toyota",
-      "model": "Rush",
-      "mileage": "2650",
-      "year": "2019",
-      "Mileage": "2650",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "name": "Vitaly's vehicle",
-      "brand": "Toyota",
-      "model": "Rush",
-      "mileage": "2650",
-      "year": "2019",
-      "Mileage": "2650",
-      "userId": 2
-    },
-    {
-      "id": 3,
-      "name": "Vitaly's vehicle",
-      "brand": "Toyota",
-      "model": "Rush",
-      "mileage": "2650",
-      "year": "2019",
-      "Mileage": "2650",
-      "userId": 2
-    },
-    {
-      "id": 4,
-      "name": "Vitaly's vehicle",
-      "brand": "Toyota",
-      "model": "Rush",
-      "mileage": "2650",
-      "year": "2019",
-      "Mileage": "2650",
-      "userId": 1
-    },
-    {
-      "id": 5,
-      "userId": null,
-      "description": "Fabian",
-      "name": "Fabian",
-      "brand": "Kia",
-      "model": "Rio",
-      "mileage": "169337",
-      "year": "2012",
-      "image": "https://pngimg.com/d/kia_PNG20.png"
-    },
-    {
-      "id": 6,
-      "userId": null,
-      "description": "gyuihgyugbyuioh",
-      "name": "gyuihgyugbyuioh",
-      "brand": "Mercedes-Benz",
-      "model": "ML",
-      "mileage": "197767",
-      "year": "2001",
-      "image": "https://pngimg.com/d/mercedes_PNG1874.png"
-    }
   ],
   "statusCheck": [
     {
@@ -141,6 +80,14 @@
       "planId": 1,
       "amount": 115,
       "date": "2025-06-21T07:41:12.098Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 2,
+      "userId": "4",
+      "planId": 2,
+      "amount": 100,
+      "date": "2025-06-21T18:11:19.430Z",
       "status": "COMPLETED"
     }
   ],

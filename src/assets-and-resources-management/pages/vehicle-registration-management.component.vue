@@ -5,6 +5,7 @@ import {CarsImagesApiService} from "../services/cars-images-api.service.js";
 import {VehicleAssembler} from "../services/vehicle.assembler.js";
 import {CarsBrandsApiService} from "../services/cars-brands-api.service.js";
 import VehicleItemCreate from "../components/vehicle-item-create.component.vue";
+import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
 
 export default {
   name: "vehicle-registration-management",
@@ -19,21 +20,29 @@ export default {
   },
   created() {
     this.vehicleService = new VehicleService();
-    this.vehicleService.getAll().then((response) => {
-      this.vehicles = VehicleAssembler.toEntitiesFromResponse(response);
-    }).catch((error) => {
-      console.error("Error loading vehicles: ", error);
-    });
+    this.loadVehicles();
     this.carsBrandsApiService = new CarsBrandsApiService()
     this.carsImagesApiService = new CarsImagesApiService();
   },
   methods: {
+    async loadVehicles() {
+      try {
+        const response = await this.vehicleService.getAll();
+        this.vehicles = VehicleAssembler.toEntitiesFromResponse(response);
+        console.log("Vehicles loaded successfully:", this.vehicles);
+      } catch (error) {
+        console.error("Error loading vehicles: ", error);
+      }
+    },
 
-    handleVehicleCreated(vehicleData) {
+    async handleVehicleCreated(vehicleData) {
       try {
         const newVehicle = VehicleAssembler.toEntityFromResource(vehicleData);
-        console.log(newVehicle);
-        this.vehicleService.create(newVehicle);
+
+        const createdVehicleResponse = await this.vehicleService.create(newVehicle);
+        const createdVehicleWithId = VehicleAssembler.toEntityFromResource(createdVehicleResponse.data);
+        VehicleSessionService.setVehicleId(createdVehicleWithId.id);
+        this.vehicles.push(createdVehicleWithId);
       } catch (error) {
         console.log("Error making vehicle: ", error)
       }

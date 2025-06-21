@@ -1,6 +1,7 @@
 <!-- src/components/car-presentation.vue -->
-<script setup>
+<script>
 const userName = "Vitaly Baca"
+data
 </script>
 
 <template>
