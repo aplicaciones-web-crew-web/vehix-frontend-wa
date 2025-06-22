@@ -43,6 +43,17 @@
       "dni": "92319",
       "gender": "male",
       "planId": 2
+    },
+    {
+      "id": 5,
+      "name": "Robert",
+      "lastName": "Lewandosky",
+      "email": "robert@bayern.com",
+      "password": "123456",
+      "phoneNumber": "998758473",
+      "dni": "45256321",
+      "gender": "male",
+      "planId": 1
     }
   ],
   "plans": [
@@ -101,6 +112,215 @@
       "mileage": "108288",
       "year": "2000",
       "image": "https://images.carprices.com/pricebooks_data/usa/colorized/2024/Ford/View2/Ranger/Lariat/R4J_E7.png"
+    },
+    {
+      "id": 5,
+      "userId": null,
+      "description": "Juan",
+      "name": "Juan",
+      "brand": "Volvo",
+      "model": "XC90",
+      "mileage": "155978",
+      "year": "2002",
+      "image": "https://images.dealer.com/ddc/vehicles/2021/Volvo/XC90/SUV/perspective/front-left/2021_76.png"
+    },
+    {
+      "id": 6,
+      "userId": null,
+      "description": "",
+      "name": "",
+      "brand": "Dodge",
+      "model": "Nitro",
+      "mileage": "29091",
+      "year": "2007",
+      "image": "https://www.motortrend.com/uploads/sites/10/2015/11/2010-dodge-nitro-heat-4x2-suv-angular-front.png"
+    },
+    {
+      "id": 7,
+      "userId": null,
+      "description": "",
+      "name": "",
+      "brand": "Mazda",
+      "model": "CX-7",
+      "mileage": "186403",
+      "year": "2010",
+      "image": "https://www2.mazda.com/ja/100th/cars/assets/img/cars/img_051_cx-7.png"
+    },
+    {
+      "id": 8,
+      "userId": null,
+      "description": "",
+      "name": "",
+      "brand": "Volvo",
+      "model": "XC90",
+      "mileage": "20334",
+      "year": "2009",
+      "image": "https://images.dealer.com/ddc/vehicles/2021/Volvo/XC90/SUV/perspective/front-left/2021_76.png"
+    },
+    {
+      "id": 9,
+      "userId": null,
+      "description": "",
+      "name": "",
+      "brand": "Kia",
+      "model": "Forte",
+      "mileage": "56937",
+      "year": "2013",
+      "image": "https://assets-clean.local-car-finder.com/images/14563/14563_st1280_089.png"
+    },
+    {
+      "id": 10,
+      "userId": null,
+      "description": "",
+      "name": "",
+      "brand": "Toyota",
+      "model": "Sienna",
+      "mileage": "45353",
+      "year": "2016",
+      "image": "https://media.rti.toyota.com/config/pub/3d/vcr/live/vehicle/TOY/2025/sienna/5419/779/97dc3b8bbd2428a35f40b53f4f66476baa1704918bcb8680a08767ce6ec69327.png?fit=crop&wid=1200&hei=663&efcview=Exterior&bfc=off&fmt=png-alpha"
+    },
+    {
+      "id": 11,
+      "userId": null,
+      "description": "Juan",
+      "name": "Juan",
+      "brand": "Lexus",
+      "model": "GS",
+      "mileage": "76657",
+      "year": "2006",
+      "image": "https://images.dealer.com/ddc/vehicles/2020/Lexus/GS%20350/Sedan/perspective/front-left/2020_24.png"
+    },
+    {
+      "id": 12,
+      "userId": null,
+      "description": "Mazda BT50",
+      "name": "Mazda BT50",
+      "brand": "Subaru",
+      "model": "Forester",
+      "mileage": "96642",
+      "year": "2012",
+      "image": "https://vehicle-images.dealerinspire.com/stock-images/chrome/cbddc83f6b2a9f382f8da96d27050b70.png"
+    },
+    {
+      "id": 13,
+      "userId": null,
+      "description": "cX 50",
+      "name": "cX 50",
+      "brand": "Volvo",
+      "model": "S60",
+      "mileage": "29814",
+      "year": "2000",
+      "image": "https://images.dealer.com/ddc/vehicles/2021/Volvo/S60/Sedan/perspective/front-left/2021_76.png"
+    },
+    {
+      "id": 14,
+      "userId": null,
+      "description": "BT 50",
+      "name": "BT 50",
+      "brand": "Volvo",
+      "model": "S80",
+      "mileage": "22633",
+      "year": "2002",
+      "image": "https://www.motortrend.com/uploads/sites/10/2015/11/2011-volvo-s80-3.2-fwd-auto-sedan-angular-front.png?w=768&width=768&q=75&format=webp"
+    },
+    {
+      "id": 15,
+      "userId": null,
+      "description": "BT 50",
+      "name": "BT 50",
+      "brand": "Jeep",
+      "model": "Wrangler",
+      "mileage": "40751",
+      "year": "2009",
+      "image": "https://di-uploads-pod26.dealerinspire.com/rickhendrickchryslerdodgejeepramduluth/uploads/2024/10/mlp-img-top-2025-wrangler-temp.png"
+    },
+    {
+      "id": 16,
+      "userId": null,
+      "description": "ford",
+      "name": "ford",
+      "brand": "Chevrolet",
+      "model": "S-10",
+      "mileage": "35967",
+      "year": "2004",
+      "image": "https://e7.pngegg.com/pngimages/81/256/png-clipart-chevrolet-s-10-blazer-car-general-motors-chevrolet-trailblazer-season-10-compact-car-truck.png"
+    },
+    {
+      "id": 17,
+      "userId": null,
+      "description": "Mustang",
+      "name": "Mustang",
+      "brand": "Jeep",
+      "model": "Grand Cherokee",
+      "mileage": "39007",
+      "year": "2002",
+      "image": "https://purepng.com/public/uploads/large/purepng.com-jeep-grand-cherokee-carcarvehicletransportjeep-961524665863wbpmz.png"
+    },
+    {
+      "id": 18,
+      "userId": "1",
+      "description": "F150",
+      "name": "F150",
+      "brand": "Audi",
+      "model": "RS6",
+      "mileage": "129477",
+      "year": "2005",
+      "image": "https://www.motortrend.com/uploads/sites/5/2020/07/2020-audi-rs6.png"
+    },
+    {
+      "id": 19,
+      "userId": "1",
+      "description": "",
+      "name": "",
+      "brand": "Mazda",
+      "model": "2",
+      "mileage": "196706",
+      "year": "2006",
+      "image": "https://www2.mazda.com/ja/100th/cars/assets/img/cars/img_066_mazda2.png"
+    },
+    {
+      "id": 20,
+      "userId": "5",
+      "description": "F150",
+      "name": "F150",
+      "brand": "Honda",
+      "model": "Odyssey",
+      "mileage": "21207",
+      "year": "2019",
+      "image": "https://images.dealer.com/ddc/vehicles/2023/Honda/Odyssey/Van/perspective/front-left/2023_24.png"
+    },
+    {
+      "id": 21,
+      "userId": "5",
+      "description": "",
+      "name": "",
+      "brand": "GMC",
+      "model": "Yukon",
+      "mileage": "159993",
+      "year": "2013",
+      "image": "https://images.dealer.com/ddc/vehicles/2023/GMC/Yukon/SUV/perspective/front-left/2023_76.png"
+    },
+    {
+      "id": 22,
+      "userId": "5",
+      "description": "",
+      "name": "",
+      "brand": "Jaguar",
+      "model": "XK8",
+      "mileage": "197270",
+      "year": "2005",
+      "image": "https://www.terrysjag.com/mm5/images/XK8.png"
+    },
+    {
+      "id": 23,
+      "userId": "5",
+      "description": "",
+      "name": "",
+      "brand": "Subaru",
+      "model": "Forester",
+      "mileage": "175311",
+      "year": "2000",
+      "image": "https://vehicle-images.dealerinspire.com/stock-images/chrome/cbddc83f6b2a9f382f8da96d27050b70.png"
     }
   ],
   "statusCheck": [
@@ -132,6 +352,14 @@
       "planId": 2,
       "amount": 100,
       "date": "2025-06-21T18:11:19.430Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 3,
+      "userId": "5",
+      "planId": 1,
+      "amount": 115,
+      "date": "2025-06-21T22:23:49.007Z",
       "status": "COMPLETED"
     }
   ],

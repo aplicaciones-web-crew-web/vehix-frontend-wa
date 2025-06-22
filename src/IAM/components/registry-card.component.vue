@@ -106,6 +106,27 @@ export default {
       if (!this.validateFilledFields()) return;
 
       if (this.validateUserNotExist()) {
+        const newUserResource = {
+          dni: this.dni,
+          passwordHash: this.password,
+          name: this.name,
+          lastname: this.lastName,
+          email: this.email,
+          phoneNumber: this.phoneNumber,
+          gender: this.gender,
+          planId: 0,
+          roleId: 1,
+        }
+        this.userApiService.create(newUserResource).then(() => {
+          this.displayAlert("Registration successful", `Welcome, ${newUserResource.name} ${newUserResource.lastname}!. Enter your credentials to validate your account.`, "success");
+          this.resetFormData();
+        }).catch(error => {
+          console.error("Error during registration: ", error);
+          this.displayAlert("Registration failed", "An error occurred during registration. Please try again.", "error");
+        });
+      }
+      /** For future use, if needed
+      if (this.validateUserNotExist()) {
         const newUser = UserAssembler.toEntityFromResource({
           dni: this.dni,
           password: this.password,
@@ -123,8 +144,7 @@ export default {
           this.displayAlert("Registration failed", "An error occurred during registration. Please try again.", "error");
         });
       }
-
-
+      **/
     },
     /**
      * @summary Resets the form data to empty strings.

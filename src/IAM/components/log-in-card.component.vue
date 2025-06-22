@@ -1,7 +1,7 @@
 <script>
 import {UsersApiService} from "../services/users-api.service.js";
 import AlertCard from "../../shared/components/alert-card.component.vue";
-import {UserAssembler} from "../services/user.assembler.js"; // Asegúrate de que el path sea correcto
+import {UserAssembler} from "../services/user.assembler.js";
 import {isNumeric} from "../../shared/utils/validation.util.js";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
 

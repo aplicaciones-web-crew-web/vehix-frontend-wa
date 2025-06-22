@@ -2,22 +2,24 @@ export class User {
     constructor({
                     id = 0,
                     name = '',
-                    lastName = '',
+                    lastname = '',
                     email = '',
-                    password = '',
+                    passwordHash = '',
                     phoneNumber = '',
                     dni = '',
                     gender='',
-                    planId = 0
+                    planId = 0,
+                    roleId = 0
                 } = {}) {
         this.id = id;
         this.name = name;
-        this.lastName = lastName;
+        this.lastName = lastname;
         this.email = email;
-        this.password = password;
+        this.password = passwordHash;
         this.phoneNumber = phoneNumber;
         this.dni = dni;
         this.gender = gender;
         this.planId = planId;
+        this.roleId = roleId;
     }
 }
