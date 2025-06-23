@@ -3,10 +3,11 @@
 import Scan from "../components/scan.component.vue";
 import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
 import {VehicleService} from "../../assets-and-resources-management/services/vehicle.service.js";
+import Analysis from "../components/analysis.component.vue";
 
 export default {
   name: "maintenance-management",
-  components: {Scan},
+  components: {Analysis, Scan},
   data() {
     return {
       vehicleId: null,
@@ -38,7 +39,7 @@ export default {
 <template>
   <div class="maintenance-management-container">
     <div class="analysis-container">
-      <p>lorem*5dsakdasnjidasnjidasnjioasdinjasdnuidas<br>dasjinasdnjasddoasodnas<br></p>
+      <analysis></analysis>
     </div>
     <div class="scan-container">
       <scan
@@ -50,17 +51,27 @@ export default {
 </template>
 
 <style>
-.maintenance-management-container{
+.maintenance-management-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: end;
+  height: calc(100vh - 65px);
+  width: 100vw;
+
 }
 
-.analysis-container{
+.analysis-container {
   width: 40vw;
+  height: calc(100vh - 65px);
 }
 
-.scan-container{
+.scan-container {
+  display: flex;
   width: 60vw;
+  height: calc(100vh - 65px);
+  justify-content: center;
+  align-items: center;
+
 }
 </style>

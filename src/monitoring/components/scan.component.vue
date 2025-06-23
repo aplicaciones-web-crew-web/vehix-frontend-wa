@@ -83,7 +83,7 @@ export default {
       </div>
     </div>
     <div class="img" v-if="vehicleId">
-      <img width="100%" style="" :src="vehicleImage">
+      <img width="95%" style="" :src="vehicleImage">
     </div>
   </div>
 
@@ -96,7 +96,6 @@ export default {
   align-items: center;
   justify-content: center;
   width: 50vw;
-  height: calc(100vh - 65px);
   gap: 4rem;
   padding: 3rem;
 }
