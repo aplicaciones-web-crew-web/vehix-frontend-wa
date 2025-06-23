@@ -3,44 +3,11 @@
     {
       "id": 1,
       "name": "Sergio Gino",
-      "lastname": "Julca Minaya",
+      "lastName": "Julca Minaya",
       "email": "sergiogino8@gmail.com",
-      "password": "123456",
-      "phoneNumber": "999999999",
-      "dni": "12345678",
-      "gender": "Male",
-      "planId": 2
-    },
-    {
-      "id": 2,
-      "name": "UJuan",
-      "lastName": "Carlos",
-      "email": "sergiogino145@gmail.com",
-      "password": "123",
-      "phoneNumber": "123",
-      "dni": "123",
-      "gender": "male",
-      "planId": 0
-    },
-    {
-      "id": 3,
-      "name": "Peror",
-      "lastName": "Peror",
-      "email": "Peror@sda.com",
-      "password": "4321",
-      "phoneNumber": "4321",
-      "dni": "4321",
-      "gender": "female",
-      "planId": 1
-    },
-    {
-      "id": 4,
-      "name": "jaundsauhdash",
-      "lastName": "jaundsauhdash",
-      "email": "jaundsauhdash@gmail.com",
-      "password": "92319",
-      "phoneNumber": "123",
-      "dni": "92319",
+      "password": "72265874",
+      "phoneNumber": "951893113",
+      "dni": "72265874",
       "gender": "male",
       "planId": 2
     }
@@ -101,6 +68,28 @@
       "mileage": "108288",
       "year": "2000",
       "image": "https://images.carprices.com/pricebooks_data/usa/colorized/2024/Ford/View2/Ranger/Lariat/R4J_E7.png"
+    },
+    {
+      "id": 5,
+      "userId": null,
+      "description": "DAS",
+      "name": "DAS",
+      "brand": "Cadillac",
+      "model": "Seville",
+      "mileage": "196242",
+      "year": "2002",
+      "image": "https://www.motortrend.com/uploads/sites/10/2015/11/2003-cadillac-seville-sts-sedan-angular-front.png"
+    },
+    {
+      "id": 6,
+      "userId": null,
+      "description": "dsa",
+      "name": "dsa",
+      "brand": "Nissan",
+      "model": "Almera",
+      "mileage": "3995",
+      "year": "2000",
+      "image": "https://e7.pngegg.com/pngimages/578/766/png-clipart-nissan-almera-ford-motor-company-car-lexus-es-car-compact-car-sedan.png"
     }
   ],
   "statusCheck": [
@@ -132,6 +121,14 @@
       "planId": 2,
       "amount": 100,
       "date": "2025-06-21T18:11:19.430Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 3,
+      "userId": "1",
+      "planId": 2,
+      "amount": 100,
+      "date": "2025-06-23T00:49:48.740Z",
       "status": "COMPLETED"
     }
   ],

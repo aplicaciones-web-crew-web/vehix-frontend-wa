@@ -33,7 +33,7 @@ export default {
         console.log("Vehicles loaded successfully:", this.vehicles);
       } catch (error) {
         console.error("Error loading vehicles: ", error);
-      }
+      }z
     },   */
   }
 }

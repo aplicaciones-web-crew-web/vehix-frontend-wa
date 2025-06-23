@@ -1,6 +1,10 @@
 <script>
+import Scan from "../../monitoring/components/scan.component.vue";
+import ScanManagement from "../../monitoring/pages/scan-management.vue";
+
 export default {
   name: 'DiagnosticPage',
+  components: {ScanManagement, Scan},
   data() {
     return {
       diagnosticOptions: [
@@ -17,6 +21,7 @@ export default {
 </script>
 
 <template>
+<!--
   <div class="diagnostic-wrapper">
     <div class="type-diagnostics">
       <router-link
@@ -38,9 +43,10 @@ export default {
         </router-link>
       </div>
     </div>
+  </div>-->
+  <scan-management></scan-management>
 
 
-  </div>
 </template>
 
 
