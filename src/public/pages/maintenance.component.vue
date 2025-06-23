@@ -1,10 +1,10 @@
 <script>
 import Scan from "../../monitoring/components/scan.component.vue";
-import ScanManagement from "../../monitoring/pages/scan-management.vue";
+import MaintenanceManagement from "../../monitoring/pages/maintenance-management.vue";
 
 export default {
   name: 'DiagnosticPage',
-  components: {ScanManagement, Scan},
+  components: {MaintenanceManagement, Scan},
   data() {
     return {
       diagnosticOptions: [
@@ -44,98 +44,12 @@ export default {
       </div>
     </div>
   </div>-->
-  <scan-management></scan-management>
+  <maintenance-management></maintenance-management>
 
 
 </template>
 
 
 
-<style scoped>
-.diagnostic-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.type-diagnostics {
-  width: 80%;
-  max-width: 450px;
-  padding: 7px;
-  margin-left: 0;
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.card-link {
-  text-decoration: none;
-}
-
-.item {
-  width: 100%;
-  padding: 10px;
-  height: 100px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  background-color: black;
-  color: white;
-  font-size: 32px;
-}
-
-.car-image {
-  position: fixed;
-  top: 520px;
-  right: 10rem;
-  width: 35rem;
-}
-
-.tap-scan-container {
-  position: absolute;
-  top: 35%;
-  left: 57%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-}
-
-.outer-circle {
-  width: 270px;
-  height: 270px;
-  border: 8px solid black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.inner-circle {
-  width: 250px;
-  height: 250px;
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 40px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.outer-circle:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-}
-
-.outer-circle:hover .inner-circle {
-  background-color: white;
-  color: black;
-}
+<style >
 </style>

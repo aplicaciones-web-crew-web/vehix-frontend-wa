@@ -10,6 +10,10 @@ export default {
     showScannedResults: {
       type: Boolean,
       default: false
+    },
+    vehicleImage:{
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -20,6 +24,7 @@ export default {
   },
   created() {
     this.vehicleId = VehicleSessionService.getVehicleId();
+    console.log(this.vehicleImage);
   },
   methods: {
     /**
@@ -44,15 +49,15 @@ export default {
       console.log('AlertCard closed by:', action);
     },
 
-    validateTapToScan(){
-      if(!this.showScannedResults) {
-        this.displayAlert("Error","NO VEHICLE WAS SCANNED", "error")
+    validateTapToScan() {
+      if (!this.showScannedResults) {
+        this.displayAlert("Error", "NO VEHICLE WAS SCANNED", "error")
         return;
       }
       this.redirectTo("/diagnostic/tap-scan");
     },
 
-    redirectTo(path){
+    redirectTo(path) {
       this.$router.push(path);
     }
   }
@@ -69,27 +74,35 @@ export default {
       :type="currentAlert.type"
       :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
   ></alert-card>
-
-  <div class="tap-scan-container" @click="validateTapToScan()">
-    <div class="outer-circle">
-      <div class="inner-circle">
-        {{ $t('diagnostic.tapToScan') }}
+  <div class="scan-main-container">
+    <div class="tap-scan-container" @click="validateTapToScan()">
+      <div class="outer-circle">
+        <div class="inner-circle">
+          {{ $t('diagnostic.tapToScan') }}
+        </div>
       </div>
+    </div>
+    <div class="img" v-if="vehicleId">
+      <img width="100%" style="" :src="vehicleImage">
     </div>
   </div>
 
 </template>
 
 <style>
-
-.tap-scan-container {
-  position: absolute;
-  top: 35%;
-  left: 57%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
+.scan-main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: calc(100vh - 65px);
+  gap: 4rem;
+  padding: 3rem;
 }
-
+.img{
+  width: 100%;
+}
 .outer-circle {
   width: 270px;
   height: 270px;
@@ -100,7 +113,6 @@ export default {
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .inner-circle {
   width: 250px;
   height: 250px;
@@ -117,15 +129,14 @@ export default {
   transition: all 0.3s ease;
   text-decoration: none;
 }
-
 .outer-circle:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
-
 .outer-circle:hover .inner-circle {
   background-color: white;
   color: black;
 }
+
 
 </style>
