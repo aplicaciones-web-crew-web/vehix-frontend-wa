@@ -132,8 +132,15 @@
       "status": "COMPLETED"
     }
   ],
-  "failuresVehicles": [
-    {}
+  "vehiclesFailures": [
+    {
+      "id": 1,
+      "vehicleId": 1,
+      "failureId": 1,
+      "date": "2025-06-23T00:49:48.740Z",
+      "status": "Pending"
+
+    }
   ],
   "failures": [
     {
