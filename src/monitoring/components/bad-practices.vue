@@ -8,12 +8,7 @@ export default {
       badPractices: []
     }
   },
-  async mounted() {
-    const vehicleId = 1;
-    const service = new IssuesService();
-    const data = await service.getAllBadPractices(vehicleId);
-    this.badPractices = data.map(item => new BadPractices(item));
-  }
+
 }
 </script>
 

@@ -1,6 +1,6 @@
 <script>
 import Scan from "../../monitoring/components/scan.component.vue";
-import MaintenanceManagement from "../../monitoring/pages/maintenance-management.vue";
+import MaintenanceManagement from "../../monitoring/pages/maintenance-management.component.vue";
 
 export default {
   name: 'DiagnosticPage',

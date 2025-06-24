@@ -1,6 +1,6 @@
 <script>
 import { SimpleIssues } from '../model/simple-issues.entity.js';
-import { SimpleIssuesService } from '../services/simple-issues.service.js';
+import { BadPracticeService } from '../services/simple-issues.service.js';
 
 export default {
   name: 'SimpleIssues',
@@ -11,7 +11,7 @@ export default {
   },
   async mounted() {
     const vehicleId = 1;
-    const service = new SimpleIssuesService();
+    const service = new BadPracticeService();
     const data = await service.getSimpleIssues(vehicleId);
     this.issues = data.map(item => new SimpleIssues(item));
     console.log('Simple issues cargadas:', this.issues); // para debug
