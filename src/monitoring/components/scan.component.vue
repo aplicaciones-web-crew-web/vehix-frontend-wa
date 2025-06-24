@@ -54,7 +54,7 @@ export default {
         this.displayAlert("Error", "NO VEHICLE WAS SCANNED", "error")
         return;
       }
-      this.redirectTo("/diagnostic/tap-scan");
+      this.redirectTo("/maintenance/failures");
     },
 
     redirectTo(path) {
@@ -83,7 +83,7 @@ export default {
       </div>
     </div>
     <div class="img" v-if="vehicleId">
-      <img width="95%" style="" :src="vehicleImage">
+      <img width="700px" :src="vehicleImage">
     </div>
   </div>
 
@@ -96,11 +96,13 @@ export default {
   align-items: center;
   justify-content: center;
   width: 50vw;
-  gap: 4rem;
-  padding: 3rem;
+  gap: 1rem;
 }
 .img{
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .outer-circle {
   width: 270px;

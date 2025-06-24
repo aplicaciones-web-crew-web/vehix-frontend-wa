@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { generateRandomCarFailure } from '../services/fault-generator.service.js';
+import { generateRandomCarFailure } from '../services/failure.service.js';
 
 const failure = ref(null);
 const errorMessage = ref('');

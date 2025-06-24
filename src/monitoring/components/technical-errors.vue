@@ -1,6 +1,6 @@
 <script>
 import { TechnicalErrors } from '../model/technical-errors.entity.js';
-import { TechnicalErrorService } from '../services/technical-error.service.js';
+import { OdbErrorService } from '../services/technical-error.service.js';
 
 export default {
   name: 'TechnicalErrors',
@@ -11,7 +11,7 @@ export default {
   },
   async mounted() {
     const vehicleId = 1;
-    const service = new TechnicalErrorService();
+    const service = new OdbErrorService();
     const data = await service.getTechnicalErrors(vehicleId);
     this.errors = data.map(e => new TechnicalErrors(e));
     console.log('Errores técnicos cargados:', this.errors);

@@ -28,13 +28,13 @@
     {
       "id": 1,
       "userId": null,
-      "description": "FSD",
-      "name": "FSD",
-      "brand": "BMW",
-      "model": "3 Series",
-      "mileage": "181330",
-      "year": "2013",
-      "image": "https://www.bmwpeabody.com/assets/stock/colormatched_01/transparent/1280/cc_2025bmc22_01_1280/cc_2025bmc220011_01_1280_c4w.png?bg-color=FFFFFF"
+      "description": "dsa",
+      "name": "dsa",
+      "brand": "Kia",
+      "model": "Sephia II",
+      "mileage": "10751",
+      "year": "2003",
+      "image": "https://cdn.wheel-size.com/thumbs/e9/ae/e9ae2e4b22d133979707786cd3932949.jpg"
     }
   ],
   "statusCheck": [
@@ -77,8 +77,35 @@
       "status": "COMPLETED"
     }
   ],
-  "failuresVehicles": [
-    {}
+  "vehiclesFailures": [
+    {
+      "id": 1,
+      "vehicleId": 2,
+      "failureId": 1,
+      "date": "2025-06-23T00:49:48.740Z",
+      "status": "Pending"
+    },
+    {
+      "id": 2,
+      "vehicleId": 3,
+      "failureId": 2,
+      "date": "2025-06-23T00:49:48.740Z",
+      "status": "Pending"
+    },
+    {
+      "id": 3,
+      "vehicleId": 1,
+      "failureId": 3,
+      "date": "2025-06-23T00:49:48.740Z",
+      "status": "Pending"
+    },
+    {
+      "id": 4,
+      "vehicleId": 1,
+      "failureId": 4,
+      "date": "2025-06-23T00:49:48.740Z",
+      "status": "Pending"
+    }
   ],
   "failures": [
     {
@@ -176,49 +203,49 @@
     {
       "id": 1,
       "ErrorCode": "P0300",
-      "ErrorCodeTitle": "Random/Multiple Cylinder Misfire Detected",
+      "ErrorTitle": "Random/Multiple Cylinder Misfire Detected",
       "ErrorType": "Powertrain"
     },
     {
       "id": 2,
       "ErrorCode": "P0420",
-      "ErrorCodeTitle": "Catalyst System Efficiency Below Threshold (Bank 1)",
+      "ErrorTitle": "Catalyst System Efficiency Below Threshold (Bank 1)",
       "ErrorType": "Powertrain"
     },
     {
       "id": 3,
       "ErrorCode": "C0035",
-      "ErrorCodeTitle": "Left Front Wheel Speed Sensor Circuit",
+      "ErrorTitle": "Left Front Wheel Speed Sensor Circuit",
       "ErrorType": "Chassis"
     },
     {
       "id": 4,
       "ErrorCode": "C1214",
-      "ErrorCodeTitle": "Brake Control Relay Contact Circuit Open",
+      "ErrorTitle": "Brake Control Relay Contact Circuit Open",
       "ErrorType": "Chassis"
     },
     {
       "id": 5,
       "ErrorCode": "B0020",
-      "ErrorCodeTitle": "Right Front Passenger Airbag Deploy Circuit",
+      "ErrorTitle": "Right Front Passenger Airbag Deploy Circuit",
       "ErrorType": "Body"
     },
     {
       "id": 6,
       "ErrorCode": "B1325",
-      "ErrorCodeTitle": "Oil Pressure Sensor Circuit",
+      "ErrorTitle": "Oil Pressure Sensor Circuit",
       "ErrorType": "Body"
     },
     {
       "id": 7,
       "ErrorCode": "U0100",
-      "ErrorCodeTitle": "Lost Communication with Engine Control Module (ECM/PCM)",
+      "ErrorTitle": "Lost Communication with Engine Control Module (ECM/PCM)",
       "ErrorType": "Network"
     },
     {
       "id": 8,
       "ErrorCode": "U0140",
-      "ErrorCodeTitle": "Lost Communication with Body Control Module (BCM)",
+      "ErrorTitle": "Lost Communication with Body Control Module (BCM)",
       "ErrorType": "Network"
     }
   ],
