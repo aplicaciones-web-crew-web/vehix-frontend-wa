@@ -1,6 +1,5 @@
 <script>
 import { SimpleIssues } from '../model/simple-issues.entity.js';
-import { BadPracticeService } from '../services/simple-issues.service.js';
 
 export default {
   name: 'SimpleIssues',

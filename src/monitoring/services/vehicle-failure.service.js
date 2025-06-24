@@ -41,8 +41,8 @@ export class VehicleFailureService {
      * @description This method retrieves all vehicle failures associated with a specific vehicle ID from the API endpoint.
      * @author u202318274 Julca Minaya Sergio Gino
      */
-    getByVehicleId(vehicleId) {
-        return httpInstance.get(`${this.resourceEndPoint}/vehicleId/${vehicleId}`);
+    getByVehicleId(id) {
+        return httpInstance.get(`${this.resourceEndPoint}?vehicleId=${id}`);
     }
 
     /**

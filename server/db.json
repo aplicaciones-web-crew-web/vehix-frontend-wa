@@ -28,68 +28,13 @@
     {
       "id": 1,
       "userId": null,
-      "description": "FSD",
-      "name": "FSD",
-      "brand": "BMW",
-      "model": "3 Series",
-      "mileage": "181330",
-      "year": "2013",
-      "image": "https://www.bmwpeabody.com/assets/stock/colormatched_01/transparent/1280/cc_2025bmc22_01_1280/cc_2025bmc220011_01_1280_c4w.png?bg-color=FFFFFF"
-    },
-    {
-      "id": 2,
-      "userId": null,
-      "description": "sda",
-      "name": "sda",
-      "brand": "Mercedes-Benz",
-      "model": "SLR McLaren",
-      "mileage": "132561",
+      "description": "dsa",
+      "name": "dsa",
+      "brand": "Kia",
+      "model": "Sephia II",
+      "mileage": "10751",
       "year": "2003",
-      "image": "https://www.auto-salon-singen.de/generate/vehicle/58efe95accd2d-1200x900_cropgrayscale.png"
-    },
-    {
-      "id": 3,
-      "userId": null,
-      "description": "dfsa",
-      "name": "dfsa",
-      "brand": "Nissan",
-      "model": "Quest",
-      "mileage": "199756",
-      "year": "2020",
-      "image": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/8760/2013-Nissan-Quest-front_8760_032_1861x887_FAA_cropped.png"
-    },
-    {
-      "id": 4,
-      "userId": null,
-      "description": "",
-      "name": "",
-      "brand": "Mitsubishi",
-      "model": "Outlander",
-      "mileage": "136239",
-      "year": "2009",
-      "image": "https://images.dealer.com/ddc/vehicles/2024/Mitsubishi/Outlander/SUV/perspective/front-left/2024_24.png"
-    },
-    {
-      "id": 5,
-      "userId": null,
-      "description": "fsd",
-      "name": "fsd",
-      "brand": "Ford",
-      "model": "Contour",
-      "mileage": "6899",
-      "year": "2000",
-      "image": "https://images.iconfigurators.app/images/vehicles/reference/Ford-Contour-LX-1995_2000.png"
-    },
-    {
-      "id": 6,
-      "userId": null,
-      "description": "cfdsasd",
-      "name": "cfdsasd",
-      "brand": "Mercedes-Benz",
-      "model": "CLS",
-      "mileage": "59541",
-      "year": "2012",
-      "image": "https://images.dealer.com/ddc/vehicles/2022/Mercedes-Benz/CLS%20450/Sedan/perspective/front-left/2022_76.png"
+      "image": "https://cdn.wheel-size.com/thumbs/e9/ae/e9ae2e4b22d133979707786cd3932949.jpg"
     }
   ],
   "statusCheck": [
@@ -135,11 +80,31 @@
   "vehiclesFailures": [
     {
       "id": 1,
-      "vehicleId": 1,
+      "vehicleId": 2,
       "failureId": 1,
       "date": "2025-06-23T00:49:48.740Z",
       "status": "Pending"
-
+    },
+    {
+      "id": 2,
+      "vehicleId": 3,
+      "failureId": 2,
+      "date": "2025-06-23T00:49:48.740Z",
+      "status": "Pending"
+    },
+    {
+      "id": 3,
+      "vehicleId": 1,
+      "failureId": 3,
+      "date": "2025-06-23T00:49:48.740Z",
+      "status": "Pending"
+    },
+    {
+      "id": 4,
+      "vehicleId": 1,
+      "failureId": 4,
+      "date": "2025-06-23T00:49:48.740Z",
+      "status": "Pending"
     }
   ],
   "failures": [

@@ -54,7 +54,7 @@ export default {
         this.displayAlert("Error", "NO VEHICLE WAS SCANNED", "error")
         return;
       }
-      this.redirectTo("/diagnostic/tap-scan");
+      this.redirectTo("/maintenance/failures");
     },
 
     redirectTo(path) {
