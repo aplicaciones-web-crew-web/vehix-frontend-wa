@@ -7,10 +7,10 @@ export class FailureAssembler {
 
 
     /**
-     * Converts a response containing Failure resources to an array of Failure entities.
-     * This method is used to transform the raw data from the API into an array of Failure entities.
+     * Converts a response containing SimpleFailureComponent resources to an array of SimpleFailureComponent entities.
+     * This method is used to transform the raw data from the API into an array of SimpleFailureComponent entities.
      * @param response
-     * @return {Failure[]} Array of Failure entities
+     * @return {Failure[]} Array of SimpleFailureComponent entities
      * @author u202318274 Julca Minaya Sergio Gino
      */
     static toEntitiesFromResponse(response) {

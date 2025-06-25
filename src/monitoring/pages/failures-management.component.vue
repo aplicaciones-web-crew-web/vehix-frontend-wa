@@ -9,10 +9,12 @@ import {Button as PvButton} from "primevue";
 import {VehicleFailureAssembler} from "../services/vehicle-failure.assembler.js";
 import {Vehicle} from "../../assets-and-resources-management/model/vehicle.entity.js";
 import {VehicleFailure} from "../model/vehicle-failure.entity.js";
+import SimpleFailureComponent from "../components/simple-failure.component.vue";
+import SimpleFailure from "../components/simple-failure.component.vue";
 
 export default {
   name: "failures-management",
-  components: {PvButton},
+  components: {SimpleFailure, Failure: SimpleFailureComponent, PvButton},
   data() {
     return {
       vehicleId: null,
@@ -26,61 +28,107 @@ export default {
       failures: [],
       failuresId: [],
       vehicleFailuresIds: [],
+      pendingFailuresToShow: [],
+      emptyMessage: "El vehículo está en óptimas condiciones."
     };
   },
-  created() {
+  async created() {
     this.vehicleId = VehicleSessionService.getVehicleId();
     if (!this.vehicleId) this.$router.push("/login");
-
 
     this.failureService = new FailureService();
     this.vehicleFailureService = new VehicleFailureService();
 
-    this.loadVehiclesFailures();
-    this.loadVehicleFailuresId();
+    await this.loadFailures();
+    await this.loadVehicleFailuresInPendingId();  // importante cargar fallas pendientes primero
+
+    await this.generateRandomQuantityOfVehicleFailure();
   },
   methods: {
+    async loadVehicleFailuresInPendingId() {
+      try {
+        const response = await this.vehicleFailureService.getByVehicleId(this.vehicleId, 'Pending');
+        this.vehicleFailures = VehicleFailureAssembler.toEntitiesFromResponse(response);
+        this.vehicleFailuresIds = this.vehicleFailures.map(vf => vf.failureId);
 
+        if (this.vehicleFailures.length === 0) {
+          this.pendingFailuresToShow = [];
+        } else {
+          this.pendingFailuresToShow = this.vehicleFailures.map(vf => {
+            return this.failures.find(failure => failure.id === vf.failureId);
+          }).filter(Boolean);
+        }
+        console.log("Vehicle failures pendientes para mostrar:", this.pendingFailuresToShow);
+      } catch (error) {
+        console.error("Error cargando fallas pendientes:", error);
+      }
+    },
+    async generateRandomQuantityOfVehicleFailure() {
+      try {
+        // Ya tienes las fallas pendientes cargadas en this.vehicleFailures
+        const pendingFailuresForVehicle = this.vehicleFailures
+            .filter(vf => vf.vehicleId === this.vehicleId && vf.status === 'Pending')
+            .map(vf => vf.failureId);
+
+        const availableFailures = this.failures.filter(failure => !pendingFailuresForVehicle.includes(failure.id));
+
+        const maxAssignable = Math.min(5, availableFailures.length);
+        const randomQuantity = Math.floor(Math.random() * (maxAssignable + 1));
+
+        const shuffled = availableFailures.sort(() => 0.5 - Math.random());
+        const selectedFailures = shuffled.slice(0, randomQuantity);
+
+        for (const failure of selectedFailures) {
+          const newVehicleFailure = {
+            vehicleId: parseInt(this.vehicleId),
+            failureId: failure.id,
+            date: new Date().toISOString(),
+            status: "Pending"
+          };
+          await this.vehicleFailureService.create(newVehicleFailure);
+        }
+
+        // Vuelve a cargar las fallas pendientes para actualizar la vista
+        await this.loadVehicleFailuresInPendingId();
+
+      } catch (error) {
+        console.error("Error generando fallas aleatorias:", error);
+      }
+    },
 
     async loadVehiclesFailures() {
       try {
         const response = await this.vehicleFailureService.getAll();
         this.vehicleFailures = VehicleFailureAssembler.toEntitiesFromResponse(response);
-        console.log("VehiclesFailures loaded successfully:", this.vehicleFailures);
       } catch (error) {
-        console.error("Error loading VehiclesFailures: ", error);
+        console.error("Error: Loaded VehicleFailure", error);
       }
     },
 
-    /**
-     * @summary Return failuresId of the vehicle Failures
-     * @return {Array} Array of failures objects
-     * @author U202318274 Julca Minaya Sergio Gino
-     */
-    async loadVehicleFailuresId() {
-      this.vehicleFailureService.getByVehicleId(this.vehicleId).then(response => {
-        this.vehicleFailures = VehicleFailureAssembler.toEntitiesFromResponse(response);
-        this.vehicleFailuresIds = this.vehicleFailures.map(vf => vf.failureId);
-      }).catch(error => {
-        console.error("Error loading vehicle failures: ", error);
-      });
-    },
-
-    /**
-     * Get Failures In pending of the current vehicle
-     * @returns {Promise<void>}
-     */
-    async getFailuresInPendingOfCurrentVehicle(){
+    async loadFailures() {
+      try {
+        const response = await this.failureService.getAll();
+        this.failures = FailureAssembler.toEntitiesFromResponse(response);
+        await this.loadVehiclesFailures();
+        await this.loadVehicleFailuresInPendingId();
+      } catch (error) {
+        console.error("Error loading failures:", error);
+      }
     }
-  }
-
+  },
 
 }
 </script>
 
 <template>
 
-  <pv-button @click="getVehicleFailuresIds()">Dale click para tener las fallas</pv-button>
+  <div>
+
+    <simple-failure
+        :failures="pendingFailuresToShow"
+        :empty-message="emptyMessage"
+    />
+  </div>
 </template>
 
 <style>

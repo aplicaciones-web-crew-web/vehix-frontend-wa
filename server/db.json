@@ -30,11 +30,66 @@
       "userId": null,
       "description": "dsa",
       "name": "dsa",
-      "brand": "Kia",
-      "model": "Sephia II",
-      "mileage": "10751",
-      "year": "2003",
-      "image": "https://cdn.wheel-size.com/thumbs/e9/ae/e9ae2e4b22d133979707786cd3932949.jpg"
+      "brand": "Porsche",
+      "model": "Cayenne",
+      "mileage": "7547",
+      "year": "2009",
+      "image": "https://gld-creative.s3.us-west-2.amazonaws.com/2025-porsche-cayenne-gts-model-trim-fb3100347033-600x300.png"
+    },
+    {
+      "id": 2,
+      "userId": null,
+      "description": "dsa",
+      "name": "dsa",
+      "brand": "Mitsubishi",
+      "model": "Eclipse",
+      "mileage": "52676",
+      "year": "2001",
+      "image": "https://images.dealer.com/ddc/vehicles/2025/Mitsubishi/Eclipse%20Cross/SUV/perspective/front-left/2025_76.png"
+    },
+    {
+      "id": 3,
+      "userId": null,
+      "description": "dsa",
+      "name": "dsa",
+      "brand": "Mitsubishi",
+      "model": "Lancer",
+      "mileage": "157754",
+      "year": "2013",
+      "image": "https://pngimg.com/d/mitsubishi_PNG101.png"
+    },
+    {
+      "id": 4,
+      "userId": null,
+      "description": "dsa",
+      "name": "dsa",
+      "brand": "Audi",
+      "model": "RS4",
+      "mileage": "79307",
+      "year": "2002",
+      "image": "https://assets.stickpng.com/images/580b585b2edbce24c47b2c21.png"
+    },
+    {
+      "id": 5,
+      "userId": null,
+      "description": "ewq",
+      "name": "ewq",
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "mileage": "2115",
+      "year": "2001",
+      "image": "https://mystrongad.com/DMY_DonMooreHyundai/Interactive/Elantra/2020/20-hyundai-elantra-se-white-LG.png"
+    },
+    {
+      "id": 6,
+      "userId": null,
+      "description": "dsa",
+      "name": "dsa",
+      "brand": "Fiat",
+      "model": "500",
+      "mileage": "117456",
+      "year": "2013",
+      "image": "https://purepng.com/public/uploads/large/purepng.com-white-fiat-500-carcarvehicletransportfiat-961524650065dsyyk.png"
     }
   ],
   "statusCheck": [
@@ -79,32 +134,354 @@
   ],
   "vehiclesFailures": [
     {
-      "id": 1,
-      "vehicleId": 2,
-      "failureId": 1,
-      "date": "2025-06-23T00:49:48.740Z",
-      "status": "Pending"
-    },
-    {
-      "id": 2,
       "vehicleId": 3,
       "failureId": 2,
-      "date": "2025-06-23T00:49:48.740Z",
-      "status": "Pending"
+      "date": "2025-06-25T00:00:18.224Z",
+      "status": "Pending",
+      "id": 1
     },
     {
-      "id": 3,
-      "vehicleId": 1,
-      "failureId": 3,
-      "date": "2025-06-23T00:49:48.740Z",
-      "status": "Pending"
+      "vehicleId": 3,
+      "failureId": 7,
+      "date": "2025-06-25T00:00:18.232Z",
+      "status": "Pending",
+      "id": 2
     },
     {
-      "id": 4,
-      "vehicleId": 1,
+      "vehicleId": 3,
+      "failureId": 1,
+      "date": "2025-06-25T00:00:18.236Z",
+      "status": "Pending",
+      "id": 3
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 6,
+      "date": "2025-06-25T00:00:18.241Z",
+      "status": "Pending",
+      "id": 4
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 8,
+      "date": "2025-06-25T00:00:18.246Z",
+      "status": "Pending",
+      "id": 5
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 8,
+      "date": "2025-06-25T00:00:20.352Z",
+      "status": "Pending",
+      "id": 6
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 7,
+      "date": "2025-06-25T00:00:20.357Z",
+      "status": "Pending",
+      "id": 7
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 2,
+      "date": "2025-06-25T00:00:20.362Z",
+      "status": "Pending",
+      "id": 8
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 1,
+      "date": "2025-06-25T00:00:20.368Z",
+      "status": "Pending",
+      "id": 9
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 6,
+      "date": "2025-06-25T00:00:20.373Z",
+      "status": "Pending",
+      "id": 10
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 6,
+      "date": "2025-06-25T00:03:14.453Z",
+      "status": "Pending",
+      "id": 11
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 5,
+      "date": "2025-06-25T00:03:14.457Z",
+      "status": "Pending",
+      "id": 12
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 8,
+      "date": "2025-06-25T00:03:14.460Z",
+      "status": "Pending",
+      "id": 13
+    },
+    {
+      "vehicleId": 3,
       "failureId": 4,
-      "date": "2025-06-23T00:49:48.740Z",
-      "status": "Pending"
+      "date": "2025-06-25T00:03:14.464Z",
+      "status": "Pending",
+      "id": 14
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 2,
+      "date": "2025-06-25T00:03:26.343Z",
+      "status": "Pending",
+      "id": 15
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 3,
+      "date": "2025-06-25T00:03:26.345Z",
+      "status": "Pending",
+      "id": 16
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 3,
+      "date": "2025-06-25T00:03:26.347Z",
+      "status": "Pending",
+      "id": 17
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 4,
+      "date": "2025-06-25T00:03:49.958Z",
+      "status": "Pending",
+      "id": 18
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 7,
+      "date": "2025-06-25T00:03:49.961Z",
+      "status": "Pending",
+      "id": 19
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 3,
+      "date": "2025-06-25T00:03:49.966Z",
+      "status": "Pending",
+      "id": 20
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 1,
+      "date": "2025-06-25T00:03:49.966Z",
+      "status": "Pending",
+      "id": 21
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 8,
+      "date": "2025-06-25T00:03:49.971Z",
+      "status": "Pending",
+      "id": 22
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 2,
+      "date": "2025-06-25T00:03:49.972Z",
+      "status": "Pending",
+      "id": 23
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 2,
+      "date": "2025-06-25T00:03:49.978Z",
+      "status": "Pending",
+      "id": 24
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 7,
+      "date": "2025-06-25T00:03:49.983Z",
+      "status": "Pending",
+      "id": 25
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 1,
+      "date": "2025-06-25T00:03:53.077Z",
+      "status": "Pending",
+      "id": 26
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 2,
+      "date": "2025-06-25T00:03:53.082Z",
+      "status": "Pending",
+      "id": 27
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 5,
+      "date": "2025-06-25T00:03:53.087Z",
+      "status": "Pending",
+      "id": 28
+    },
+    {
+      "vehicleId": 5,
+      "failureId": 1,
+      "date": "2025-06-25T00:04:44.569Z",
+      "status": "Pending",
+      "id": 29
+    },
+    {
+      "vehicleId": 5,
+      "failureId": 3,
+      "date": "2025-06-25T00:04:47.387Z",
+      "status": "Pending",
+      "id": 30
+    },
+    {
+      "vehicleId": 5,
+      "failureId": 2,
+      "date": "2025-06-25T00:04:47.393Z",
+      "status": "Pending",
+      "id": 31
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 3,
+      "date": "2025-06-25T00:05:23.907Z",
+      "status": "Pending",
+      "id": 32
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 2,
+      "date": "2025-06-25T00:05:23.911Z",
+      "status": "Pending",
+      "id": 33
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 7,
+      "date": "2025-06-25T00:05:23.916Z",
+      "status": "Pending",
+      "id": 34
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 5,
+      "date": "2025-06-25T00:05:23.920Z",
+      "status": "Pending",
+      "id": 35
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 1,
+      "date": "2025-06-25T00:05:23.924Z",
+      "status": "Pending",
+      "id": 36
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 2,
+      "date": "2025-06-25T00:05:26.428Z",
+      "status": "Pending",
+      "id": 37
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 8,
+      "date": "2025-06-25T00:05:26.434Z",
+      "status": "Pending",
+      "id": 38
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 1,
+      "date": "2025-06-25T00:05:26.437Z",
+      "status": "Pending",
+      "id": 39
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 7,
+      "date": "2025-06-25T00:05:26.441Z",
+      "status": "Pending",
+      "id": 40
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 1,
+      "date": "2025-06-25T00:05:36.554Z",
+      "status": "Pending",
+      "id": 41
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 2,
+      "date": "2025-06-25T00:05:36.561Z",
+      "status": "Pending",
+      "id": 42
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 3,
+      "date": "2025-06-25T00:05:36.566Z",
+      "status": "Pending",
+      "id": 43
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 4,
+      "date": "2025-06-25T00:05:36.571Z",
+      "status": "Pending",
+      "id": 44
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 1,
+      "date": "2025-06-25T00:05:39.292Z",
+      "status": "Pending",
+      "id": 45
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 4,
+      "date": "2025-06-25T00:05:42.125Z",
+      "status": "Pending",
+      "id": 46
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 1,
+      "date": "2025-06-25T00:05:43.642Z",
+      "status": "Pending",
+      "id": 47
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 2,
+      "date": "2025-06-25T00:05:43.647Z",
+      "status": "Pending",
+      "id": 48
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 8,
+      "date": "2025-06-25T00:05:43.652Z",
+      "status": "Pending",
+      "id": 49
+    },
+    {
+      "vehicleId": 6,
+      "failureId": 5,
+      "date": "2025-06-25T00:05:43.658Z",
+      "status": "Pending",
+      "id": 50
     }
   ],
   "failures": [
