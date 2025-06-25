@@ -16,11 +16,11 @@ export default {
     getUrgencyClass(urgency) {
       switch (urgency) {
         case "Critical":
-          return "critical";
+          return "Critical";
         case "Moderate":
-          return "moderate";
-        case "Low":
-          return "low";
+          return "Moderate";
+        case "Mild":
+          return "Mild";
         default:
           return "";
       }
@@ -37,8 +37,7 @@ export default {
 
     <ul v-else>
       <li v-for="failure in failures" :key="failure.id" class="issue-item">
-        <span class="icon">⚠️</span>
-        <span class="text">{{ failure.suggestSolution }}</span>
+        <span class="text">{{ failure.title }}</span>
         <span class="urgency-dot" :class="getUrgencyClass(failure.urgency)"></span>
       </li>
     </ul>
@@ -47,50 +46,30 @@ export default {
 
 <style >
 .issues-box {
-  background: #eeeeee;
-  color: black;
-  border-radius: 20px;
-  padding: 35px;
-  width: 420px;
-  font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-}
-
-.issues-box h3 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.issue-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  font-size: 16px;
-}
+  justify-content: center;
 
-.icon {
-  font-size: 20px;
-  margin-right: 8px;
-  width: 24px;
-}
-
-.text {
-  flex-grow: 1;
-  font-size: 16px;
-  font-weight: 500;
-  color: #333;
+  background-color: #EEEEEE;
+  border-radius: 50px;
+  padding: 3rem;
 }
 
 .urgency-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-left: 8px;
+  width: 60px;
+  height: 20px;
+  border-radius: 100%;
+  margin-left: 1rem;
 }
 
-.dot-red { background-color: red; }
-.dot-yellow { background-color: gold; }
-.dot-green { background-color: limegreen; }
+.urgency-dot.Critical {
+  background-color: red;
+}
+.urgency-dot.Moderate {
+  background-color: gold;
+}
+.urgency-dot.Mild {
+  background-color: limegreen;
+}
 </style>

@@ -56,7 +56,6 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: end;
-  height: calc(100vh - 65px);
   width: 100vw;
 
 }

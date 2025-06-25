@@ -28,68 +28,13 @@
     {
       "id": 1,
       "userId": null,
-      "description": "dsa",
-      "name": "dsa",
-      "brand": "Porsche",
-      "model": "Cayenne",
-      "mileage": "7547",
-      "year": "2009",
-      "image": "https://gld-creative.s3.us-west-2.amazonaws.com/2025-porsche-cayenne-gts-model-trim-fb3100347033-600x300.png"
-    },
-    {
-      "id": 2,
-      "userId": null,
-      "description": "dsa",
-      "name": "dsa",
-      "brand": "Mitsubishi",
-      "model": "Eclipse",
-      "mileage": "52676",
-      "year": "2001",
-      "image": "https://images.dealer.com/ddc/vehicles/2025/Mitsubishi/Eclipse%20Cross/SUV/perspective/front-left/2025_76.png"
-    },
-    {
-      "id": 3,
-      "userId": null,
-      "description": "dsa",
-      "name": "dsa",
-      "brand": "Mitsubishi",
-      "model": "Lancer",
-      "mileage": "157754",
-      "year": "2013",
-      "image": "https://pngimg.com/d/mitsubishi_PNG101.png"
-    },
-    {
-      "id": 4,
-      "userId": null,
-      "description": "dsa",
-      "name": "dsa",
-      "brand": "Audi",
-      "model": "RS4",
-      "mileage": "79307",
-      "year": "2002",
-      "image": "https://assets.stickpng.com/images/580b585b2edbce24c47b2c21.png"
-    },
-    {
-      "id": 5,
-      "userId": null,
-      "description": "ewq",
-      "name": "ewq",
-      "brand": "Hyundai",
-      "model": "Elantra",
-      "mileage": "2115",
-      "year": "2001",
-      "image": "https://mystrongad.com/DMY_DonMooreHyundai/Interactive/Elantra/2020/20-hyundai-elantra-se-white-LG.png"
-    },
-    {
-      "id": 6,
-      "userId": null,
-      "description": "dsa",
-      "name": "dsa",
-      "brand": "Fiat",
-      "model": "500",
-      "mileage": "117456",
-      "year": "2013",
-      "image": "https://purepng.com/public/uploads/large/purepng.com-white-fiat-500-carcarvehicletransportfiat-961524650065dsyyk.png"
+      "description": "das",
+      "name": "das",
+      "brand": "Mercedes-Benz",
+      "model": "CLK",
+      "mileage": "84217",
+      "year": "2000",
+      "image": "https://carfax-vrs.imgix.net/2006-Mercedes-Benz-CLK-EX-100559982-08.png"
     }
   ],
   "statusCheck": [
@@ -134,359 +79,66 @@
   ],
   "vehiclesFailures": [
     {
-      "vehicleId": 3,
-      "failureId": 2,
-      "date": "2025-06-25T00:00:18.224Z",
+      "vehicleId": 1,
+      "failureId": 6,
+      "date": "2025-06-25T16:22:10.729Z",
       "status": "Pending",
       "id": 1
     },
     {
-      "vehicleId": 3,
+      "vehicleId": 1,
       "failureId": 7,
-      "date": "2025-06-25T00:00:18.232Z",
+      "date": "2025-06-25T16:22:10.760Z",
       "status": "Pending",
       "id": 2
     },
     {
-      "vehicleId": 3,
-      "failureId": 1,
-      "date": "2025-06-25T00:00:18.236Z",
+      "vehicleId": 1,
+      "failureId": 3,
+      "date": "2025-06-25T16:23:18.007Z",
       "status": "Pending",
       "id": 3
     },
     {
-      "vehicleId": 3,
-      "failureId": 6,
-      "date": "2025-06-25T00:00:18.241Z",
+      "vehicleId": 1,
+      "failureId": 4,
+      "date": "2025-06-25T16:23:18.043Z",
       "status": "Pending",
       "id": 4
     },
     {
-      "vehicleId": 3,
-      "failureId": 8,
-      "date": "2025-06-25T00:00:18.246Z",
+      "vehicleId": 1,
+      "failureId": 1,
+      "date": "2025-06-25T16:23:26.194Z",
       "status": "Pending",
       "id": 5
     },
     {
-      "vehicleId": 3,
+      "vehicleId": 1,
       "failureId": 8,
-      "date": "2025-06-25T00:00:20.352Z",
+      "date": "2025-06-25T16:23:29.368Z",
       "status": "Pending",
       "id": 6
     },
     {
-      "vehicleId": 3,
-      "failureId": 7,
-      "date": "2025-06-25T00:00:20.357Z",
+      "vehicleId": 1,
+      "failureId": 5,
+      "date": "2025-06-25T16:23:29.396Z",
       "status": "Pending",
       "id": 7
     },
     {
-      "vehicleId": 3,
+      "vehicleId": 1,
       "failureId": 2,
-      "date": "2025-06-25T00:00:20.362Z",
+      "date": "2025-06-25T16:24:41.028Z",
       "status": "Pending",
       "id": 8
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 1,
-      "date": "2025-06-25T00:00:20.368Z",
-      "status": "Pending",
-      "id": 9
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 6,
-      "date": "2025-06-25T00:00:20.373Z",
-      "status": "Pending",
-      "id": 10
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 6,
-      "date": "2025-06-25T00:03:14.453Z",
-      "status": "Pending",
-      "id": 11
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 5,
-      "date": "2025-06-25T00:03:14.457Z",
-      "status": "Pending",
-      "id": 12
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 8,
-      "date": "2025-06-25T00:03:14.460Z",
-      "status": "Pending",
-      "id": 13
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 4,
-      "date": "2025-06-25T00:03:14.464Z",
-      "status": "Pending",
-      "id": 14
-    },
-    {
-      "vehicleId": 2,
-      "failureId": 2,
-      "date": "2025-06-25T00:03:26.343Z",
-      "status": "Pending",
-      "id": 15
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 3,
-      "date": "2025-06-25T00:03:26.345Z",
-      "status": "Pending",
-      "id": 16
-    },
-    {
-      "vehicleId": 2,
-      "failureId": 3,
-      "date": "2025-06-25T00:03:26.347Z",
-      "status": "Pending",
-      "id": 17
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 4,
-      "date": "2025-06-25T00:03:49.958Z",
-      "status": "Pending",
-      "id": 18
-    },
-    {
-      "vehicleId": 2,
-      "failureId": 7,
-      "date": "2025-06-25T00:03:49.961Z",
-      "status": "Pending",
-      "id": 19
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 3,
-      "date": "2025-06-25T00:03:49.966Z",
-      "status": "Pending",
-      "id": 20
-    },
-    {
-      "vehicleId": 2,
-      "failureId": 1,
-      "date": "2025-06-25T00:03:49.966Z",
-      "status": "Pending",
-      "id": 21
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 8,
-      "date": "2025-06-25T00:03:49.971Z",
-      "status": "Pending",
-      "id": 22
-    },
-    {
-      "vehicleId": 2,
-      "failureId": 2,
-      "date": "2025-06-25T00:03:49.972Z",
-      "status": "Pending",
-      "id": 23
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 2,
-      "date": "2025-06-25T00:03:49.978Z",
-      "status": "Pending",
-      "id": 24
-    },
-    {
-      "vehicleId": 3,
-      "failureId": 7,
-      "date": "2025-06-25T00:03:49.983Z",
-      "status": "Pending",
-      "id": 25
-    },
-    {
-      "vehicleId": 2,
-      "failureId": 1,
-      "date": "2025-06-25T00:03:53.077Z",
-      "status": "Pending",
-      "id": 26
-    },
-    {
-      "vehicleId": 2,
-      "failureId": 2,
-      "date": "2025-06-25T00:03:53.082Z",
-      "status": "Pending",
-      "id": 27
-    },
-    {
-      "vehicleId": 2,
-      "failureId": 5,
-      "date": "2025-06-25T00:03:53.087Z",
-      "status": "Pending",
-      "id": 28
-    },
-    {
-      "vehicleId": 5,
-      "failureId": 1,
-      "date": "2025-06-25T00:04:44.569Z",
-      "status": "Pending",
-      "id": 29
-    },
-    {
-      "vehicleId": 5,
-      "failureId": 3,
-      "date": "2025-06-25T00:04:47.387Z",
-      "status": "Pending",
-      "id": 30
-    },
-    {
-      "vehicleId": 5,
-      "failureId": 2,
-      "date": "2025-06-25T00:04:47.393Z",
-      "status": "Pending",
-      "id": 31
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 3,
-      "date": "2025-06-25T00:05:23.907Z",
-      "status": "Pending",
-      "id": 32
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 2,
-      "date": "2025-06-25T00:05:23.911Z",
-      "status": "Pending",
-      "id": 33
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 7,
-      "date": "2025-06-25T00:05:23.916Z",
-      "status": "Pending",
-      "id": 34
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 5,
-      "date": "2025-06-25T00:05:23.920Z",
-      "status": "Pending",
-      "id": 35
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 1,
-      "date": "2025-06-25T00:05:23.924Z",
-      "status": "Pending",
-      "id": 36
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 2,
-      "date": "2025-06-25T00:05:26.428Z",
-      "status": "Pending",
-      "id": 37
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 8,
-      "date": "2025-06-25T00:05:26.434Z",
-      "status": "Pending",
-      "id": 38
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 1,
-      "date": "2025-06-25T00:05:26.437Z",
-      "status": "Pending",
-      "id": 39
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 7,
-      "date": "2025-06-25T00:05:26.441Z",
-      "status": "Pending",
-      "id": 40
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 1,
-      "date": "2025-06-25T00:05:36.554Z",
-      "status": "Pending",
-      "id": 41
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 2,
-      "date": "2025-06-25T00:05:36.561Z",
-      "status": "Pending",
-      "id": 42
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 3,
-      "date": "2025-06-25T00:05:36.566Z",
-      "status": "Pending",
-      "id": 43
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 4,
-      "date": "2025-06-25T00:05:36.571Z",
-      "status": "Pending",
-      "id": 44
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 1,
-      "date": "2025-06-25T00:05:39.292Z",
-      "status": "Pending",
-      "id": 45
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 4,
-      "date": "2025-06-25T00:05:42.125Z",
-      "status": "Pending",
-      "id": 46
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 1,
-      "date": "2025-06-25T00:05:43.642Z",
-      "status": "Pending",
-      "id": 47
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 2,
-      "date": "2025-06-25T00:05:43.647Z",
-      "status": "Pending",
-      "id": 48
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 8,
-      "date": "2025-06-25T00:05:43.652Z",
-      "status": "Pending",
-      "id": 49
-    },
-    {
-      "vehicleId": 6,
-      "failureId": 5,
-      "date": "2025-06-25T00:05:43.658Z",
-      "status": "Pending",
-      "id": 50
     }
   ],
   "failures": [
     {
       "id": 1,
+      "title": "Ignition and Fuel System Issue",
       "suggestSolution": "Regularly inspect and replace spark plugs and ignition components; ensure proper fuel system maintenance.",
       "badPracticeId": 1,
       "odbErrorId": 1,
@@ -494,6 +146,7 @@
     },
     {
       "id": 2,
+      "title": "Engine Misfire and Exhaust Leak",
       "suggestSolution": "Immediately address engine misfires and rich fuel conditions; repair any exhaust leaks to protect the catalytic converter.",
       "badPracticeId": 2,
       "odbErrorId": 2,
@@ -501,13 +154,15 @@
     },
     {
       "id": 3,
+      "title": "Wheel Sensor or Wiring Damage",
       "suggestSolution": "Secure wiring harnesses properly; promptly replace damaged wheel speed sensors or wiring, and address bearing issues.",
       "badPracticeId": 3,
       "odbErrorId": 3,
-      "urgency": "Critical"
+      "urgency": "Moderate"
     },
     {
       "id": 4,
+      "title": "Brake System Malfunction",
       "suggestSolution": "Do not ignore ABS or brake warning lights; seek immediate professional inspection for any braking system malfunctions.",
       "badPracticeId": 4,
       "odbErrorId": 4,
@@ -515,20 +170,23 @@
     },
     {
       "id": 5,
+      "title": "Airbag Wiring Safety",
       "suggestSolution": "Ensure all airbag system wiring connectors are secure; avoid physical damage to components and follow all safety protocols.",
       "badPracticeId": 5,
       "odbErrorId": 5,
-      "urgency": "Critical"
+      "urgency": "Mild"
     },
     {
       "id": 6,
+      "title": "Oil Change and Pressure Warning",
       "suggestSolution": "Adhere to oil change schedules and use the correct oil type/viscosity; promptly address low oil pressure warnings.",
       "badPracticeId": 6,
       "odbErrorId": 6,
-      "urgency": "Moderate"
+      "urgency": "Mild"
     },
     {
       "id": 7,
+      "title": "Battery or Communication Fault",
       "suggestSolution": "Maintain a healthy vehicle battery and charging system; get persistent communication fault codes professionally diagnosed.",
       "badPracticeId": 7,
       "odbErrorId": 7,
@@ -536,6 +194,7 @@
     },
     {
       "id": 8,
+      "title": "Electrical System Failure",
       "suggestSolution": "Ensure all aftermarket electrical installations are professional; maintain overall electrical system health to prevent module communication failures.",
       "badPracticeId": 8,
       "odbErrorId": 8,
@@ -579,51 +238,51 @@
   "odbErrors": [
     {
       "id": 1,
-      "ErrorCode": "P0300",
-      "ErrorTitle": "Random/Multiple Cylinder Misfire Detected",
-      "ErrorType": "Powertrain"
+      "errorCode": "P0300",
+      "errorTitle": "Random/Multiple Cylinder Misfire Detected",
+      "errorType": "Powertrain"
     },
     {
       "id": 2,
-      "ErrorCode": "P0420",
-      "ErrorTitle": "Catalyst System Efficiency Below Threshold (Bank 1)",
-      "ErrorType": "Powertrain"
+      "errorCode": "P0420",
+      "errorTitle": "Catalyst System Efficiency Below Threshold (Bank 1)",
+      "errorType": "Powertrain"
     },
     {
       "id": 3,
-      "ErrorCode": "C0035",
-      "ErrorTitle": "Left Front Wheel Speed Sensor Circuit",
-      "ErrorType": "Chassis"
+      "errorCode": "C0035",
+      "errorTitle": "Left Front Wheel Speed Sensor Circuit",
+      "errorType": "Chassis"
     },
     {
       "id": 4,
-      "ErrorCode": "C1214",
-      "ErrorTitle": "Brake Control Relay Contact Circuit Open",
-      "ErrorType": "Chassis"
+      "errorCode": "C1214",
+      "errorTitle": "Brake Control Relay Contact Circuit Open",
+      "errorType": "Chassis"
     },
     {
       "id": 5,
-      "ErrorCode": "B0020",
-      "ErrorTitle": "Right Front Passenger Airbag Deploy Circuit",
-      "ErrorType": "Body"
+      "errorCode": "B0020",
+      "errorTitle": "Right Front Passenger Airbag Deploy Circuit",
+      "errorType": "Body"
     },
     {
       "id": 6,
-      "ErrorCode": "B1325",
-      "ErrorTitle": "Oil Pressure Sensor Circuit",
-      "ErrorType": "Body"
+      "errorCode": "B1325",
+      "errorTitle": "Oil Pressure Sensor Circuit",
+      "errorType": "Body"
     },
     {
       "id": 7,
-      "ErrorCode": "U0100",
-      "ErrorTitle": "Lost Communication with Engine Control Module (ECM/PCM)",
-      "ErrorType": "Network"
+      "errorCode": "U0100",
+      "errorTitle": "Lost Communication with Engine Control Module (ECM/PCM)",
+      "errorType": "Network"
     },
     {
       "id": 8,
-      "ErrorCode": "U0140",
-      "ErrorTitle": "Lost Communication with Body Control Module (BCM)",
-      "ErrorType": "Network"
+      "errorCode": "U0140",
+      "errorTitle": "Lost Communication with Body Control Module (BCM)",
+      "errorType": "Network"
     }
   ],
   "report": [
