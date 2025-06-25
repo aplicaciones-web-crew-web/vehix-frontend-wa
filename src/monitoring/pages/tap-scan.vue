@@ -43,7 +43,9 @@ export default {
   <div class="diagnostic-wrapper">
 
     <div class="left-column">
+
       <car-presentation></car-presentation>
+
     </div>
 
     <div class="center-column">

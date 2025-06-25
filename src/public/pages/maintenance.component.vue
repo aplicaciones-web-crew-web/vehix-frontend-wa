@@ -19,11 +19,14 @@ export default {
         </div>
       </div>
     </div>-->
-  <maintenance-management></maintenance-management>
+    <maintenance-management></maintenance-management>
 
 
 </template>
 
 
 <style>
+* {
+  box-sizing: border-box;
+}
 </style>

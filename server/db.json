@@ -28,13 +28,13 @@
     {
       "id": 1,
       "userId": null,
-      "description": "dsa",
-      "name": "dsa",
-      "brand": "Kia",
-      "model": "Sephia II",
-      "mileage": "10751",
-      "year": "2003",
-      "image": "https://cdn.wheel-size.com/thumbs/e9/ae/e9ae2e4b22d133979707786cd3932949.jpg"
+      "description": "das",
+      "name": "das",
+      "brand": "Mercedes-Benz",
+      "model": "CLK",
+      "mileage": "84217",
+      "year": "2000",
+      "image": "https://carfax-vrs.imgix.net/2006-Mercedes-Benz-CLK-EX-100559982-08.png"
     }
   ],
   "statusCheck": [
@@ -79,37 +79,66 @@
   ],
   "vehiclesFailures": [
     {
-      "id": 1,
-      "vehicleId": 2,
-      "failureId": 1,
-      "date": "2025-06-23T00:49:48.740Z",
-      "status": "Pending"
+      "vehicleId": 1,
+      "failureId": 6,
+      "date": "2025-06-25T16:22:10.729Z",
+      "status": "Pending",
+      "id": 1
     },
     {
-      "id": 2,
-      "vehicleId": 3,
-      "failureId": 2,
-      "date": "2025-06-23T00:49:48.740Z",
-      "status": "Pending"
+      "vehicleId": 1,
+      "failureId": 7,
+      "date": "2025-06-25T16:22:10.760Z",
+      "status": "Pending",
+      "id": 2
     },
     {
-      "id": 3,
       "vehicleId": 1,
       "failureId": 3,
-      "date": "2025-06-23T00:49:48.740Z",
-      "status": "Pending"
+      "date": "2025-06-25T16:23:18.007Z",
+      "status": "Pending",
+      "id": 3
     },
     {
-      "id": 4,
       "vehicleId": 1,
       "failureId": 4,
-      "date": "2025-06-23T00:49:48.740Z",
-      "status": "Pending"
+      "date": "2025-06-25T16:23:18.043Z",
+      "status": "Pending",
+      "id": 4
+    },
+    {
+      "vehicleId": 1,
+      "failureId": 1,
+      "date": "2025-06-25T16:23:26.194Z",
+      "status": "Pending",
+      "id": 5
+    },
+    {
+      "vehicleId": 1,
+      "failureId": 8,
+      "date": "2025-06-25T16:23:29.368Z",
+      "status": "Pending",
+      "id": 6
+    },
+    {
+      "vehicleId": 1,
+      "failureId": 5,
+      "date": "2025-06-25T16:23:29.396Z",
+      "status": "Pending",
+      "id": 7
+    },
+    {
+      "vehicleId": 1,
+      "failureId": 2,
+      "date": "2025-06-25T16:24:41.028Z",
+      "status": "Pending",
+      "id": 8
     }
   ],
   "failures": [
     {
       "id": 1,
+      "title": "Ignition and Fuel System Issue",
       "suggestSolution": "Regularly inspect and replace spark plugs and ignition components; ensure proper fuel system maintenance.",
       "badPracticeId": 1,
       "odbErrorId": 1,
@@ -117,6 +146,7 @@
     },
     {
       "id": 2,
+      "title": "Engine Misfire and Exhaust Leak",
       "suggestSolution": "Immediately address engine misfires and rich fuel conditions; repair any exhaust leaks to protect the catalytic converter.",
       "badPracticeId": 2,
       "odbErrorId": 2,
@@ -124,13 +154,15 @@
     },
     {
       "id": 3,
+      "title": "Wheel Sensor or Wiring Damage",
       "suggestSolution": "Secure wiring harnesses properly; promptly replace damaged wheel speed sensors or wiring, and address bearing issues.",
       "badPracticeId": 3,
       "odbErrorId": 3,
-      "urgency": "Critical"
+      "urgency": "Moderate"
     },
     {
       "id": 4,
+      "title": "Brake System Malfunction",
       "suggestSolution": "Do not ignore ABS or brake warning lights; seek immediate professional inspection for any braking system malfunctions.",
       "badPracticeId": 4,
       "odbErrorId": 4,
@@ -138,20 +170,23 @@
     },
     {
       "id": 5,
+      "title": "Airbag Wiring Safety",
       "suggestSolution": "Ensure all airbag system wiring connectors are secure; avoid physical damage to components and follow all safety protocols.",
       "badPracticeId": 5,
       "odbErrorId": 5,
-      "urgency": "Critical"
+      "urgency": "Mild"
     },
     {
       "id": 6,
+      "title": "Oil Change and Pressure Warning",
       "suggestSolution": "Adhere to oil change schedules and use the correct oil type/viscosity; promptly address low oil pressure warnings.",
       "badPracticeId": 6,
       "odbErrorId": 6,
-      "urgency": "Moderate"
+      "urgency": "Mild"
     },
     {
       "id": 7,
+      "title": "Battery or Communication Fault",
       "suggestSolution": "Maintain a healthy vehicle battery and charging system; get persistent communication fault codes professionally diagnosed.",
       "badPracticeId": 7,
       "odbErrorId": 7,
@@ -159,6 +194,7 @@
     },
     {
       "id": 8,
+      "title": "Electrical System Failure",
       "suggestSolution": "Ensure all aftermarket electrical installations are professional; maintain overall electrical system health to prevent module communication failures.",
       "badPracticeId": 8,
       "odbErrorId": 8,
@@ -202,51 +238,51 @@
   "odbErrors": [
     {
       "id": 1,
-      "ErrorCode": "P0300",
-      "ErrorTitle": "Random/Multiple Cylinder Misfire Detected",
-      "ErrorType": "Powertrain"
+      "errorCode": "P0300",
+      "errorTitle": "Random/Multiple Cylinder Misfire Detected",
+      "errorType": "Powertrain"
     },
     {
       "id": 2,
-      "ErrorCode": "P0420",
-      "ErrorTitle": "Catalyst System Efficiency Below Threshold (Bank 1)",
-      "ErrorType": "Powertrain"
+      "errorCode": "P0420",
+      "errorTitle": "Catalyst System Efficiency Below Threshold (Bank 1)",
+      "errorType": "Powertrain"
     },
     {
       "id": 3,
-      "ErrorCode": "C0035",
-      "ErrorTitle": "Left Front Wheel Speed Sensor Circuit",
-      "ErrorType": "Chassis"
+      "errorCode": "C0035",
+      "errorTitle": "Left Front Wheel Speed Sensor Circuit",
+      "errorType": "Chassis"
     },
     {
       "id": 4,
-      "ErrorCode": "C1214",
-      "ErrorTitle": "Brake Control Relay Contact Circuit Open",
-      "ErrorType": "Chassis"
+      "errorCode": "C1214",
+      "errorTitle": "Brake Control Relay Contact Circuit Open",
+      "errorType": "Chassis"
     },
     {
       "id": 5,
-      "ErrorCode": "B0020",
-      "ErrorTitle": "Right Front Passenger Airbag Deploy Circuit",
-      "ErrorType": "Body"
+      "errorCode": "B0020",
+      "errorTitle": "Right Front Passenger Airbag Deploy Circuit",
+      "errorType": "Body"
     },
     {
       "id": 6,
-      "ErrorCode": "B1325",
-      "ErrorTitle": "Oil Pressure Sensor Circuit",
-      "ErrorType": "Body"
+      "errorCode": "B1325",
+      "errorTitle": "Oil Pressure Sensor Circuit",
+      "errorType": "Body"
     },
     {
       "id": 7,
-      "ErrorCode": "U0100",
-      "ErrorTitle": "Lost Communication with Engine Control Module (ECM/PCM)",
-      "ErrorType": "Network"
+      "errorCode": "U0100",
+      "errorTitle": "Lost Communication with Engine Control Module (ECM/PCM)",
+      "errorType": "Network"
     },
     {
       "id": 8,
-      "ErrorCode": "U0140",
-      "ErrorTitle": "Lost Communication with Body Control Module (BCM)",
-      "ErrorType": "Network"
+      "errorCode": "U0140",
+      "errorTitle": "Lost Communication with Body Control Module (BCM)",
+      "errorType": "Network"
     }
   ],
   "report": [
