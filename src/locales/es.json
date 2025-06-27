@@ -1,0 +1,190 @@
+{
+  "option": {
+    "home": "Inicio",
+    "library": "Biblioteca",
+    "maintenance": "Mantenimiento",
+    "profile": "Perfil",
+    "sync": "Sincronizar"
+  },
+  "diagnostic": {
+    "problemForecasting": "Pronóstico de Problemas",
+    "carUsefulLife": "Vida Útil del Vehículo",
+    "rapidDiagnostic": "Diagnóstico Rápido",
+    "recentRepairs": "Reparaciones Recientes",
+    "lastScan": "Último Escaneo",
+    "aboutVehicle": "Sobre tu Vehículo",
+    "tapToScan": "Toca para escanear"
+  },
+  "title": "Si tiene fallas críticas en el sistema eléctrico de su auto, aquí están las ubicaciones de mecánicos especializados cerca de usted:",
+  "button": "¿Se reparó alguna falla?",
+  "login": {
+    "title": "Iniciar Sesión",
+    "dni": "DNI",
+    "password": "Contraseña",
+    "loginButton": "Iniciar Sesión",
+    "registerButton": "Crear Cuenta"
+  },
+  "register": {
+    "title": "Crear Cuenta",
+    "dni": "DNI",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "phoneNumber": "Número de Teléfono",
+    "genderLabel": "Género",
+    "genderMale": "Masculino",
+    "genderFemale": "Femenino",
+    "registerButton": "Crear Cuenta",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?"
+  },
+  "planPro": {
+    "phrase": "Prueba VEHIX por solo S/. 100.000 con el PLAN PRO",
+    "title":     "Plan PRO",
+    "planTerm": "Incluye los beneficios del Plan Estándar",
+    "benefit1": "Técnica personalizada a los requerimientos del vehículo",
+    "benefit2": "Análisis predictivo",
+    "benefit3": "Datos estadísticos mostrados",
+    "benefit4": "Visualización avanzada del estado del vehículo",
+    "benefit5": "Detección y lectura de códigos de error",
+    "benefit6": "Escáner VEHIX gratis (Incluye envío)"
+  },
+
+  "planStandard": {
+    "title":   "Plan Estándar",
+    "phrase": "Prueba VEHIX desde S/. 65.00 con el PLAN ESTÁNDAR",
+    "planTerm": "Ideal para propietarios que buscan un soporte básico en el cuidado de su vehículo.",
+    "benefit1": "Acceso a la aplicación web y móvil",
+    "benefit2": "Alertas de mantenimiento preventivo",
+    "benefit3": "Registro y visualización del historial técnico del vehículo",
+    "benefit4": "Visualización del estado del vehículo",
+    "benefit5": "Detección y lectura de códigos de error",
+    "benefit6": "Escáner VEHIX gratis (Incluye envío)"
+  },
+  "payment": {
+    "contactInformation": "Información de Contacto",
+    "email": "Correo Electrónico",
+
+    "mailingAddress": "Dirección de Envío",
+    "address": "Dirección",
+    "street": "Ingresa tu calle o avenida",
+    "city": "Ingresa tu ciudad",
+    "country": "Ingresa tu país",
+    "floor": "Ingresa tu piso o departamento",
+    "province": "Ingresa tu provincia o estado",
+    "postalCode": "Ingresa tu código postal",
+      "phoneNumber": "Número de Teléfono",
+
+    "paymentMethod": "Método de Pago",
+    "description": "Todas las transacciones son seguras y protegidas.",
+    "cardNumber": "Número de Tarjeta (16 dígitos)",
+    "expirationDate": "Fecha de Expiración (MM/AA)",
+    "cvv": "Código de Seguridad / CVV (3 dígitos)",
+    "completeOrder": "Finalizar Compra",
+
+
+    "summaryOrder": "Order Summary",
+    "vehixScanner": "VEHIX Scanner",
+    "free": "Free",
+    "vehixPlanPro": "VEHIX Plan PRO",
+    "vehixPlanStandard": "VEHIX Plan Estándar",
+    "subTotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total"
+  },
+
+  "vehicleRegistration": {
+    "vehicleName": "Ingresa el nombre de tu vehículo"
+},
+
+  "card": {
+    "technical": "ARTÍCULOS TÉCNICOS",
+    "news": "NOTICIAS DEL MUNDO AUTOMOTRIZ",
+    "advances": "AVANCES DEL SECTOR",
+    "videos": "VIDEOS Y TUTORIALES",
+    "manuals": "MANUALES Y GUÍAS TÉCNICAS",
+    "recommendations": "RECOMENDACIONES"
+  },
+  "resources": {
+    "title": "RECURSOS"
+  },
+  "more": {
+    "link": "Click para saber más"
+  },
+  "videos": {
+    "list": [
+      "Título del Video 1",
+      "Título del Video 2",
+      "Título del Video 3",
+      "Título del Video 4",
+      "Título del Video 5",
+      "Título del Video 6"
+    ]
+  },
+  "articles": {
+    "text": [
+      "Los vehículos modernos están cada vez más equipados con sistemas digitales que van más allá de la mecánica tradicional. Desde módulos de control del motor hasta control de crucero adaptativo, los autos actuales dependen de software y sensores para ofrecer rendimiento y seguridad. Comprender estas tecnologías es esencial tanto para conductores como para técnicos.",
+      "Uno de los avances más importantes es el uso de diagnósticos en tiempo real. Estos sistemas monitorean el vehículo continuamente y detectan desviaciones en el comportamiento que pueden indicar fallos en etapas tempranas. Plataformas como VEHIX recopilan estos datos y los convierten en recomendaciones accionables para el mantenimiento preventivo.",
+      "Al aprender cómo funcionan componentes como los sensores de oxígeno, sensores MAF y bobinas de encendido, los usuarios pueden interpretar mejor los resultados de los diagnósticos. Este nivel de conocimiento permite tomar decisiones informadas y minimizar reparaciones innecesarias al comprender la causa raíz de los códigos de advertencia.",
+      "Los artículos técnicos proporcionan una visión más profunda de cómo funciona cada sistema del vehículo. Ya sea explorando los principios de la inyección de combustible o la mecánica detrás de los sistemas de asistencia de frenos, estos recursos simplifican temas complejos para todos los niveles. VEHIX ayuda a que el conocimiento automotriz sea más accesible.",
+      "Nuestro contenido también incluye desgloses de códigos de falla, con explicaciones, causas y soluciones sugeridas. Los usuarios pueden seguir tutoriales paso a paso para revisiones y mantenimientos rutinarios, evitando visitas costosas al taller por tareas simples que pueden hacerse en casa.",
+      "A medida que los vehículos se vuelven más inteligentes, mantenerse actualizado es clave. Esta sección mantiene informados a los usuarios sobre las últimas tecnologías como el frenado regenerativo, trenes motrices híbridos y la integración de inteligencia artificial en los diagnósticos. VEHIX ayuda a los usuarios no solo a mantener su vehículo, sino también a comprenderlo."
+    ]
+  },
+  "sectorAdvances": {
+    "text": [
+      "El sector automotriz avanza a un ritmo sin precedentes, impulsado por desarrollos en electrificación, conectividad e inteligencia artificial. Los fabricantes de automóviles no solo producen autos, sino que diseñan soluciones de movilidad inteligente que se adaptan a entornos urbanos, preferencias de los usuarios y regulaciones medioambientales. Desde plataformas eléctricas hasta sistemas de conducción autónoma, la innovación está transformando el propio concepto de transporte.",
+      "Nuevos métodos de fabricación como la manufactura aditiva (impresión 3D), los gemelos digitales y las plataformas modulares están revolucionando la forma en que se construyen los vehículos. Estas tecnologías permiten mayor flexibilidad en las líneas de producción, reducen el desperdicio y acortan los ciclos de desarrollo. Los fabricantes ahora pueden probar y ajustar diseños de manera virtual antes de pasar al prototipado físico.",
+      "La colaboración entre industrias también está acelerando el cambio. Empresas tecnológicas, proveedores de energía y desarrolladores de infraestructura trabajan junto a los fabricantes para crear un ecosistema integrado que respalde la movilidad eléctrica, la gestión del tráfico en tiempo real y soluciones de mantenimiento basadas en datos. Esta sinergia está ayudando a que la industria evolucione más rápido que nunca.",
+      "El auge de las actualizaciones OTA (over-the-air) se ha convertido en uno de los hitos más importantes de los últimos años. Ahora los vehículos pueden recibir mejoras de sistema, nuevas funciones y correcciones de errores de forma remota, sin necesidad de acudir a un centro de servicio. Esta capacidad acerca el software automotriz a la naturaleza dinámica de los smartphones y computadoras.",
+      "Los sistemas avanzados de asistencia al conductor (ADAS) también progresan rápidamente, ofreciendo capacidades como centrado de carril, asistencia en atascos y control de crucero predictivo. Estos sistemas utilizan una combinación de radar, lidar y cámaras para hacer la conducción más segura y cómoda, allanando el camino hacia la autonomía total en la próxima década.",
+      "Además, la inteligencia artificial se utiliza para analizar el comportamiento de conducción, el rendimiento del vehículo y las tendencias de mantenimiento. Plataformas como VEHIX emplean estos datos para anticipar posibles problemas y ofrecer recomendaciones preventivas. Este nivel de conocimiento transforma la forma en que mantenemos los vehículos y mejora la toma de decisiones tanto para conductores individuales como para gestores de flotas."
+    ]
+  },
+  "manual": {
+    "text": [
+      "Los manuales técnicos son herramientas esenciales para comprender cómo funciona un vehículo y cómo mantenerlo adecuadamente. Desde los intervalos de cambio de aceite hasta los procedimientos de calibración de sensores, estos documentos proporcionan la base tanto para reparaciones profesionales como para el mantenimiento realizado por el usuario. VEHIX recopila estas guías para ofrecer a los usuarios un acceso rápido y centralizado.",
+      "Además de las instrucciones tradicionales de reparación, estos manuales incluyen diagramas, especificaciones de torque, esquemas eléctricos y rutinas de servicio recomendadas por el fabricante.",
+      "Este nivel de detalle ayuda a garantizar la seguridad y precisión al realizar tareas técnicas bajo el capó o en los sistemas electrónicos del vehículo.",
+      "Ya seas un mecánico certificado o un propietario que intenta resolver una advertencia en el tablero, VEHIX facilita encontrar la documentación adecuada. Nuestra biblioteca técnica crece continuamente, asegurando que incluso los vehículos más modernos y complejos cuenten con orientación clara y confiable.",
+      "Entender el funcionamiento interno de tu vehículo no tiene por qué ser difícil. Nuestras guías técnicas paso a paso están redactadas en un lenguaje sencillo y acompañadas de imágenes que hacen que el diagnóstico y las reparaciones sean más accesibles para los no expertos. Estos recursos están diseñados para su uso en el mundo real, tanto en casa como en el taller.",
+      "Cada guía incluye información contextual—como síntomas comunes, diagramas de diagnóstico y herramientas recomendadas—para apoyar reparaciones más rápidas y precisas. Esto no solo mejora los resultados, sino que también ayuda a reducir costos al evitar el reemplazo innecesario de piezas.",
+      "A medida que los vehículos dependen cada vez más de sistemas electrónicos, nuestras guías también evolucionan. Cubrimos componentes modernos como sistemas híbridos de propulsión, sensores ADAS y cableado CAN bus. VEHIX ayuda a cerrar la brecha de conocimiento, asegurando que los usuarios tengan la información necesaria para trabajar con confianza y seguridad."
+    ]
+  },
+  "recommendations": {
+    "text": [
+      "Para que tu vehículo funcione sin problemas y evitar reparaciones costosas, es fundamental seguir los programas de mantenimiento regular. Tareas básicas como el cambio de aceite, la rotación de neumáticos y la inspección de frenos pueden extender significativamente la vida útil del vehículo y mejorar su rendimiento general.",
+      "También recomendamos revisar los niveles de fluidos—incluyendo refrigerante, líquido de frenos y limpiaparabrisas—al menos una vez al mes. Una simple inspección visual puede ayudar a detectar fugas o niveles anormales que podrían indicar problemas antes de que se agraven.",
+      "Además, siempre presta atención a tu vehículo. Sonidos, olores o luces de advertencia inusuales nunca deben ser ignorados. Atender a tiempo pequeñas irregularidades puede prevenir problemas mayores y garantizar condiciones de conducción más seguras para ti y tus pasajeros.",
+      "La limpieza y el cuidado tanto del interior como del exterior de tu auto no solo son cuestiones estéticas: protegen tu inversión. Lavar y encerar regularmente ayuda a preservar la pintura, mientras que mantener el interior limpio previene el desgaste de los materiales y mejora tu experiencia diaria al conducir.",
+      "El cuidado de los neumáticos es otra prioridad. Asegúrate de que estén correctamente inflados y balanceados, y revisa si hay signos de desgaste irregular, lo que podría indicar problemas de alineación o suspensión. Reemplazar los neumáticos desgastados a tiempo es clave para mantener la seguridad y el control óptimos en la carretera.",
+      "Por último, no olvides actualizar el software si tu auto lo permite. Muchos vehículos hoy en día incluyen actualizaciones inalámbricas para navegación, entretenimiento o incluso funciones críticas del sistema. Mantenerte al día te asegura disfrutar de mejoras y correcciones de seguridad."
+    ]
+  },
+  "dashboard": {
+    "scanHistory": "Historial de Escaneos",
+    "scanHistoryContent":  "No se encontraron escaneos recientes, para escanear tu vehículo ve a la sección “Sincronizar” y busca un dispositivo",
+    "subscription": "Suscripción",
+
+    "vehicleStateSummary": "Resumen del Estado del Vehículo",
+    "vehicleStateSummaryContent": "No se encontró ningún vehículo, para conectarlo ve a la sección “Sincronizar” y busca un dispositivo",
+    "goToScan": "Ir a Escanear",
+
+    "recentAlerts": "Alertas Recientes",
+    "recentAlertsContent": "No se encontraron alertas recientes, para escanear tu vehículo ve a la sección “Sincronizar” y busca un dispositivo",
+    "vehicleStateAnalysis": "Análisis del Estado del Vehículo",
+    "vehicleStateAnalysisContent": "No se encontró ningún vehículo, para conectarlo ve a la sección “Sincronizar” y busca un dispositivo"
+  },
+
+  "connectionGuide": {
+    "title": "Guía de Conexión del Vehículo",
+    "subtitle": "Para conectar tu vehículo a la aplicación VEHIX, sigue estos pasos:",
+    "step1": "1. Enciende tu vehículo.",
+    "step2": "2. Conecta el escáner VEHIX al puerto OBD-II de tu vehículo.",
+    "step3": "3. Activa el Bluetooth en tu dispositivo móvil.",
+    "step4": "4. Selecciona el escáner VEHIX de tu vehiculo en la aplicación.",
+    "step5": "5. Y listo, deja que la aplicación haga el trabajo.",
+    "availableDevices": "Dispositivos Disponibles"
+  }
+}
