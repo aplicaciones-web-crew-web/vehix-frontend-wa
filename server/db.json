@@ -11,17 +11,6 @@
       "gender": "male",
       "planId": 2
     },
-    {
-      "id": 2,
-      "name": "JuanSitoPedro",
-      "lastName": "JuanSitoPedro",
-      "email": "juansito@gmail.com",
-      "password": "1230",
-      "phoneNumber": "1230",
-      "dni": "1230",
-      "gender": "male",
-      "planId": 0
-    }
   ],
   "plans": [
     {
