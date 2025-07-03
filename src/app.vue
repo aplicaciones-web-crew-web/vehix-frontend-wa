@@ -92,6 +92,9 @@ export default {
 <style scoped>
 header {
   font-family: 'Montserrat', sans-serif;
+
+  flex: 0 0 auto;
+
 }
 
 h1 {
@@ -127,6 +130,7 @@ main {
     gap: 1rem;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .menu-toolbar-container {
     display: flex;

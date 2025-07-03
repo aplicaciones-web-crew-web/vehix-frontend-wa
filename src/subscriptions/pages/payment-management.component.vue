@@ -81,9 +81,15 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: black;
+  font-size: clamp( 1rem, 1.3vw, 1.3rem);
 }
+.payment-page{
+  width: 100%;
 
+}
 .payment-process-container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

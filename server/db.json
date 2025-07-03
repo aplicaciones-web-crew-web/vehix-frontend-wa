@@ -10,18 +10,31 @@
       "dni": "72265874",
       "gender": "male",
       "planId": 2
+    },
+    {
+      "id": 2,
+      "name": "JuanSitoPedro",
+      "lastName": "JuanSitoPedro",
+      "email": "juansito@gmail.com",
+      "password": "1230",
+      "phoneNumber": "1230",
+      "dni": "1230",
+      "gender": "male",
+      "planId": 0
     }
   ],
   "plans": [
     {
       "id": 1,
       "name": "Plan Standard",
-      "price": 65
+      "price": 65,
+      "imageUrl": "https://preview.redd.it/bawz2az9poaf1.png?width=268&format=png&auto=webp&s=829fb0a6da1ff9da4af4bcb58807da9d8addac59"
     },
     {
       "id": 2,
       "name": "Plan Pro",
-      "price": 100
+      "price": 100,
+      "imageUrl": "https://preview.redd.it/fi7m6az9poaf1.png?width=268&format=png&auto=webp&s=5b56a46e051dcbfd000bc629e7327b8118ba6959"
     }
   ],
   "vehicles": [
@@ -33,8 +46,7 @@
       "brand": "Fiat",
       "model": "Siena",
       "mileage": "89112",
-      "year": "2011",
-      "image": "https://360view.3dmodels.org/zoom/Fiat/Fiat_Siena_Mk1_178_2009_1000_0001.jpg"
+      "year": "2011"
     }
   ],
   "statusCheck": [
