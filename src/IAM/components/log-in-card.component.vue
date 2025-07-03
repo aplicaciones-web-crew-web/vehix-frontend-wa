@@ -125,8 +125,16 @@ export default {
       :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
   ></alert-card>
   <div v-if="currentAlert" class="modal-overlay"></div> <div class="login-container">
-  <pv-card class="login-card">
-    <template #title><h1>VEHIX</h1></template>
+
+  <video autoplay loop muted playsinline class="video-background">
+    <source src="https://packaged-media.redd.it/biq46suadqaf1/pb/m2-res_360p.mp4?m=DASHPlaylist.mpd&v=1&e=1751594400&s=b7e7d28c0042e41351ee23c8f06328ac577529fe" type="video/mp4">
+    Your navigator does not support the video tag.
+  </video>
+  <pv-card class="login-card" style="background: rgba(255, 255, 255, 0.3);">
+    <template #title>
+
+      <h1>VEHIX</h1>
+    </template>
     <template #subtitle><h1> {{ $t('login.title') }}</h1></template>
     <template #content>
       <div class="form-fields login-fields">
@@ -160,6 +168,18 @@ export default {
   height: 100vh;
   width: 100vw;
 }
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+
 
 .login-card {
   display: flex;

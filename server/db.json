@@ -11,6 +11,17 @@
       "gender": "male",
       "planId": 2
     },
+    {
+      "id": 2,
+      "name": "Juansito",
+      "lastName": "Juansito",
+      "email": "Juansito@gmail.com",
+      "password": "1234567890",
+      "phoneNumber": "1234567890",
+      "dni": "1234567890",
+      "gender": "male",
+      "planId": 0
+    }
   ],
   "plans": [
     {

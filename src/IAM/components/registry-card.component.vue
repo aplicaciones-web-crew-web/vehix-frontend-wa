@@ -162,8 +162,13 @@ export default {
       :type="currentAlert.type"
       :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
   ></alert-card>
+  <video autoplay loop muted playsinline class="video-background">
+    <source src="https://preview.redd.it/hl0umqudjqaf1.gif?width=1920&format=mp4&s=953a6332be88407a82760aff925924fd1485c6be" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
   <div class="registry-container">
-    <pv-card class="registry-card">
+
+    <pv-card class="registry-card" style="background: rgba(255,255,255,0.52)">
       <template #title><h1>VEHIX</h1></template>
       <template #subtitle><h1> {{ $t('register.title') }}</h1>
       </template>
@@ -197,7 +202,16 @@ export default {
   margin: 0;
   box-sizing: border-box;
 }
-
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.6;
+}
 .registry-container {
   text-align: center;
   display: flex;
@@ -212,6 +226,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 1;
+
 }
 
 .registry-fields {
