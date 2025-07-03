@@ -164,7 +164,7 @@ export default {
   ></alert-card>
   <video autoplay loop muted playsinline class="video-background">
     <source src="https://preview.redd.it/hl0umqudjqaf1.gif?width=1920&format=mp4&s=953a6332be88407a82760aff925924fd1485c6be" type="video/mp4">
-    Tu navegador no soporta el video.
+    Your navigator does not support the video tag.
   </video>
   <div class="registry-container">
 

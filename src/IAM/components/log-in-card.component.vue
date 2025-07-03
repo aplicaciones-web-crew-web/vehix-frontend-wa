@@ -144,7 +144,7 @@ export default {
     </template>
     <template #footer>
       <div class="buttons-container">
-        <pv-button :label="$t('login.loginButton')" @click="validateLogin()"></pv-button>
+        <pv-button :label="$t('login.loginButton')" @click="validateLogin()" style="color: white"></pv-button>
         <pv-button :label="$t('login.registerButton')" @click="emitToggleMode()"></pv-button>
       </div>
     </template>

@@ -99,7 +99,6 @@ header {
 
 h1 {
   letter-spacing: 20px;
-  color: black;
 }
 
 main {

@@ -21,6 +21,17 @@
       "dni": "1234567890",
       "gender": "male",
       "planId": 0
+    },
+    {
+      "id": 3,
+      "name": "jdsa",
+      "lastName": "jdsa",
+      "email": "jdsa@gmail.com",
+      "password": "123",
+      "phoneNumber": "123",
+      "dni": "123",
+      "gender": "male",
+      "planId": 2
     }
   ],
   "plans": [
@@ -86,6 +97,14 @@
       "planId": 2,
       "amount": 100,
       "date": "2025-06-23T00:49:48.740Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 4,
+      "userId": "3",
+      "planId": 2,
+      "amount": 100,
+      "date": "2025-07-03T23:23:38.029Z",
       "status": "COMPLETED"
     }
   ],
