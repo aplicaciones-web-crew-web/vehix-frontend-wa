@@ -115,7 +115,7 @@ export default {
   align-items: center;
   padding: 1rem;
   color: white;
-  gap:1rem
+  gap: 1rem
 }
 
 .car-engine {
