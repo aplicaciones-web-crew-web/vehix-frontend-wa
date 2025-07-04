@@ -10,28 +10,6 @@
       "dni": "72265874",
       "gender": "male",
       "planId": 2
-    },
-    {
-      "id": 2,
-      "name": "Juansito",
-      "lastName": "Juansito",
-      "email": "Juansito@gmail.com",
-      "password": "1234567890",
-      "phoneNumber": "1234567890",
-      "dni": "1234567890",
-      "gender": "male",
-      "planId": 0
-    },
-    {
-      "id": 3,
-      "name": "jdsa",
-      "lastName": "jdsa",
-      "email": "jdsa@gmail.com",
-      "password": "123",
-      "phoneNumber": "123",
-      "dni": "123",
-      "gender": "male",
-      "planId": 2
     }
   ],
   "plans": [
@@ -49,17 +27,6 @@
     }
   ],
   "vehicles": [
-    {
-      "id": 1,
-      "userId": "3",
-      "description": "ds",
-      "name": "ds",
-      "brand": "Hyundai",
-      "model": "Elantra",
-      "mileage": "119394",
-      "year": "2009",
-      "image": "https://mystrongad.com/DMY_DonMooreHyundai/Interactive/Elantra/2020/20-hyundai-elantra-se-white-LG.png"
-    }
   ],
   "statusCheck": [
     {
@@ -107,64 +74,156 @@
       "amount": 100,
       "date": "2025-07-03T23:23:38.029Z",
       "status": "COMPLETED"
+    },
+    {
+      "id": 5,
+      "userId": "4",
+      "planId": 2,
+      "amount": 100,
+      "date": "2025-07-04T02:33:33.039Z",
+      "status": "COMPLETED"
     }
   ],
   "vehiclesFailures": [
     {
-      "vehicleId": 1,
-      "failureId": 6,
-      "date": "2025-06-25T16:22:10.729Z",
+      "vehicleId": 2,
+      "failureId": 4,
+      "date": "2025-07-04T02:42:36.511Z",
       "status": "Pending",
       "id": 1
     },
     {
       "vehicleId": 1,
-      "failureId": 7,
-      "date": "2025-06-25T16:22:10.760Z",
+      "failureId": 2,
+      "date": "2025-07-04T02:47:41.851Z",
       "status": "Pending",
       "id": 2
     },
     {
       "vehicleId": 1,
-      "failureId": 3,
-      "date": "2025-06-25T16:23:18.007Z",
+      "failureId": 8,
+      "date": "2025-07-04T03:37:17.305Z",
       "status": "Pending",
       "id": 3
     },
     {
       "vehicleId": 1,
-      "failureId": 4,
-      "date": "2025-06-25T16:23:18.043Z",
+      "failureId": 3,
+      "date": "2025-07-04T03:37:17.332Z",
       "status": "Pending",
       "id": 4
     },
     {
       "vehicleId": 1,
-      "failureId": 1,
-      "date": "2025-06-25T16:23:26.194Z",
+      "failureId": 6,
+      "date": "2025-07-04T03:37:17.343Z",
       "status": "Pending",
       "id": 5
     },
     {
       "vehicleId": 1,
-      "failureId": 8,
-      "date": "2025-06-25T16:23:29.368Z",
+      "failureId": 1,
+      "date": "2025-07-04T03:37:17.350Z",
       "status": "Pending",
       "id": 6
     },
     {
       "vehicleId": 1,
-      "failureId": 5,
-      "date": "2025-06-25T16:23:29.396Z",
+      "failureId": 7,
+      "date": "2025-07-04T03:38:01.853Z",
       "status": "Pending",
       "id": 7
     },
     {
       "vehicleId": 1,
-      "failureId": 2,
-      "date": "2025-06-25T16:24:41.028Z",
+      "failureId": 5,
+      "date": "2025-07-04T03:38:04.641Z",
       "status": "Pending",
       "id": 8
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 3,
+      "date": "2025-07-04T03:44:52.009Z",
+      "status": "Pending",
+      "id": 9
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 5,
+      "date": "2025-07-04T03:44:52.041Z",
+      "status": "Pending",
+      "id": 10
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 2,
+      "date": "2025-07-04T03:44:52.048Z",
+      "status": "Pending",
+      "id": 11
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 8,
+      "date": "2025-07-04T03:47:42.228Z",
+      "status": "Pending",
+      "id": 12
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 1,
+      "date": "2025-07-04T03:47:42.258Z",
+      "status": "Pending",
+      "id": 13
+    },
+    {
+      "vehicleId": 1,
+      "failureId": 4,
+      "date": "2025-07-04T03:49:55.754Z",
+      "status": "Pending",
+      "id": 14
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 2,
+      "date": "2025-07-04T04:42:45.358Z",
+      "status": "Pending",
+      "id": 15
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 3,
+      "date": "2025-07-04T04:42:45.382Z",
+      "status": "Pending",
+      "id": 16
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 5,
+      "date": "2025-07-04T04:42:52.321Z",
+      "status": "Pending",
+      "id": 17
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 7,
+      "date": "2025-07-04T04:43:04.966Z",
+      "status": "Pending",
+      "id": 18
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 6,
+      "date": "2025-07-04T04:43:04.996Z",
+      "status": "Pending",
+      "id": 19
+    },
+    {
+      "vehicleId": 3,
+      "failureId": 4,
+      "date": "2025-07-04T04:43:05.003Z",
+      "status": "Pending",
+      "id": 20
     }
   ],
   "failures": [

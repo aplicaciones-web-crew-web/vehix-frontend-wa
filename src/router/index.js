@@ -12,7 +12,6 @@ const LibraryComponent = () => import('../public/pages/library.component.vue');
 const MaintenanceComponent = () => import('../public/pages/maintenance.component.vue');
 const ProfileComponent = () => import('../public/pages/profile.component.vue');
 const SyncComponent = () => import('../public/pages/sync.component.vue');
-const TapScanComponent = () => import('../monitoring/pages/tap-scan.vue');
 const MechanicComponent = () => import('../monitoring/pages/Mechanic.vue');
 const FailuresManagementComponent = () => import('../monitoring/pages/failures-management.component.vue');
 const PaymentManagementComponent = () => import('../subscriptions/pages/payment-management.component.vue');
@@ -43,7 +42,6 @@ const routes = [
     { path: '/:pathMatch(.*)*',         name: 'not-found',  component: PageNotFoundComponent,       meta: { title: 'Page Not Found' }},
 
 
-    {path: '/diagnostic/tap-scan', name: 'tap-scan', component: TapScanComponent, meta: {title: 'Tap Scan'}},
     {path: '/maintenance/failures', name: 'failures', component: FailuresManagementComponent, meta: {title: 'SimpleFailureComponent Management'}},
     {path: '/mechanic', name: 'mechanic', component: MechanicComponent, meta: {title: 'Mechanic Help'}},
     {path: '/payment-management', name: 'payment-management', component: PaymentManagementComponent, meta: {title: 'Payment Management'}},

@@ -186,5 +186,11 @@
     "step4": "4. Selecciona el escáner VEHIX de tu vehiculo en la aplicación.",
     "step5": "5. Y listo, deja que la aplicación haga el trabajo.",
     "availableDevices": "Dispositivos Disponibles"
+  },
+  "vehicleCard": {
+    "model": "Modelo",
+    "Marca": "Marca",
+    "lifeSpan": "Vida útil estimada",
+    "name": "Nombre del Vehículo"
   }
 }
