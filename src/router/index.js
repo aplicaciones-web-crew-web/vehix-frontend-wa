@@ -14,6 +14,7 @@ const ProfileComponent = () => import('../public/pages/profile.component.vue');
 const SyncComponent = () => import('../public/pages/sync.component.vue');
 const TapScanComponent = () => import('../monitoring/pages/tap-scan.vue');
 const MechanicComponent = () => import('../monitoring/pages/Mechanic.vue');
+const RapidDiagnosticComponent = () => import('../monitoring/pages/rapid-diagnostic.component.vue');
 const FailuresManagementComponent = () => import('../monitoring/pages/failures-management.component.vue');
 //const AuditComponent = () => import('../analytics/audit/pages/audit.component.vue');
 //const Useful_life = () => import('../analytics/car-usefull-life/pages/useful_life.vue');
@@ -43,6 +44,7 @@ const routes = [
     {path: '/sync', name: 'sync', component: SyncComponent, meta: {title: 'Sync'}},
     {path: '/diagnostic/tap-scan', name: 'tap-scan', component: TapScanComponent, meta: {title: 'Tap Scan'}},
     {path: '/maintenance/failures', name: 'failures', component: FailuresManagementComponent, meta: {title: 'SimpleFailureComponent Management'}},
+    {path: '/diagnostic/rapid_diagnostic', name: 'rapid-diagnostic', component: RapidDiagnosticComponent, meta: {title: 'Rapid Diagnostic'}},
     {path: '/mechanic', name: 'mechanic', component: MechanicComponent, meta: {title: 'Mechanic Help'}},
     //{path: '/diagnostic/audit-page', name: 'audit-page', component: AuditComponent, meta: {title: 'Audit Page'}},
     //{path: '/diagnostic/useful_life', name: 'useful_life', component: Useful_life, meta: {title: 'Useful Life'}},
