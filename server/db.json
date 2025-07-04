@@ -27,10 +27,73 @@
     }
   ],
   "vehicles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "description": "Ford",
+      "name": "Ford",
+      "brand": "Nissan",
+      "model": "Quest",
+      "mileage": "53758",
+      "year": "2019",
+      "image": "https://e7.pngegg.com/pngimages/906/462/png-clipart-2015-nissan-quest-car-2009-nissan-quest-2008-nissan-quest-nissan-compact-car-van.png"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "description": "NISSAN",
+      "name": "NISSAN",
+      "brand": "Subaru",
+      "model": "Impreza",
+      "mileage": "15561",
+      "year": "2002",
+      "image": "https://pngimg.com/d/subaru_PNG11922.png"
+    }
   ],
-  "statusChecks": [],
+  "statusChecks": [
+    {
+      "vehicleId": 2,
+      "engine": 38,
+      "transmission": 98,
+      "brakes": 17,
+      "electrical": 93,
+      "steering": 96,
+      "suspension": 90,
+      "fuel": 60,
+      "refrigeration": 35,
+      "id": 1
+    }
+  ],
   "payments": [],
   "vehiclesFailures": [
+    {
+      "vehicleId": 2,
+      "failureId": 1,
+      "date": "2025-07-04T23:01:01.594Z",
+      "status": "Pending",
+      "id": 1
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 4,
+      "date": "2025-07-04T23:01:01.610Z",
+      "status": "Pending",
+      "id": 2
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 8,
+      "date": "2025-07-04T23:08:17.814Z",
+      "status": "Pending",
+      "id": 3
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 7,
+      "date": "2025-07-04T23:08:17.845Z",
+      "status": "Pending",
+      "id": 4
+    }
   ],
   "failures": [
     {
