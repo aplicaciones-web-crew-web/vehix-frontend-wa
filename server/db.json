@@ -35,6 +35,17 @@
       "mileage": "84217",
       "year": "2000",
       "image": "https://carfax-vrs.imgix.net/2006-Mercedes-Benz-CLK-EX-100559982-08.png"
+    },
+    {
+      "id": 2,
+      "userId": "1",
+      "description": "ford F150",
+      "name": "ford F150",
+      "brand": "Kia",
+      "model": "Optima",
+      "mileage": "144080",
+      "year": "2004",
+      "image": "https://di-shared-assets.dealerinspire.com/legacy/rackspace/ldm-images/2019-Kia-Optima-Snow-White-Pearl.png"
     }
   ],
   "statusCheck": [
@@ -133,6 +144,62 @@
       "date": "2025-06-25T16:24:41.028Z",
       "status": "Pending",
       "id": 8
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 1,
+      "date": "2025-07-04T03:07:58.259Z",
+      "status": "Pending",
+      "id": 9
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 4,
+      "date": "2025-07-04T03:07:58.278Z",
+      "status": "Pending",
+      "id": 10
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 2,
+      "date": "2025-07-04T03:08:40.635Z",
+      "status": "Pending",
+      "id": 11
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 5,
+      "date": "2025-07-04T03:08:40.657Z",
+      "status": "Pending",
+      "id": 12
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 7,
+      "date": "2025-07-04T03:08:40.665Z",
+      "status": "Pending",
+      "id": 13
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 8,
+      "date": "2025-07-04T03:08:54.638Z",
+      "status": "Pending",
+      "id": 14
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 6,
+      "date": "2025-07-04T03:08:54.658Z",
+      "status": "Pending",
+      "id": 15
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 3,
+      "date": "2025-07-04T03:09:03.861Z",
+      "status": "Pending",
+      "id": 16
     }
   ],
   "failures": [
