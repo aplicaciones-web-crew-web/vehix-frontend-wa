@@ -20,7 +20,6 @@ export default {
   },
   created() {
     this.userId = UserService.getUserId();
-    //this.userId=1;
     console.log(this.userId);
     this.vehicleService = new VehicleService();
     this.vehicleService.getByUserId(this.userId).then(response => {
@@ -31,10 +30,10 @@ export default {
     })
   },
   methods: {
-    showDevicesAvailables(){
-      this.devicesActivator= !this.devicesActivator;
+    showDevicesAvailables() {
+      this.devicesActivator = !this.devicesActivator;
     },
-    currentVehicle(vehicle){
+    currentVehicle(vehicle) {
       VehicleSessionService.setVehicleId(vehicle.id);
       console.log("Current vehicle: ", vehicle);
     },
@@ -46,8 +45,8 @@ export default {
 </script>
 
 <template>
-  <div class="available-devices-management" style="display: flex; flex-direction: row; justify-content: center;">
-    <div class="column-1" style="display: flex; flex-direction: column; width: 30vw;height: 100%; padding: 1rem; ">
+  <div class="available-devices-management" style="display: flex;  justify-content: center;">
+    <div class="column-1" style="display: flex; flex-direction: column;height: 100%; padding: 1rem; ">
       <div class="content-row-1" style="background: rgb(239,239,239); height: 100% ;padding: 2rem">
         <h1 style="font-size: clamp(1rem, 2vw, 2rem)">{{ $t('connectionGuide.title') }}</h1>
         <h2 style="font-size: clamp(1rem, 2vw, 2rem)">{{ $t('connectionGuide.subtitle') }}</h2>
@@ -76,7 +75,7 @@ export default {
     </div>
 
     <div class="column-2"
-         style="display: flex; flex-direction: column; width: 40vw;height: calc(100vh - 65px); padding: 1rem">
+         style="display: flex; flex-direction: column;height: calc(100vh - 65px); padding: 1rem">
       <div class="content-row-1" style="background: #f5f5f5 ; height: 100% ;padding: 1rem">
         <button @click="showDevicesAvailables()">Tap to activate the sync</button>
       </div>
@@ -93,10 +92,11 @@ export default {
     </div>
 
     <div class="column-3"
-         style="display: flex; flex-direction: column; width: 30vw;height: calc(100vh - 65px); padding: 1rem">
+         style="display: flex; flex-direction: column;height: calc(100vh - 65px); padding: 1rem">
       <div class="content-row-1" style="background: #f5f5f5 ; height: 100% ;padding: 1rem">
-        <h2>{{ $t('dashboard.scanHistory') }}</h2>
-          <p>{{ $t('dashboard.scanHistoryContent') }}</p>
+        <h2 class="title-scan-history-dash">{{ $t('dashboardSync.scanHistory') }}</h2>
+        <video class="background-video-registration" style="border-radius: 1rem" loop autoplay muted playsinline
+               width="90%" src="https://va.media.tumblr.com/tumblr_swu5y22xmE1ah01bq.mp4"></video>
 
       </div>
     </div>
@@ -107,5 +107,55 @@ export default {
 </template>
 
 <style>
+.available-devices-management {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 
+.column-1 {
+  width: 33%;
+}
+
+.column-2 {
+  width: 34%;
+}
+
+.title-scan-history-dash {
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.column-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+
+.content-row-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .available-devices-management {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content-row-1 {
+    width: 100%;
+  }
+
+  .column-1, .column-2, .column-3 {
+    width: 100%;
+  }
+}
 </style>

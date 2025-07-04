@@ -190,6 +190,10 @@
     "availableDevices": "Available Devices"
   },
 
+  "dashboardSync": {
+    "scanHistory": "Instructional Video"
+  },
+
   "vehicleCard": {
     "model": "Model",
     "brand": "Brand",
