@@ -16,6 +16,7 @@ export default {
       vehiclesUser: [],
       userId: 0,
       devicesActivator: false,
+      isSearching: false,
     };
   },
   created() {
@@ -32,6 +33,8 @@ export default {
   methods: {
     showDevicesAvailables() {
       this.devicesActivator = !this.devicesActivator;
+      this.isSearching = !this.isSearching;
+
     },
     currentVehicle(vehicle) {
       VehicleSessionService.setVehicleId(vehicle.id);
@@ -77,17 +80,25 @@ export default {
     <div class="column-2"
          style="display: flex; flex-direction: column;height: calc(100vh - 65px); padding: 1rem">
       <div class="content-row-1" style="background: #f5f5f5 ; height: 100% ;padding: 1rem">
-        <button @click="showDevicesAvailables()">Tap to activate the sync</button>
+        <button
+            :class="['sync-button', isSearching ? 'searching' : '']"
+            @click="showDevicesAvailables"
+        >
+          {{ isSearching ? 'Buscando dispositivos...' : 'Tap to activate the sync' }}
+        </button>
       </div>
       <div class="content-row-2" style="background: white ; height: 100% ;padding: 1rem">
         <h2>{{ $t('connectionGuide.availableDevices') }}</h2>
-        <devices-list class="list-availables-devices"
-                      :vehicles="vehiclesUser"
-                      @car-selected="currentVehicle"
-                      @new-car-selected="newCarSelected"
-                      v-if="devicesActivator">
-          {{ $t('dashboard.scanHistoryContent') }}
-        </devices-list>
+        <pv-panel
+            style="width: 100% ; height: 300px; border: 1px solid red ; display: flex; justify-content: center; align-items: center; text-align: center;">
+          <devices-list class="list-availables-devices"
+                        :vehicles="vehiclesUser"
+                        @car-selected="currentVehicle"
+                        @new-car-selected="newCarSelected"
+                        v-if="devicesActivator">
+            {{ $t('dashboard.scanHistoryContent') }}
+          </devices-list>
+        </pv-panel>
       </div>
     </div>
 
@@ -111,6 +122,14 @@ export default {
   display: flex;
   flex-direction: row;
   width: 100%;
+}
+
+.content-row-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .column-1 {
@@ -141,6 +160,26 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.sync-button {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.sync-button.searching {
+  background-color: #bfbfbf;
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {

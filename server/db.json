@@ -28,11 +28,9 @@
   ],
   "vehicles": [
   ],
-  "statusChecks": [
-  ],
+  "statusChecks": [],
   "payments": [],
-  "vehiclesFailures": [
-  ],
+  "vehiclesFailures": [],
   "failures": [
     {
       "id": 1,
