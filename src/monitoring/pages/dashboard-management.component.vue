@@ -11,10 +11,11 @@ import VehicleState from "../components/vehicle-state.component.vue";
 import {VehicleFailureService} from "../services/vehicle-failure.service.js";
 import {SystemCheckService} from "../services/system-check.service.js";
 import {SystemCheckAssembler} from "../services/system-check.assembler.js";
+import CarSystem from "../components/car-system.component.vue";
 
 export default {
   name: "dashboard-management",
-  components: {VehicleState, Vehicle, VehicleCard},
+  components: {CarSystem, VehicleState, Vehicle, VehicleCard},
   data() {
     return {
       userId: 0,
@@ -48,13 +49,13 @@ export default {
     this.activateEmptyMessage = false;
     this.userId = UserSessionService.getUserId();
     this.vehicleId = VehicleSessionService.getVehicleId();
+    this.systemCheckService = new SystemCheckService();
 
 
     this.userService = new UserService();
     this.vehicleService = new VehicleService();
     this.subscriptionService = new SubscriptionPlanService();
     this.vehicleFailureService = new VehicleFailureService();
-    this.systemCheckService = new SystemCheckService();
 
 
     console.log(this.vehicleId);
@@ -111,7 +112,7 @@ export default {
 
     async getSystemCheck() {
       try {
-        const response = await this.systemCheckService.getAllByVehicleId(this.vehicleId);
+        const response = await this.systemCheckService.getByVehicleId(this.vehicleId);
         if (response.data.length > 0) {
           this.systemChecks = SystemCheckAssembler.toEntitiesFromResponse(response);
           this.activateEmptyMessage = false;
@@ -132,14 +133,17 @@ export default {
     <div class="column-1" style="display: flex; flex-direction: column; width: 30%;height: calc(100vh - 65px);">
       <div class="row-1" style="display: flex; flex-direction: column; height: 60%;  padding: 1rem">
         <div class="content-row-1" style="background: #f5f5f5 ; height: 100% ;padding: 1rem">
-          <h2>{{ $t('dashboard.scanHistory') }}</h2>
+          <h2 class="h2-container">{{ $t('dashboard.scanHistory') }}</h2>
           <p v-if="activateEmptyMessage">{{ $t('dashboard.scanHistoryContent') }}</p>
+          <vehicle-state :vehicle-failures=" vehicleFailures" v-if="!activateEmptyMessage"
+                         style="display: flex; justify-content: center; align-items: center; height: 70%"></vehicle-state>
+
         </div>
       </div>
       <div class="row-2" style="display: flex; flex-direction: column; height: 40%; padding: 1rem">
         <div class="content-row-2" style="background: #d9d9d9 ; height: 100% ;padding: 1rem">
-          <h2>{{ $t('dashboard.subscription') }}</h2>
-          <img class="plan-image-container" :src="subscriptionImage" alt="">
+          <h2 class="h2-container">{{ $t('dashboard.subscription') }}</h2>
+          <img v-if="vehicleId" class="plan-image-container" :src="subscriptionImage" alt="">
         </div>
       </div>
     </div>
@@ -147,7 +151,7 @@ export default {
     <div class="column-2" style="display: flex; flex-direction: column;width: 40%; padding: 1rem">
       <div class="main-row"
            style="display: flex; flex-direction: column; background: #696969; height: 100%; padding: 1rem; text-align: center">
-        <h2 style="color: white">{{ $t('dashboard.vehicleStateSummary') }}</h2>
+        <h2 class="h2-container" style="color: white">{{ $t('dashboard.vehicleStateSummary') }}</h2>
         <p v-if="activateEmptyMessage" style="color: white">{{ $t('dashboard.vehicleStateSummaryContent') }}</p>
         <vehicle v-if="!activateEmptyMessage" :name="vehicleName" :model="vehicleModel" :brand="vehicleBrand"
                  :url-image="vehicleImage"></vehicle>
@@ -155,30 +159,23 @@ export default {
       </div>
     </div>
 
-    <div class="column-3" style="display: flex; flex-direction: column;width: 30%;">
-      <div class="row-1" style="display: flex; flex-direction: column; height: 50%;  padding: 1rem">
-        <div class="content-row-1" style="background: #f5f5f5 ; height: 100% ;padding: 1rem">
-          <h2>{{ $t('dashboard.recentAlerts') }}</h2>
-          <p v-if="activateEmptyMessage">{{ $t('dashboard.recentAlertsContent') }}</p>
-        </div>
-      </div>
-      <div class="row-2" style="display: flex; flex-direction: column; height: 50%; padding: 1rem">
-        <div class="content-row-2" style="background: #d9d9d9 ; height: 100% ;padding: 1rem">
-          <h2>{{ $t('dashboard.vehicleStateAnalysis') }}</h2>
-          <p v-if="activateEmptyMessage">{{ $t('dashboard.vehicleStateAnalysisContent') }}</p>
-          <vehicle-state :vehicle-failures=" vehicleFailures" v-if="!activateEmptyMessage"></vehicle-state>
+    <div class="column-2" style="display: flex; flex-direction: column;width: 30%; padding: 1rem">
+      <div class="main-row"
+           style="display: flex; flex-direction: column; background: #696969; height: 100%; padding: 1rem; text-align: center;">
+        <h2 class="h2-container" style="color: white">{{ $t('dashboard.vehicleStateSummary') }}</h2>
+        <p v-if="activateEmptyMessage" style="color: white">{{ $t('dashboard.vehicleStateSummaryContent') }}</p>
+        <car-system :systemChecks="systemChecks"
+                    style="display: flex; text-align: center; justify-content: center; width: 100%"></car-system>
 
-        </div>
       </div>
     </div>
   </div>
-
-
 </template>
 
 <style>
-h2 {
+.h2-container{
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.5rem, 1.5vw, 2rem);
   margin-bottom: 1rem;
 }

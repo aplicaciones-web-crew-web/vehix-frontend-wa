@@ -21,7 +21,7 @@ export class SystemCheckService {
      * @param vehicleId
      * @return {Promise<axios.AxiosResponse<any>>}
      */
-    getAllByVehicleId(vehicleId) {
+    getByVehicleId(vehicleId) {
         return httpInstance.get(`${this.resourceEndPoint}?vehicleId=${vehicleId}`);
     }
 
