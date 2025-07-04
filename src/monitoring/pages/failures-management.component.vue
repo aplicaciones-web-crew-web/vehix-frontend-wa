@@ -205,7 +205,6 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100%;
-  border: 1px solid blue;
 }
 
 .column-2 {
@@ -215,7 +214,6 @@ export default {
   justify-content: center;
   height: 50%;
 
-  border: 1px solid blue;
 
 }
 
@@ -225,7 +223,6 @@ export default {
   align-items: center;
   justify-content: center;
   height: 50%;
-  border: 1px solid blue;
 }
 
 .column-4 {
@@ -235,7 +232,6 @@ export default {
   width: 30%;
   justify-content: center;
   height: 100%;
-  border: 1px solid red;
 }
 
 .seek-help-btn-container {
@@ -260,7 +256,6 @@ export default {
   gap: 1rem;
   width: 30%;
   height: 100%;
-  border: 1px solid blue;
 }
 
 button {

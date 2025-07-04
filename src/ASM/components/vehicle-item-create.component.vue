@@ -202,17 +202,49 @@ export default {
       :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
   ></alert-card>
   <div class="vehicle-item-create-main-container">
-    <pv-card>
-      <template #title>
+    <pv-card class="vehicle-card">
+      <template #title class="card-vehicle-item">
         <loading-spinner v-if="loading" :visible="loading"></loading-spinner>
         <div class="card-vehicle-item-container" v-else>
           <img :src="vehicleImageLink"
-               width="500px">
+               width="100%">
         </div>
+        <div class="input-card-vehicle-name">
         <pv-input-text v-model="vehicleName" :placeholder="$t('vehicleRegistration.vehicleName')"></pv-input-text>
-        <pv-button @click="searchVehiclesImages()"></pv-button>
-
+        <pv-button @click="searchVehiclesImages()">EnterName</pv-button>
+        </div>
       </template>
     </pv-card>
   </div>
 </template>
+
+<style>
+.card-vehicle-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.input-card-vehicle-name{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.vehicle-item-create-main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 65px);
+}
+.vehicle-card{
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>

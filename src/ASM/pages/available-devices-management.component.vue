@@ -90,7 +90,7 @@ export default {
       <div class="content-row-2" style="background: white ; height: 100% ;padding: 1rem">
         <h2>{{ $t('connectionGuide.availableDevices') }}</h2>
         <pv-panel
-            style="width: 100% ; height: 300px; border: 1px solid red ; display: flex; justify-content: center; align-items: center; text-align: center;">
+            style="width: 100% ; height: 300px; display: flex; justify-content: center; align-items: center; text-align: center;">
           <devices-list class="list-availables-devices"
                         :vehicles="vehiclesUser"
                         @car-selected="currentVehicle"

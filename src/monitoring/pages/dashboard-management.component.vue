@@ -51,26 +51,34 @@ export default {
     this.vehicleId = VehicleSessionService.getVehicleId();
     this.systemCheckService = new SystemCheckService();
 
-
     this.userService = new UserService();
     this.vehicleService = new VehicleService();
     this.subscriptionService = new SubscriptionPlanService();
     this.vehicleFailureService = new VehicleFailureService();
 
+    console.log("🚗 vehicleId:", this.vehicleId);
 
-    console.log(this.vehicleId);
-    console.log(this.activateEmptyMessage)
+    try {
+      await this.getPlanId();
+      await this.getSubscriptionImage();
 
-    if (!this.vehicleId) {
+      if (!this.vehicleId || this.vehicleId === 0) {
+        this.activateEmptyMessage = true;
+        return;
+      }
+
+      await this.getVehicleDto();
+      await this.getVehicleFailures();
+      await this.getSystemCheck();
+
+      if (!this.vehicleModel && this.systemChecks.length === 0) {
+        this.activateEmptyMessage = true;
+      }
+
+    } catch (error) {
+      console.error("Error loading dashboard:", error);
       this.activateEmptyMessage = true;
     }
-    await this.getPlanId();
-    await this.getSubscriptionImage();
-    await this.getVehicleDto();
-    await this.getVehicleFailures();
-    await this.getSystemCheck();
-
-
   },
 
   methods: {
@@ -117,7 +125,6 @@ export default {
           this.systemChecks = SystemCheckAssembler.toEntitiesFromResponse(response);
           this.activateEmptyMessage = false;
         } else {
-          this.activateEmptyMessage = true;
         }
       } catch (error) {
         console.error("Error: System Check", error);
