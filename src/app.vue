@@ -3,6 +3,11 @@ import LanguageSwitcher from "./public/components/language-switcher.component.vu
 
 export default {
   name: 'App',
+  computed: {
+    routeKey() {
+      return this.$route.fullPath;
+    }
+  },
   components: {LanguageSwitcher},
   data() {
     return {
@@ -28,6 +33,12 @@ export default {
     shouldShowNavBar() {
       const hiddenRouteNames = ['log-in-management', 'subscription-plan-management', 'payment-management', 'not-found'];
       return !hiddenRouteNames.includes(this.$route.name);
+    },
+
+    forceRepaint() {
+      document.body.style.display = 'none';
+      void document.body.offsetHeight;
+      document.body.style.display = '';
     }
   },
 
@@ -39,6 +50,7 @@ export default {
   watch: {
     '$route'() {
       this.showNavBar = this.shouldShowNavBar();
+      this.forceRepaint();
     }
   },
 
@@ -47,9 +59,7 @@ export default {
    * It checks if the navigation bar should be shown based on the current route.
    * @author U202318274 Julca Minaya Sergio Gino
    */
-  mounted() {
-    this.showNavBar = this.shouldShowNavBar();
-  }
+
 }
 
 </script>
@@ -85,20 +95,16 @@ export default {
     </pv-toolbar>
   </header>
   <main>
-    <router-view/>
+    <router-view :key="$route.fullPath"/>
   </main>
 
 </template>
-<style scoped>
+<style>
 header {
   font-family: 'Montserrat', sans-serif;
 
   flex: 0 0 auto;
 
-}
-
-h1 {
-  letter-spacing: 20px;
 }
 
 main {

@@ -9,6 +9,8 @@ import VehicleCard from "../components/vehicle-card.component.vue";
 import Vehicle from "../components/vehicle.component.vue";
 import VehicleState from "../components/vehicle-state.component.vue";
 import {VehicleFailureService} from "../services/vehicle-failure.service.js";
+import {SystemCheckService} from "../services/system-check.service.js";
+import {SystemCheckAssembler} from "../services/system-check.assembler.js";
 
 export default {
   name: "dashboard-management",
@@ -32,11 +34,13 @@ export default {
       subscriptionService: null,
       userService: null,
       vehicleFailureService: null,
+      systemCheckService: null,
 
       vehiclesDto: [],
       usersDto: [],
       subscriptionsDto: [],
-      vehicleFailures: []
+      vehicleFailures: [],
+      systemChecks: [],
     }
   },
 
@@ -47,9 +51,11 @@ export default {
 
 
     this.userService = new UserService();
-    this.vehicleService = new VehicleService()
-    this.subscriptionService = new SubscriptionPlanService()
-    this.vehicleFailureService = new VehicleFailureService()
+    this.vehicleService = new VehicleService();
+    this.subscriptionService = new SubscriptionPlanService();
+    this.vehicleFailureService = new VehicleFailureService();
+    this.systemCheckService = new SystemCheckService();
+
 
     console.log(this.vehicleId);
     console.log(this.activateEmptyMessage)
@@ -61,13 +67,12 @@ export default {
     await this.getSubscriptionImage();
     await this.getVehicleDto();
     await this.getVehicleFailures();
+    await this.getSystemCheck();
 
 
   },
 
   methods: {
-
-
     async getVehicleFailures() {
       try {
         const response = await this.vehicleFailureService.getByVehicleId(this.vehicleId, 'Pending');
@@ -101,6 +106,20 @@ export default {
         this.subscriptionImage = response.data.imageUrl;
       } catch (error) {
         console.error("Error: Loaded Plans", error);
+      }
+    },
+
+    async getSystemCheck() {
+      try {
+        const response = await this.systemCheckService.getAllByVehicleId(this.vehicleId);
+        if (response.data.length > 0) {
+          this.systemChecks = SystemCheckAssembler.toEntitiesFromResponse(response);
+          this.activateEmptyMessage = false;
+        } else {
+          this.activateEmptyMessage = true;
+        }
+      } catch (error) {
+        console.error("Error: System Check", error);
       }
     }
   }
