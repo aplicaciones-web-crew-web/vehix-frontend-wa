@@ -1,7 +1,7 @@
 <script>
-import {UsersApiService} from "../services/users-api.service.js";
+import {UserService} from "../services/user.service.js";
 import AlertCard from "../../shared/components/alert-card.component.vue";
-import {UserAssembler} from "../services/user.assembler.js"; // Asegúrate de que el path sea correcto
+import {UserAssembler} from "../services/user.assembler.js";
 import {isNumeric} from "../../shared/utils/validation.util.js";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
 
@@ -24,7 +24,7 @@ export default {
    * @author U202318274 Julca Minaya Sergio Gino
    */
   created() {
-    this.userService = new UsersApiService();
+    this.userService = new UserService();
     this.userService.getAll().then(response => {
       this.users = UserAssembler.toEntitiesFromResponse(response);
       console.log("Users loaded successfully:", this.users);
@@ -65,7 +65,7 @@ export default {
      * @returns {boolean} - Returns true if all fields are filled, false otherwise.
      * @author U202318274 Julca Minaya Sergio Gino
      */
-    validateFilledFields(){
+    validateFilledFields() {
       if (this.dni === '' || this.password === '') {
         this.displayAlert("Empty fields", "Please complete all fields", "warn");
         return false;
@@ -82,10 +82,12 @@ export default {
      * It checks if the provided DNI and password match any user in the users array.
      * @author U202318274 Julca Minaya Sergio Gino
      */
-    validateLogin(){
+    validateLogin() {
       this.currentAlert = null;
-      if (!this.validateFilledFields()) { return;}
-      const foundUser = this.users.find( user => user.dni === this.dni && user.password === this.password);
+      if (!this.validateFilledFields()) {
+        return;
+      }
+      const foundUser = this.users.find(user => user.dni === this.dni && user.password === this.password);
 
       if (foundUser) {
         this.displayAlert("Succesfull login", `Welcome back, ${foundUser.name} ${foundUser.lastName}!`, "success");
@@ -124,24 +126,35 @@ export default {
       :type="currentAlert.type"
       :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
   ></alert-card>
-  <div v-if="currentAlert" class="modal-overlay"></div> <div class="login-container">
-  <pv-card class="login-card">
-    <template #title><h1>VEHIX</h1></template>
-    <template #subtitle><h1> {{ $t('login.title') }}</h1></template>
-    <template #content>
-      <div class="form-fields login-fields">
-        <pv-input-text :placeholder="$t('login.dni')" v-model="dni"></pv-input-text>
-        <pv-input-text :placeholder="$t('login.password')" type="password" v-model="password"></pv-input-text>
-      </div>
-    </template>
-    <template #footer>
-      <div class="buttons-container">
-        <pv-button :label="$t('login.loginButton')" @click="validateLogin()"></pv-button>
-        <pv-button :label="$t('login.registerButton')" @click="emitToggleMode()"></pv-button>
-      </div>
-    </template>
-  </pv-card>
-</div>
+  <div v-if="currentAlert" class="modal-overlay"></div>
+  <div class="login-container">
+
+    <video autoplay loop muted playsinline class="video-background">
+      <source
+          src="https://packaged-media.redd.it/biq46suadqaf1/pb/m2-res_360p.mp4?m=DASHPlaylist.mpd&v=1&e=1751594400&s=b7e7d28c0042e41351ee23c8f06328ac577529fe"
+          type="video/mp4">
+      Your navigator does not support the video tag.
+    </video>
+    <pv-card class="login-card" style="background: rgba(255, 255, 255, 0.3);">
+      <template #title>
+
+        <h1>VEHIX</h1>
+      </template>
+      <template #subtitle><h1> {{ $t('login.title') }}</h1></template>
+      <template #content>
+        <div class="form-fields login-fields">
+          <pv-input-text :placeholder="$t('login.dni')" v-model="dni"></pv-input-text>
+          <pv-input-text :placeholder="$t('login.password')" type="password" v-model="password"></pv-input-text>
+        </div>
+      </template>
+      <template #footer>
+        <div class="buttons-container">
+          <pv-button :label="$t('login.loginButton')" @click="validateLogin()" style="color: white"></pv-button>
+          <pv-button :label="$t('login.registerButton')" @click="emitToggleMode()"></pv-button>
+        </div>
+      </template>
+    </pv-card>
+  </div>
 </template>
 
 <style>
@@ -160,6 +173,18 @@ export default {
   height: 100vh;
   width: 100vw;
 }
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.6;
+}
+
 
 .login-card {
   display: flex;

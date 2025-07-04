@@ -78,8 +78,10 @@ createApp(App)
             preset: MyPreset,
             options: {
                 prefix: 'p',
-                darkModeSelector: 'system',
-                cssLayer: false
+                darkModeSelector: false,
+                cssLayer: false,
+                dark: false
+
             }
         }
     })

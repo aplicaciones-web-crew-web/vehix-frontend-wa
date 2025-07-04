@@ -1,7 +1,7 @@
 <script>
 
 import AvailableDevicesManagement
-  from "../../assets-and-resources-management/pages/available-devices-management.component.vue";
+  from "../../ASM/pages/available-devices-management.component.vue";
 
 export default {
   name: "sync",

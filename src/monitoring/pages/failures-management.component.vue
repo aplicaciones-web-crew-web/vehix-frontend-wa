@@ -3,12 +3,9 @@
 import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
 import {VehicleFailureService} from "../services/vehicle-failure.service.js";
 import {FailureService} from "../services/failure.service.js";
-import {VehicleAssembler} from "../../assets-and-resources-management/services/vehicle.assembler.js";
 import {FailureAssembler} from "../services/failure.assembler.js";
 import {Button as PvButton} from "primevue";
 import {VehicleFailureAssembler} from "../services/vehicle-failure.assembler.js";
-import {Vehicle} from "../../assets-and-resources-management/model/vehicle.entity.js";
-import {VehicleFailure} from "../model/vehicle-failure.entity.js";
 import SimpleFailureComponent from "../components/simple-failure.component.vue";
 import SimpleFailure from "../components/simple-failure.component.vue";
 import {BadPracticeAssembler} from "../services/bad-practice.assembler.js";

@@ -10,31 +10,55 @@
       "dni": "72265874",
       "gender": "male",
       "planId": 2
+    },
+    {
+      "id": 2,
+      "name": "Juansito",
+      "lastName": "Juansito",
+      "email": "Juansito@gmail.com",
+      "password": "1234567890",
+      "phoneNumber": "1234567890",
+      "dni": "1234567890",
+      "gender": "male",
+      "planId": 0
+    },
+    {
+      "id": 3,
+      "name": "jdsa",
+      "lastName": "jdsa",
+      "email": "jdsa@gmail.com",
+      "password": "123",
+      "phoneNumber": "123",
+      "dni": "123",
+      "gender": "male",
+      "planId": 2
     }
   ],
   "plans": [
     {
       "id": 1,
       "name": "Plan Standard",
-      "price": 65
+      "price": 65,
+      "imageUrl": "https://preview.redd.it/bawz2az9poaf1.png?width=268&format=png&auto=webp&s=829fb0a6da1ff9da4af4bcb58807da9d8addac59"
     },
     {
       "id": 2,
       "name": "Plan Pro",
-      "price": 100
+      "price": 100,
+      "imageUrl": "https://preview.redd.it/fi7m6az9poaf1.png?width=268&format=png&auto=webp&s=5b56a46e051dcbfd000bc629e7327b8118ba6959"
     }
   ],
   "vehicles": [
     {
       "id": 1,
-      "userId": null,
-      "description": "das",
-      "name": "das",
-      "brand": "Mercedes-Benz",
-      "model": "CLK",
-      "mileage": "84217",
-      "year": "2000",
-      "image": "https://carfax-vrs.imgix.net/2006-Mercedes-Benz-CLK-EX-100559982-08.png"
+      "userId": "3",
+      "description": "ds",
+      "name": "ds",
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "mileage": "119394",
+      "year": "2009",
+      "image": "https://mystrongad.com/DMY_DonMooreHyundai/Interactive/Elantra/2020/20-hyundai-elantra-se-white-LG.png"
     }
   ],
   "statusCheck": [
@@ -74,6 +98,14 @@
       "planId": 2,
       "amount": 100,
       "date": "2025-06-23T00:49:48.740Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 4,
+      "userId": "3",
+      "planId": 2,
+      "amount": 100,
+      "date": "2025-07-03T23:23:38.029Z",
       "status": "COMPLETED"
     }
   ],
