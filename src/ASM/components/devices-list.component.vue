@@ -33,5 +33,9 @@ export default {
 </template>
 
 <style>
-
+.device-item{
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
 </style>

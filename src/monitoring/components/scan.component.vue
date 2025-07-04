@@ -26,6 +26,7 @@ export default {
     };
   },
   created() {
+
     this.vehicleId = VehicleSessionService.getVehicleId();
     this.systemCheckService = new SystemCheckService();
     console.log(this.vehicleImage);
@@ -80,35 +81,34 @@ export default {
       return Math.floor(Math.random() * 100) + 1;
     },
     async validateTapToScan() {
-      if (!this.showScannedResults) {
+      if (!this.showScannedResults || this.vehicleId === 0 || this.vehicleId === null) {
         this.displayAlert("Error", "NO VEHICLE WAS SCANNED", "error");
         return;
       }
 
+      const newStatusCheck = {
+        vehicleId: parseInt(this.vehicleId),
+        engine: this.getRandomEngine(),
+        transmission: this.getRandomRefrigeration(),
+        brakes: this.getRandomBrakes(),
+        electrical: this.getRandomElectrical(),
+        steering: this.getRandomSteering(),
+        suspension: this.getRandomSuspension(),
+        fuel: this.getRandomFuel(),
+        refrigeration: this.getRandomRefrigeration()
+      };
 
       try {
         const response = await this.systemCheckService.getByVehicleId(this.vehicleId);
         const existingChecks = response.data;
 
-        if (existingChecks.length > 0) {
+        if (existingChecks.length > 0 && this.vehicleId !== 0 && this.vehicleId !== null) {
           const existingCheck = existingChecks[0];
-          const newStatusCheck = {
-            vehicleId: parseInt(this.vehicleId),
-            engine: this.getRandomEngine(),
-            transmission: this.getRandomRefrigeration(),
-            brakes: this.getRandomBrakes(),
-            electrical: this.getRandomElectrical(),
-            steering: this.getRandomSteering(),
-            suspension: this.getRandomSuspension(),
-            fuel: this.getRandomFuel(),
-            refrigeration: this.getRandomRefrigeration()
-          };
           await this.systemCheckService.update(existingCheck.id, newStatusCheck);
           console.log("SystemCheck updated:", existingCheck.id);
         } else {
-
           await this.systemCheckService.create(newStatusCheck);
-          console.log("✔ SystemCheck created");
+          console.log("SystemCheck created");
         }
 
         this.redirectTo("/maintenance/failures");
@@ -116,6 +116,7 @@ export default {
         console.error("Error updating the systemcheck: ", error);
       }
     },
+
 
     redirectTo(path) {
       this.$router.push(path);
