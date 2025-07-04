@@ -39,33 +39,12 @@ const routes = [
     {path: '/profile', name: 'profile', component: ProfileComponent, meta: {title: 'Profile'}},
     {path: '/sync', name: 'sync', component: SyncComponent, meta: {title: 'Sync'}},
     {path: '/diagnostic/tap-scan', name: 'tap-scan', component: TapScanComponent, meta: {title: 'Tap Scan'}},
-    {
-        path: '/maintenance/failures',
-        name: 'failures',
-        component: FailuresManagementComponent,
-        meta: {title: 'SimpleFailureComponent Management'}
-    },
+    {path: '/maintenance/failures', name: 'failures', component: FailuresManagementComponent, meta: {title: 'SimpleFailureComponent Management'}},
     {path: '/mechanic', name: 'mechanic', component: MechanicComponent, meta: {title: 'Mechanic Help'}},
-    {
-        path: '/payment-management',
-        name: 'payment-management',
-        component: PaymentManagementComponent,
-        meta: {title: 'Payment Management'}
-    },
-    {
-        path: '/subscriptions',
-        name: 'subscription-plan-management',
-        component: SubscriptionPlanManagementComponent,
-        meta: {title: 'Subscription Plan Management'}
-    },
-    {
-        path: '/vehicle-registration-management',
-        name: 'vehicle-registration-management',
-        component: VehicleRegistrationManagementComponent,
-        meta: {title: 'Vehicle Registration Management'}
-    },
-    {path: '/library/technical', name: 'technical', component: ResourceView, props: {titleKey: 'card.technical'}, meta: {title: 'Technical'}
-    },
+    {path: '/payment-management', name: 'payment-management', component: PaymentManagementComponent, meta: {title: 'Payment Management'}},
+    {path: '/subscriptions', name: 'subscription-plan-management', component: SubscriptionPlanManagementComponent, meta: {title: 'Subscription Plan Management'}},
+    {path: '/vehicle-registration-management', name: 'vehicle-registration-management', component: VehicleRegistrationManagementComponent, meta: {title: 'Vehicle Registration Management'}},
+    {path: '/library/technical', name: 'technical', component: ResourceView, props: {titleKey: 'card.technical'}, meta: {title: 'Technical'}},
     {path: '/library/news', name: 'news', component: ResourceView, props: {titleKey: 'card.news'}, meta: {title: 'News'}},
     {path: '/library/advances', name: 'advances', component: ResourceView, props: {titleKey: 'card.advances'}, meta: {title: 'Advances'}},
     {path: '/library/videos', name: 'videos', component: ResourceView, props: {titleKey: 'card.videos'}, meta: {title: 'Videos'}},
