@@ -15,8 +15,6 @@ const SyncComponent = () => import('../public/pages/sync.component.vue');
 const TapScanComponent = () => import('../monitoring/pages/tap-scan.vue');
 const MechanicComponent = () => import('../monitoring/pages/Mechanic.vue');
 const FailuresManagementComponent = () => import('../monitoring/pages/failures-management.component.vue');
-//const AuditComponent = () => import('../analytics/audit/pages/audit.component.vue');
-//const Useful_life = () => import('../analytics/car-usefull-life/pages/useful_life.vue');
 const PaymentManagementComponent = () => import('../subscriptions/pages/payment-management.component.vue');
 const SubscriptionPlanManagementComponent = () => import('../subscriptions/pages/subscription-plan-management.component.vue');
 const VehicleRegistrationManagementComponent = () => import('../ASM/pages/vehicle-registration-management.component.vue');
@@ -66,42 +64,13 @@ const routes = [
         component: VehicleRegistrationManagementComponent,
         meta: {title: 'Vehicle Registration Management'}
     },
-    {
-        path: '/technical',
-        name: 'technical',
-        component: ResourceView,
-        props: {titleKey: 'card.technical'},
-        meta: {title: 'Technical'}
+    {path: '/library/technical', name: 'technical', component: ResourceView, props: {titleKey: 'card.technical'}, meta: {title: 'Technical'}
     },
-    {path: '/news', name: 'news', component: ResourceView, props: {titleKey: 'card.news'}, meta: {title: 'News'}},
-    {
-        path: '/advances',
-        name: 'advances',
-        component: ResourceView,
-        props: {titleKey: 'card.advances'},
-        meta: {title: 'Advances'}
-    },
-    {
-        path: '/videos',
-        name: 'videos',
-        component: ResourceView,
-        props: {titleKey: 'card.videos'},
-        meta: {title: 'Videos'}
-    },
-    {
-        path: '/manuals',
-        name: 'manuals',
-        component: ResourceView,
-        props: {titleKey: 'card.manuals'},
-        meta: {title: 'Manuals'}
-    },
-    {
-        path: '/recommendations',
-        name: 'recommendations',
-        component: ResourceView,
-        props: {titleKey: 'card.recommendations'},
-        meta: {title: 'Recommendations'}
-    },
+    {path: '/library/news', name: 'news', component: ResourceView, props: {titleKey: 'card.news'}, meta: {title: 'News'}},
+    {path: '/library/advances', name: 'advances', component: ResourceView, props: {titleKey: 'card.advances'}, meta: {title: 'Advances'}},
+    {path: '/library/videos', name: 'videos', component: ResourceView, props: {titleKey: 'card.videos'}, meta: {title: 'Videos'}},
+    {path: '/library/manuals', name: 'manuals', component: ResourceView, props: {titleKey: 'card.manuals'}, meta: {title: 'Manuals'}},
+    {path: '/library/recommendations', name: 'recommendations', component: ResourceView, props: {titleKey: 'card.recommendations'}, meta: {title: 'Recommendations'}},
 ];
 
 /**
