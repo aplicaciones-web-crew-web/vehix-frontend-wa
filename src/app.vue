@@ -26,8 +26,8 @@ export default {
      * @author U202318274 Julca Minaya Sergio Gino
      */
     shouldShowNavBar() {
-      const hiddenRoutes = ['/login', '/subscriptions', '/payment-management', '/subscription-plan-management'];
-      return !hiddenRoutes.includes(this.$route.path);
+      const hiddenRouteNames = ['log-in-management', 'subscription-plan-management', 'payment-management', 'not-found'];
+      return !hiddenRouteNames.includes(this.$route.name);
     }
   },
 
@@ -37,7 +37,7 @@ export default {
    * @author U202318274 Julca Minaya Sergio Gino
    */
   watch: {
-    '$route'(to, from) {
+    '$route'() {
       this.showNavBar = this.shouldShowNavBar();
     }
   },

@@ -28,6 +28,8 @@ const VehicleRegistrationManagementComponent = () => import('../ASM/pages/vehicl
  * - Profile page route (/profile)
  * - Sync page route (/sync)
  */
+const PageNotFoundComponent = () => import('../public/pages/page-not-found.component.vue');
+
 const ResourceView = () => import('../ASM/pages/library.component.vue');
 
 const routes = [
@@ -38,6 +40,9 @@ const routes = [
     {path: '/maintenance', name: 'maintenance', component: MaintenanceComponent, meta: {title: 'Maintenance'}},
     {path: '/profile', name: 'profile', component: ProfileComponent, meta: {title: 'Profile'}},
     {path: '/sync', name: 'sync', component: SyncComponent, meta: {title: 'Sync'}},
+    { path: '/:pathMatch(.*)*',         name: 'not-found',  component: PageNotFoundComponent,       meta: { title: 'Page Not Found' }},
+
+
     {path: '/diagnostic/tap-scan', name: 'tap-scan', component: TapScanComponent, meta: {title: 'Tap Scan'}},
     {path: '/maintenance/failures', name: 'failures', component: FailuresManagementComponent, meta: {title: 'SimpleFailureComponent Management'}},
     {path: '/mechanic', name: 'mechanic', component: MechanicComponent, meta: {title: 'Mechanic Help'}},
@@ -50,6 +55,8 @@ const routes = [
     {path: '/library/videos', name: 'videos', component: ResourceView, props: {titleKey: 'card.videos'}, meta: {title: 'Videos'}},
     {path: '/library/manuals', name: 'manuals', component: ResourceView, props: {titleKey: 'card.manuals'}, meta: {title: 'Manuals'}},
     {path: '/library/recommendations', name: 'recommendations', component: ResourceView, props: {titleKey: 'card.recommendations'}, meta: {title: 'Recommendations'}},
+
+
 ];
 
 /**
