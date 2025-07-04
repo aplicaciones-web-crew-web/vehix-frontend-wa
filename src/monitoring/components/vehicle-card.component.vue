@@ -1,7 +1,7 @@
 <script>
 
 import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
-import {VehicleService} from "../../assets-and-resources-management/services/vehicle.service.js";
+import {VehicleService} from "../../ASM/services/vehicle.service.js";
 
 export default {
   name: "vehicle-card",

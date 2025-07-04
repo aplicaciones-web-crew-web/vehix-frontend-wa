@@ -39,7 +39,7 @@ export default {
           <span style="--i:1;"></span>
           <span style="--i:2;"></span>
         </div>
-        <h2>{{ userName }}'s car</h2>
+        <h2>{{ userName }}'s cardsadsdas</h2>
         <img class="car-image" :src=this.img alt="Car image"/>
       </div>
 

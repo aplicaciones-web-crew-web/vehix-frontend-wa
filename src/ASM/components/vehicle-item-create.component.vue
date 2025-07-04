@@ -2,8 +2,6 @@
 import LoadingSpinner from "../../shared/components/loading-spinner.component.vue";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
 import AlertCard from "../../shared/components/alert-card.component.vue";
-import {VehicleService} from "../services/vehicle.service.js";
-import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
 
 export default {
   name: "vehicle-item-create",

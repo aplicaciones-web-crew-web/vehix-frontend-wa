@@ -2,7 +2,7 @@
 
 import Scan from "../components/scan.component.vue";
 import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
-import {VehicleService} from "../../assets-and-resources-management/services/vehicle.service.js";
+import {VehicleService} from "../../ASM/services/vehicle.service.js";
 import Analysis from "../components/analysis.component.vue";
 
 export default {
