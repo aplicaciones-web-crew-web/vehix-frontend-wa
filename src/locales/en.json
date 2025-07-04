@@ -188,5 +188,12 @@
     "step4": "4. Select your vehix scanner car",
     "step5": "5. Done, let the app do the work.",
     "availableDevices": "Available Devices"
+  },
+
+  "vehicleCard": {
+    "model": "Model",
+    "brand": "Brand",
+    "lifeSpan": "Estimated lifespan",
+    "name": "Vehicle Name"
   }
 }

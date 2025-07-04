@@ -1,21 +1,26 @@
 <!-- src/components/car-presentation.vue -->
 <script>
 import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
-import {VehicleService} from "../../assets-and-resources-management/services/vehicle.service.js";
+import {VehicleService} from "../../ASM/services/vehicle.service.js";
+import {UserSessionService} from "../../shared/services/user-session.service.js";
 
 const userName = "Vitaly Baca"
 export default {
   name: "car-presentation",
   data() {
     return {
-      userName: userName,
+      userName: '',
+
       vehicleId: 0,
+      userId: 0,
+
       vehicleService: null,
       vehicles: [],
       img: ""
     };
   },
   created() {
+    this.userId = UserSessionService.getUserId();
     this.vehicleId = VehicleSessionService.getVehicleId();
     console.log("ID del vehículo de sesión:", this.vehicleId);
     this.vehicleService = new VehicleService();
@@ -39,7 +44,7 @@ export default {
           <span style="--i:1;"></span>
           <span style="--i:2;"></span>
         </div>
-        <h2>{{ userName }}'s cardsadsdas</h2>
+        <h2>{{ userName }}'s</h2>
         <img class="car-image" :src=this.img alt="Car image"/>
       </div>
 
