@@ -1,6 +1,6 @@
 <script>
 import PaymentFormCardComponent from "./payment-form-card.component.vue";
-import {SubscriptionPlanApiService} from "../services/subscription-plan-api.service.js";
+import {SubscriptionPlanService} from "../services/subscription-plan.service.js";
 import {SubscriptionPlanAssembler} from "../services/subscription-plan.assembler.js";
 
 export default {
@@ -24,7 +24,7 @@ export default {
     }
   },
   created() {
-    this.subscriptionPlanService = new SubscriptionPlanApiService()
+    this.subscriptionPlanService = new SubscriptionPlanService()
     this.subscriptionPlanService.getAll().then(response => {
       this.subscriptionsPlans = SubscriptionPlanAssembler.toEntitiesFromResponse(response);
       console.log("Plans loaded successfully");

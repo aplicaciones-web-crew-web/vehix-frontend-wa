@@ -1,10 +1,10 @@
 <script>
 
-import {UsersApiService} from "../services/users-api.service.js";
 import AlertCard from "../../shared/components/alert-card.component.vue";
 import {isNumeric} from "../../shared/utils/validation.util.js";
 import {isValidEmail} from "../../shared/utils/validation.util.js";
 import {UserAssembler} from "../services/user.assembler.js";
+import {UserService} from "../services/user.service.js";
 
 export default {
   name: "registry-card",
@@ -30,7 +30,7 @@ export default {
    * @author U202318274 Julca Minaya Sergio Gino
    */
   created() {
-    this.userApiService = new UsersApiService();
+    this.userApiService = new UserService();
     this.userApiService.getAll().then(response => {
       this.users = UserAssembler.toEntitiesFromResponse(response);
       console.log("Users loaded successfully: ", this.users);

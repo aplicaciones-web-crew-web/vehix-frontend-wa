@@ -1,7 +1,6 @@
 <script>
 import LogInCard from "../components/log-in-card.component.vue";
 import RegistryCard from "../components/registry-card.component.vue";
-import {UserSessionService} from "../../shared/services/user-session.service.js";
 
 export default {
   name: "log-in-management",

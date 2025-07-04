@@ -17,11 +17,11 @@ export default {
   <div class="main-content-container">
     <h1>Page not found</h1>
     <p>The path <b>{{ unavailableRoute }}</b> is not available.</p>
-    <router-link to="/login">Go to home</router-link>
+    <router-link to="/login">Go to Login</router-link>
   </div>
 </template>
 
-<style >
+<style>
 .video-background {
   position: absolute;
   top: 0;
@@ -32,6 +32,7 @@ export default {
   z-index: 0;
   opacity: 0.6;
 }
+
 .main-content-container {
   display: flex;
   flex-direction: column;
@@ -40,7 +41,9 @@ export default {
   height: 100vh;
   z-index: 1;
   font-family: 'Montserrat', sans-serif;
-  gap:1rem
+  color: black;
+
+  gap: 1rem
 
 }
 </style>

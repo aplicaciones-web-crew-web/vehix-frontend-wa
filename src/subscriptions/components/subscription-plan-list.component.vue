@@ -1,6 +1,4 @@
 <script>
-import {SubscriptionPlanApiService} from "../services/subscription-plan-api.service.js";
-import {SubscriptionPlanAssembler} from "../services/subscription-plan.assembler.js";
 import {Button as PvButton} from "primevue";
 
 export default {

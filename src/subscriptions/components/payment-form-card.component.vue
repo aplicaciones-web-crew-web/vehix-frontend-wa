@@ -2,7 +2,7 @@
 import AlertCard from "../../shared/components/alert-card.component.vue";
 import {isNumeric, isValidEmail} from "../../shared/utils/validation.util.js";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
-import {UsersApiService} from "../../IAM/services/users-api.service.js";
+import {UserService} from "../../IAM/services/user.service.js";
 
 export default {
   name: "payment-form-card",
@@ -48,7 +48,7 @@ export default {
     }
   },
   created() {
-    this.usersApiService = new UsersApiService();
+    this.usersApiService = new UserService();
 
     this.userId = UserSessionService.getUserId();
     this.today = new Date();

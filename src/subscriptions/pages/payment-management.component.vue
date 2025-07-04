@@ -2,9 +2,9 @@
 import ToolbarPayment from "../components/toolbar-payment.component.vue";
 import PaymentSummaryCard from "../components/payment-summary-card.component.vue";
 import PaymentFormCard from "../components/payment-form-card.component.vue";
-import {PaymentApiService} from "../services/payment-api.service.js";
+import {PaymentService} from "../services/payment.service.js";
 import {PaymentAssembler} from "../services/payment.assembler.js";
-import {SubscriptionPlanApiService} from "../services/subscription-plan-api.service.js";
+import {SubscriptionPlanService} from "../services/subscription-plan.service.js";
 import {SubscriptionPlanAssembler} from "../services/subscription-plan.assembler.js";
 
 export default {
@@ -22,8 +22,8 @@ export default {
   },
   created() {
     this.planName = this.$route.query.planName;
-    this.subscriptionPlanService = new SubscriptionPlanApiService();
-    this.paymentService = new PaymentApiService();
+    this.subscriptionPlanService = new SubscriptionPlanService();
+    this.paymentService = new PaymentService();
 
     this.subscriptionPlanService.getAll()
         .then((response) => {
