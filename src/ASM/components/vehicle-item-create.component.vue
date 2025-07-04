@@ -159,7 +159,7 @@ export default {
         if (items.length > 0) {
           this.vehicleImageLink = items[0].link;
           const vehicleGeneric = {
-            userId: this.userId,
+            userId: parseInt(this.userId),
             description: this.vehicleName,
             name: this.vehicleName,
             brand: vehicle.brand,
