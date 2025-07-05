@@ -53,14 +53,14 @@
   "statusChecks": [
     {
       "vehicleId": 2,
-      "engine": 7,
-      "transmission": 86,
-      "brakes": 64,
-      "electrical": 39,
-      "steering": 43,
-      "suspension": 31,
+      "engine": 72,
+      "transmission": 87,
+      "brakes": 41,
+      "electrical": 49,
+      "steering": 27,
+      "suspension": 63,
       "fuel": 67,
-      "refrigeration": 45,
+      "refrigeration": 28,
       "id": 1
     }
   ],
