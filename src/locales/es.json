@@ -13,7 +13,9 @@
     "recentRepairs": "Reparaciones Recientes",
     "lastScan": "Último Escaneo",
     "aboutVehicle": "Sobre tu Vehículo",
-    "tapToScan": "Toca para escanear"
+    "tapToScan": "Toca para escanear",
+    "solved": "solucionado",
+    "suggestedSolution": "Solucion sugerida:"
   },
   "title": "Si tiene fallas críticas en el sistema eléctrico de su auto, aquí están las ubicaciones de mecánicos especializados cerca de usted:",
   "button": "¿Se reparó alguna falla?",
@@ -113,12 +115,12 @@
   },
   "videos": {
     "list": [
-      "Título del Video 1",
-      "Título del Video 2",
-      "Título del Video 3",
-      "Título del Video 4",
-      "Título del Video 5",
-      "Título del Video 6"
+      "Video recomendado 1",
+      "Video recomendado 2",
+      "Video recomendado 3",
+      "Video recomendado 4",
+      "Video recomendado 5",
+      "Video recomendado 6"
     ]
   },
   "articles": {

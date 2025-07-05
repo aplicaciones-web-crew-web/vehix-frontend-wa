@@ -53,14 +53,14 @@
   "statusChecks": [
     {
       "vehicleId": 2,
-      "engine": 38,
-      "transmission": 98,
-      "brakes": 17,
-      "electrical": 93,
-      "steering": 96,
-      "suspension": 90,
-      "fuel": 60,
-      "refrigeration": 35,
+      "engine": 7,
+      "transmission": 86,
+      "brakes": 64,
+      "electrical": 39,
+      "steering": 43,
+      "suspension": 31,
+      "fuel": 67,
+      "refrigeration": 45,
       "id": 1
     }
   ],
@@ -93,6 +93,34 @@
       "date": "2025-07-04T23:08:17.845Z",
       "status": "Pending",
       "id": 4
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 5,
+      "date": "2025-07-05T01:09:02.825Z",
+      "status": "Pending",
+      "id": 5
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 3,
+      "date": "2025-07-05T01:09:02.856Z",
+      "status": "Pending",
+      "id": 6
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 2,
+      "date": "2025-07-05T01:09:02.863Z",
+      "status": "Pending",
+      "id": 7
+    },
+    {
+      "vehicleId": 2,
+      "failureId": 6,
+      "date": "2025-07-05T01:11:39.737Z",
+      "status": "Pending",
+      "id": 8
     }
   ],
   "failures": [
