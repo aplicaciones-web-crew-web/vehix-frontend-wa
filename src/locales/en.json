@@ -13,7 +13,9 @@
     "recentRepairs": "Recent Repairs",
     "lastScan": "Last Scan",
     "aboutVehicle": "About Your Vehicle",
-    "tapToScan": "Tap to scan"
+    "tapToScan": "Tap to scan",
+    "solved": "solved",
+    "suggestedSolution": "Suggested solution:"
   },
   "title": "If your car has critical electrical system failures, here are the locations of specialized mechanics near you:",
   "button": "Was any issue fixed?",
@@ -114,12 +116,12 @@
   },
   "videos": {
     "list": [
-      "Tittle of Video 1",
-      "Tittle of Video 2",
-      "Tittle of Video 3",
-      "Tittle of Video 4",
-      "Tittle of Video 5",
-      "Tittle of Video 6"
+      "Recommended video 1",
+      "Recommended video 2",
+      "Recommended video 3",
+      "Recommended video 4",
+      "Recommended video 5",
+      "Recommended video 6"
     ]
   },
   "articles": {

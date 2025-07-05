@@ -14,6 +14,8 @@ const ProfileComponent = () => import('../public/pages/profile.component.vue');
 const SyncComponent = () => import('../public/pages/sync.component.vue');
 const MechanicComponent = () => import('../monitoring/pages/Mechanic.vue');
 const FailuresManagementComponent = () => import('../monitoring/pages/failures-management.component.vue');
+const RapidDiagnosticComponent = () => import('../monitoring/pages/rapid-diagnostic.component.vue');
+const RecentRepairsComponent = () => import('../monitoring/pages/recent-repairs.component.vue');
 const PaymentManagementComponent = () => import('../subscriptions/pages/payment-management.component.vue');
 const SubscriptionPlanManagementComponent = () => import('../subscriptions/pages/subscription-plan-management.component.vue');
 const VehicleRegistrationManagementComponent = () => import('../ASM/pages/vehicle-registration-management.component.vue');
@@ -53,7 +55,8 @@ const routes = [
     {path: '/library/videos', name: 'videos', component: ResourceView, props: {titleKey: 'card.videos'}, meta: {title: 'Videos'}},
     {path: '/library/manuals', name: 'manuals', component: ResourceView, props: {titleKey: 'card.manuals'}, meta: {title: 'Manuals'}},
     {path: '/library/recommendations', name: 'recommendations', component: ResourceView, props: {titleKey: 'card.recommendations'}, meta: {title: 'Recommendations'}},
-
+    {path: '/diagnostic/rapid_diagnostic', name: 'rapid-diagnostic', component: RapidDiagnosticComponent, meta: {title: 'Rapid Diagnostic'}},
+    {path: '/diagnostic/recents-repairs', name: 'recent-repairs', component: RecentRepairsComponent, meta: {title: 'Recent Repairs'}},
 
 ];
 

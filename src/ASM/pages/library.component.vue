@@ -52,6 +52,7 @@ export default defineComponent({
     <videos-component class="card-videos-container" v-else-if="titleKey === 'card.videos'" />
     <articles-component class="card-articles-container" v-else-if="titleKey === 'card.technical'" />
     <sector-advances-component class="card-sector-advances-container" v-else-if="titleKey === 'card.advances'" />
+    <manuals-component v-else-if="titleKey === 'card.manuals'" />
     <recommendation-component class="card-recommendation-container" v-else-if="titleKey === 'card.recommendations'" />
     <news-component class="card-news-container" v-else-if="titleKey === 'card.news'" />
   </div>
