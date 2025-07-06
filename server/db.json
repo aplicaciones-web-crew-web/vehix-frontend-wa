@@ -10,6 +10,39 @@
       "dni": "72265874",
       "gender": "male",
       "planId": 2
+    },
+    {
+      "id": 2,
+      "name": "Antonio Jhair",
+      "lastName": "Navarro Chinga",
+      "email": "antonio@gmail.com",
+      "password": "123",
+      "phoneNumber": "123",
+      "dni": "123",
+      "gender": "male",
+      "planId": 1
+    },
+    {
+      "id": 3,
+      "name": "ANtonio navarro",
+      "lastName": "dsa",
+      "email": "dsa@gmail.com",
+      "password": "123",
+      "phoneNumber": "1234",
+      "dni": "1234",
+      "gender": "male",
+      "planId": 2
+    },
+    {
+      "id": 4,
+      "name": "asdada",
+      "lastName": "dsa",
+      "email": "01@gmail.com",
+      "password": "01",
+      "phoneNumber": "01",
+      "dni": "01",
+      "gender": "male",
+      "planId": 2
     }
   ],
   "plans": [
@@ -64,7 +97,32 @@
       "id": 1
     }
   ],
-  "payments": [],
+  "payments": [
+    {
+      "id": 1,
+      "userId": "2",
+      "planId": 1,
+      "amount": 115,
+      "date": "2025-07-06T20:47:27.407Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 2,
+      "userId": "3",
+      "planId": 2,
+      "amount": 100,
+      "date": "2025-07-06T20:53:01.311Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "planId": 2,
+      "amount": 100,
+      "date": "2025-07-06T20:54:16.534Z",
+      "status": "COMPLETED"
+    }
+  ],
   "vehiclesFailures": [
     {
       "vehicleId": 2,
