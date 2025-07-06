@@ -213,8 +213,6 @@ export default {
   align-items: center;
   justify-content: center;
   height: 50%;
-
-
 }
 
 .column-3 {
@@ -222,6 +220,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: auto;
   height: 50%;
 }
 
