@@ -62,7 +62,9 @@ export default {
   border-radius: 100%;
   margin-left: 1rem;
 }
-
+.issues-box h3{
+  color: black;
+}
 .urgency-dot.Critical {
   background-color: red;
 }
