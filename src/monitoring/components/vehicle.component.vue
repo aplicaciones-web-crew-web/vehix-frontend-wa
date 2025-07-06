@@ -41,21 +41,21 @@ export default {
     </div>
     <div class="vehicle-brand">
       <h2>{{ $t('vehicleCard.brand') }}</h2>
-      <h3>{{ brand }}</h3>
+      <h3 class="information-vehicle-h3">{{ brand }}</h3>
     </div>
     <div class="vehicle-model">
       <h2>{{ $t('vehicleCard.model') }}</h2>
-      <h3>{{ model }}</h3>
+      <h3 class="information-vehicle-h3">{{ model }}</h3>
     </div>
 
     <div class="vehicle-life-span">
       <h2>{{ $t('vehicleCard.lifeSpan') }}</h2>
-      <h3>{{ getRandomLifeSpanInDecimal() }}</h3>
+      <h3 class="information-vehicle-h3">{{ getRandomLifeSpanInDecimal() }}</h3>
     </div>
 
     <div class="vehicle-name">
       <h2>{{ $t('vehicleCard.name') }}</h2>
-      <h3>{{ name }}</h3>
+      <h3 class="information-vehicle-h3">{{ name }}</h3>
     </div>
 
   </div>
@@ -63,7 +63,7 @@ export default {
 
 <style>
 
-img {
+.vehicle-image-container img{
   width: clamp( 200px, 90%, 100%);
 }
 .vehicle-card-container{
@@ -114,7 +114,7 @@ img {
   color: white;
 
 }
-h3{
+.information-vehicle-h3{
   font-size: clamp(1rem, 2vw, 1.5rem);
   font-family: 'Montserrat', sans-serif;
   color: white;

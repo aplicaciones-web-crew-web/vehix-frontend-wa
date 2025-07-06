@@ -21,7 +21,7 @@ export default {
     <div v-for="check in systemChecks" :key="check.id" class="system-check-item">
       <div class="car-engine">
         <div class="car-engine-title">
-          <h3 class="title-car-system">{{ check.engine }}%</h3>
+          <h3 class="title-car-system">Engine: {{ check.engine }}%</h3>
         </div>
         <div class="car-engine-graphic">
           <pv-knob :model-value="check.engine" class="non-interactive-knob-car" :min="0" :max="100" :step="1" :size="60"
@@ -30,7 +30,7 @@ export default {
       </div>
       <div class="car-engine">
         <div class="car-engine-title">
-          <h3 class="title-car-system">{{ check.transmission }}%</h3>
+          <h3 class="title-car-system">Transmission: {{ check.transmission }}%</h3>
         </div>
         <div class="car-engine-graphic">
           <pv-knob :model-value="check.transmission" class="non-interactive-knob-car" :min="0" :max="100" :step="1"
@@ -41,7 +41,7 @@ export default {
       <div class="car-engine">
         <div class="car-engine-title">
 
-          <h3 class="title-car-system">{{ check.brake }}%</h3>
+          <h3 class="title-car-system">Brake: {{ check.brake }}%</h3>
         </div>
         <div class="car-engine-graphic">
           <pv-knob :model-value="check.brake" class="non-interactive-knob-car" :min="0" :max="100" :step="1" :size="60"
@@ -51,7 +51,7 @@ export default {
       <div class="car-engine">
         <div class="car-engine-title">
 
-          <h3 class="title-car-system">{{ check.electrical }}%</h3>
+          <h3 class="title-car-system">Electrical: {{ check.electrical }}%</h3>
         </div>
         <div class="car-engine-graphic">
           <pv-knob :model-value="check.electrical" class="non-interactive-knob-car" :min="0" :max="100" :step="1"
@@ -62,7 +62,7 @@ export default {
       <div class="car-engine">
         <div class="car-engine-title">
 
-          <h3 class="title-car-system">{{ check.steering }}%</h3>
+          <h3 class="title-car-system">Steering: {{ check.steering }}%</h3>
         </div>
         <div class="car-engine-graphic">
           <pv-knob :model-value="check.steering" class="non-interactive-knob-car" :min="0" :max="100" :step="1"
@@ -73,7 +73,7 @@ export default {
       <div class="car-engine">
         <div class="car-engine-title">
 
-          <h3 class="title-car-system">{{ check.suspension }}%</h3>
+          <h3 class="title-car-system">Suspension: {{ check.suspension }}%</h3>
         </div>
         <div class="car-engine-graphic">
           <pv-knob :model-value="check.suspension" class="non-interactive-knob-car" :min="0" :max="100" :step="1"
@@ -84,7 +84,7 @@ export default {
       <div class="car-engine">
         <div class="car-engine-title">
 
-          <h3 class="title-car-system">{{ check.fuel }}%</h3>
+          <h3 class="title-car-system">Fuel: {{ check.fuel }}%</h3>
         </div>
         <div class="car-engine-graphic">
           <pv-knob :model-value="check.fuel" class="non-interactive-knob-car" :min="0" :max="100" :step="1" :size="60"
@@ -94,7 +94,7 @@ export default {
 
       <div class="car-engine">
         <div class="car-engine-title">
-          <h3 class="title-car-system">{{ check.refrigeration }}%</h3>
+          <h3 class="title-car-system">Refrigeration: {{ check.refrigeration }}%</h3>
         </div>
         <div class="car-engine-graphic">
           <pv-knob :model-value="check.refrigeration" class="non-interactive-knob-car" :min="0" :max="100" :step="1"
@@ -140,5 +140,11 @@ export default {
 
 .title-car-system {
   color: white;
+}
+
+.car-engine-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
