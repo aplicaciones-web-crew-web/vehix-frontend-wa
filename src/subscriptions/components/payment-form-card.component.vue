@@ -152,8 +152,8 @@ export default {
       const updatedUserData = {...currentUserData, planId: this.plan.id};
 
       const paymentData = {
-        userId: this.userId,
-        planId: this.plan.id,
+        userId: parseInt(this.userId),
+        planId: parseInt(this.plan.id),
         date: new Date().toISOString(),
         status: "COMPLETED",
         amount: this.amount,
