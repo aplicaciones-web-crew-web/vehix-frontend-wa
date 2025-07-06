@@ -56,7 +56,7 @@ export default {
 
 
 
-p {
+.vehicle-image-card p{
   text-align: center;
 }
 

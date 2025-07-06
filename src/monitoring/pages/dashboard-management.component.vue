@@ -178,7 +178,7 @@ export default {
 <style>
 .dashboard-container {
   display: flex;
-  height: calc(100vh - 65px);
+  height: calc(120vh - 64px); /* Adjust height to fit below the header */
   gap: 16px;
   padding: 16px;
   box-sizing: border-box;
@@ -208,6 +208,8 @@ export default {
   padding: 16px;
   display: flex;
   flex-direction: column;
+
+
 }
 
 .scan-history {
