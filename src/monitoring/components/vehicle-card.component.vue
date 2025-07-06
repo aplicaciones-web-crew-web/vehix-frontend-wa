@@ -91,6 +91,11 @@ p {
 
 }
 
+.vehicle-image {
+  width: 100%;
+  height: auto;
+}
+
 @keyframes pulseAnimate {
   100% {
     opacity: 0;
