@@ -35,7 +35,7 @@ export default {
     //User Service loading to verify if the user has a plan
     this.userService.getById(this.userId).then(response => {
       const user = response.data;
-      if (user.planId !== 0) {
+      if (user.planId !== 3) {
         this.$router.push("/home");
       }
     }).catch(error => {
