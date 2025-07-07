@@ -136,123 +136,149 @@ export default {
 </script>
 
 <template>
-  <div class="dashboard-main-container" style="display: flex; justify-content: center;">
-    <div class="column-1" style="display: flex; flex-direction: column; width: 30%;height: calc(100vh - 65px);">
-      <div class="row-1" style="display: flex; flex-direction: column; height: 60%;  padding: 1rem">
-        <div class="content-row-1" style="background: #f5f5f5 ; height: 100% ;padding: 1rem">
-          <h2 class="h2-container">{{ $t('dashboard.scanHistory') }}</h2>
-          <p v-if="activateEmptyMessage">{{ $t('dashboard.scanHistoryContent') }}</p>
-          <vehicle-state :vehicle-failures=" vehicleFailures" v-if="!activateEmptyMessage"
-                         style="display: flex; justify-content: center; align-items: center; height: 70%"></vehicle-state>
-
+  <div class="dashboard-container">
+    <div class="left-column">
+      <div class="scan-history">
+        <h2 class="section-title">{{ $t('dashboard.scanHistory') }}</h2>
+        <p v-if="activateEmptyMessage">{{ $t('dashboard.scanHistoryContent') }}</p>
+        <div class="vehicle-state-container" v-if="!activateEmptyMessage">
+          <vehicle-state :vehicle-failures="vehicleFailures"></vehicle-state>
         </div>
       </div>
-      <div class="row-2" style="display: flex; flex-direction: column; height: 40%; padding: 1rem">
-        <div class="content-row-2" style="background: #d9d9d9 ; height: 100% ;padding: 1rem">
-          <h2 class="h2-container">{{ $t('dashboard.subscription') }}</h2>
-          <img v-if="vehicleId" class="plan-image-container" :src="subscriptionImage" alt="">
-        </div>
+
+      <div class="subscription">
+        <h2 class="section-title">{{ $t('dashboard.subscription') }}</h2>
+        <img v-if="vehicleId" :src="subscriptionImage" alt="Subscription Plan" class="subscription-image">
       </div>
     </div>
 
-    <div class="column-2" style="display: flex; flex-direction: column;width: 40%; padding: 1rem">
-      <div class="main-row"
-           style="display: flex; flex-direction: column; background: #696969; height: 100%; padding: 1rem; text-align: center">
-        <h2 class="h2-container" style="color: white">{{ $t('dashboard.vehicleStateSummary') }}</h2>
-        <p v-if="activateEmptyMessage" style="color: white">{{ $t('dashboard.vehicleStateSummaryContent') }}</p>
-        <vehicle v-if="!activateEmptyMessage" :name="vehicleName" :model="vehicleModel" :brand="vehicleBrand"
-                 :url-image="vehicleImage"></vehicle>
-
+    <div class="center-column">
+      <h2 class="section-title white">{{ $t('dashboard.vehicleStateSummary') }}</h2>
+      <p v-if="activateEmptyMessage" class="white">{{ $t('dashboard.vehicleStateSummaryContent') }}</p>
+      <div class="vehicle-container" v-if="!activateEmptyMessage">
+        <vehicle
+            :name="vehicleName"
+            :model="vehicleModel"
+            :brand="vehicleBrand"
+            :url-image="vehicleImage">
+        </vehicle>
       </div>
     </div>
 
-    <div class="column-2" style="display: flex; flex-direction: column;width: 30%; padding: 1rem">
-      <div class="main-row"
-           style="display: flex; flex-direction: column; background: #696969; height: 100%; padding: 1rem; text-align: center;">
-        <h2 class="h2-container" style="color: white">{{ $t('dashboard.vehicleStateSummary') }}</h2>
-        <p v-if="activateEmptyMessage" style="color: white">{{ $t('dashboard.vehicleStateSummaryContent') }}</p>
-        <car-system :systemChecks="systemChecks"
-                    style="display: flex; text-align: center; justify-content: center; width: 100%"></car-system>
-
+    <div class="right-column">
+      <h2 class="section-title white">{{ $t('dashboard.vehicleStateSummary') }}</h2>
+      <p v-if="activateEmptyMessage" class="white">{{ $t('dashboard.vehicleStateSummaryContent') }}</p>
+      <div class="car-system-container" v-if="!activateEmptyMessage">
+        <car-system :systemChecks="systemChecks"></car-system>
       </div>
     </div>
   </div>
 </template>
 
 <style>
-.h2-container{
+.dashboard-container {
+  display: flex;
+  height: calc(120vh - 64px); /* Adjust height to fit below the header */
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.left-column {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.center-column {
+  flex: 0 0 40%;
+  background: #696969;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-column {
+  flex: 0 0 30%;
+  background: #696969;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.scan-history {
+  flex: 1;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription {
+  flex: 1;
+  background: #d9d9d9;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vehicle-state-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vehicle-container, .car-system-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section-title {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.5rem, 1.5vw, 2rem);
   margin-bottom: 1rem;
 }
 
-.content-row-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.plan-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40%;
-
-}
-
-.column-1 {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 65px);
-}
-
-.column-3 {
-  display: flex;
-  height: calc(100vh - 65px);
-}
-
-.column-2 {
-  display: flex;
-  flex-direction: column;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.main-row {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+.white {
   color: white;
 }
 
-.dashboard-main-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 100%;
-  height: calc(100vh - 65px);
+.subscription-image {
+  width: 40%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
 }
 
 @media only screen and (max-width: 1000px) {
-  .dashboard-main-container {
-    flex-flow: column wrap;
-  }
-
-  .main-row {
-    flex-flow: column wrap;
-  }
-
-  .column-1, .column-2, .column-3 {
-    display: flex;
+  .dashboard-container {
     flex-direction: column;
+    height: auto;
+  }
 
+  .left-column, .center-column, .right-column {
+    flex: 1 0 auto;
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .scan-history, .subscription {
+    min-height: 250px;
   }
 }
 </style>

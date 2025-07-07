@@ -55,6 +55,10 @@ export default {
 </template>
 
 <style>
+.bad-practices-box h3{
+  color: #111;
+}
+
 .bad-practices-box {
   display: flex;
   flex-direction: column;
@@ -64,6 +68,7 @@ export default {
   padding: 3rem;
   background-color: #EEEEEE;
   width: 100%;
+  height: auto;
 }
 
 .bad-practice-item {

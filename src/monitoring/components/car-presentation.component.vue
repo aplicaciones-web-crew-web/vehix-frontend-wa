@@ -103,6 +103,11 @@ export default {
   margin-bottom: 10px;
 }
 
+.car-image{
+  width: 80%;
+  height: 100%;
+}
+
 .avatar span {
   position: absolute;
   top: 0;
