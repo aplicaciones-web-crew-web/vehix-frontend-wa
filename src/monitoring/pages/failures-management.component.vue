@@ -183,7 +183,6 @@ export default {
       <div class="seek-help-btn-container">
         <button @click="openMechanicPage" class="seek-help-btn">Seek help</button>
       </div>
-
     </div>
   </div>
 
@@ -196,7 +195,7 @@ export default {
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 65px);
+  height: calc(110vh - 65px);
 }
 
 .column-1 {
@@ -205,6 +204,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100%;
+
 }
 
 .column-2 {
@@ -213,6 +213,8 @@ export default {
   align-items: center;
   justify-content: center;
   height: 50%;
+  margin-top: 4rem;
+
 }
 
 .column-3 {
@@ -220,14 +222,16 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: auto;
+  width: 80%;
   height: 50%;
+  margin-top: -3rem;
 }
 
 .column-4 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 200px;
   width: 30%;
   justify-content: center;
   height: 100%;
@@ -252,9 +256,10 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  gap: 1rem;
+  margin-top: 15%;
+  gap: 5rem;
   width: 30%;
-  height: 100%;
+  height: 120%;
 }
 
 button {

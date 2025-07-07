@@ -49,7 +49,7 @@ export default {
 
 <template>
   <div class="available-devices-management" style="display: flex;  justify-content: center;">
-    <div class="column-1" style="display: flex; flex-direction: column;height: 100%; padding: 1rem; ">
+    <div class="sync-column-1" style="display: flex; flex-direction: column;height: 100%; padding: 1rem; ">
       <div class="content-row-1" style="background: rgb(239,239,239); height: 100% ;padding: 2rem">
         <h1 style="font-size: clamp(1rem, 2vw, 2rem)">{{ $t('connectionGuide.title') }}</h1>
         <h2 style="font-size: clamp(1rem, 2vw, 2rem)">{{ $t('connectionGuide.subtitle') }}</h2>
@@ -71,13 +71,13 @@ export default {
           </li>
         </ul>
         <div class="img-container" style="width: 100%; text-align: center ">
-          <img style="width: clamp(10px, 10vw, 250px); margin-top: 2.5rem; "
+          <img alt="image" style="width: clamp(10px, 10vw, 250px); margin-top: 2.5rem; "
                src="https://preview.redd.it/vehixscanner-v0-1h251yt57b8f1.png?width=640&crop=smart&auto=webp&s=2115a0c87faa1bbc800169792888e1448662639e">
         </div>
       </div>
     </div>
 
-    <div class="column-2"
+    <div class="sync-column-2"
          style="display: flex; flex-direction: column;height: calc(100vh - 65px); padding: 1rem">
       <div class="content-row-1" style="background: #f5f5f5 ; height: 100% ;padding: 1rem">
         <button
@@ -102,7 +102,7 @@ export default {
       </div>
     </div>
 
-    <div class="column-3"
+    <div class="sync-column-3"
          style="display: flex; flex-direction: column;height: calc(100vh - 65px); padding: 1rem">
       <div class="content-row-1" style="background: #f5f5f5 ; height: 100% ;padding: 1rem">
         <h2 class="title-scan-history-dash">{{ $t('dashboardSync.scanHistory') }}</h2>
@@ -132,11 +132,11 @@ export default {
   height: 100%;
 }
 
-.column-1 {
+.sync-column-1 {
   width: 33%;
 }
 
-.column-2 {
+.sync-column-2 {
   width: 34%;
 }
 
@@ -146,7 +146,7 @@ export default {
   margin-bottom: 1rem;
 }
 
-.column-3 {
+.sync-column-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,7 +193,7 @@ export default {
     width: 100%;
   }
 
-  .column-1, .column-2, .column-3 {
+  .sync-column-1, .sync-column-2, .sync-column-3 {
     width: 100%;
   }
 }
