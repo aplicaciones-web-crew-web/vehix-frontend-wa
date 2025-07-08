@@ -9,18 +9,7 @@ export default {
 </script>
 
 <template>
-
-  <!--
-      <div class="tap-scan-container">
-        <div class="outer-circle">
-          <router-link to="/diagnostic/tap-scan" class="inner-circle">
-            {{ $t('diagnostic.tapToScan') }}
-          </router-link>
-        </div>
-      </div>
-    </div>-->
-    <maintenance-management></maintenance-management>
-
+  <maintenance-management></maintenance-management>
 
 </template>
 

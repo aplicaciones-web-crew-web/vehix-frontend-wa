@@ -48,13 +48,13 @@ export default defineComponent({
     >
       {{ t('more.link') }}
     </a>
-    <resource-card-list v-if="titleKey === 'resources.title'" />
-    <videos-component v-else-if="titleKey === 'card.videos'" />
-    <articles-component v-else-if="titleKey === 'card.technical'" />
-    <sector-advances-component v-else-if="titleKey === 'card.advances'" />
+    <resource-card-list class="card-resources-container" v-if="titleKey === 'resources.title'" />
+    <videos-component class="card-videos-container" v-else-if="titleKey === 'card.videos'" />
+    <articles-component class="card-articles-container" v-else-if="titleKey === 'card.technical'" />
+    <sector-advances-component class="card-sector-advances-container" v-else-if="titleKey === 'card.advances'" />
     <manuals-component v-else-if="titleKey === 'card.manuals'" />
-    <recommendation-component v-else-if="titleKey === 'card.recommendations'" />
-    <news-component v-else-if="titleKey === 'card.news'" />
+    <recommendation-component class="card-recommendation-container" v-else-if="titleKey === 'card.recommendations'" />
+    <news-component class="card-news-container" v-else-if="titleKey === 'card.news'" />
   </div>
 </template>
 
@@ -64,11 +64,8 @@ export default defineComponent({
 * Includes styles for the container, title, and external link.
 * @author Piero Hugo Elescano Leon U202313354
 */
-<style scoped>
-.resource-view {
-  padding: 48px;
-  color: black;
-}
+<style>
+
 h1 {
   font-size: 2rem;
   text-transform: uppercase;
@@ -91,6 +88,9 @@ h1 {
   text-decoration: underline;
   background: transparent;
   color: #1976d2;
+}
+.resource-view{
+  height: clamp( 100vh, 100%, 100vh);
 }
 @media (max-width: 900px) {
   .resource-view {

@@ -55,7 +55,7 @@ h3{
   font-size: 32px;
   color: black;
 }
-p{
+.alert-message p{
   font-size: 17px;
   color: rgba(0, 0, 0, 0.75);
 }

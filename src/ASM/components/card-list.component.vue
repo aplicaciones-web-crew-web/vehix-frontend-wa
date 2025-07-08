@@ -1,11 +1,11 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 import ResourceCard from './card.component.vue';
 import ResourceCardService from '../services/card-service';
 
 export default defineComponent({
   name: 'resource-card-list',
-  components: { ResourceCard },
+  components: {ResourceCard},
   data() {
     return {
       cards: []
@@ -19,7 +19,7 @@ export default defineComponent({
 
 <template>
   <div class="resource-card-list">
-    <resource-card
+    <resource-card class="resource-card"
         v-for="card in cards"
         :key="card.id"
         :titleKey="card.titleKey"
@@ -29,12 +29,33 @@ export default defineComponent({
   </div>
 </template>
 
-<style scoped>
+<style>
+*{
+  text-align: center;
+}
 .resource-card-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 24px;
-  padding: 32px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  gap: 1rem;
+  text-align: center;
+}
+
+.resource-card {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+@media only screen and (max-width: 700px) {
+  .resource-card {
+    width: 100%;
+  }
 }
 </style>

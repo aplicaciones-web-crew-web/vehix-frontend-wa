@@ -2,7 +2,7 @@
 import AlertCard from "../../shared/components/alert-card.component.vue";
 import {isNumeric, isValidEmail} from "../../shared/utils/validation.util.js";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
-import {UsersApiService} from "../../IAM/services/users-api.service.js";
+import {UserService} from "../../IAM/services/user.service.js";
 
 export default {
   name: "payment-form-card",
@@ -48,7 +48,7 @@ export default {
     }
   },
   created() {
-    this.usersApiService = new UsersApiService();
+    this.usersApiService = new UserService();
 
     this.userId = UserSessionService.getUserId();
     this.today = new Date();
@@ -149,11 +149,11 @@ export default {
       if (!this.validateEmail()) return;
       const userResponse = await this.usersApiService.getById(this.userId);
       const currentUserData = userResponse.data;
-      const updatedUserData = { ...currentUserData, planId: this.plan.id };
+      const updatedUserData = {...currentUserData, planId: this.plan.id};
 
       const paymentData = {
-        userId: this.userId,
-        planId: this.plan.id,
+        userId: parseInt(this.userId),
+        planId: parseInt(this.plan.id),
         date: new Date().toISOString(),
         status: "COMPLETED",
         amount: this.amount,
@@ -235,6 +235,8 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: black;
+  font-size: clamp( 1rem, 1vw, 1rem);
 }
 
 .contact-fields {
@@ -242,6 +244,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.5rem;
+;
 }
 
 .address-container {
@@ -249,6 +253,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .separator-container {
@@ -264,5 +269,48 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+
+  }
+
+  .separator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .address-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .separator-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .payment-method-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 }
 </style>

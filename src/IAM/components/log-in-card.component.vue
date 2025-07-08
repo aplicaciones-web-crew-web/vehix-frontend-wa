@@ -1,9 +1,11 @@
 <script>
-import {UsersApiService} from "../services/users-api.service.js";
+import {UserService} from "../services/user.service.js";
 import AlertCard from "../../shared/components/alert-card.component.vue";
-import {UserAssembler} from "../services/user.assembler.js"; // Asegúrate de que el path sea correcto
+import {UserAssembler} from "../services/user.assembler.js";
 import {isNumeric} from "../../shared/utils/validation.util.js";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
+import {AuthenticationService} from "../services/authentication.service.js";
+import {SignInRequest} from "../model/sign-in.request.js";
 
 export default {
   name: "log-in-card",
@@ -24,7 +26,7 @@ export default {
    * @author U202318274 Julca Minaya Sergio Gino
    */
   created() {
-    this.userService = new UsersApiService();
+    this.userService = new UserService();
     this.userService.getAll().then(response => {
       this.users = UserAssembler.toEntitiesFromResponse(response);
       console.log("Users loaded successfully:", this.users);
@@ -65,7 +67,7 @@ export default {
      * @returns {boolean} - Returns true if all fields are filled, false otherwise.
      * @author U202318274 Julca Minaya Sergio Gino
      */
-    validateFilledFields(){
+    validateFilledFields() {
       if (this.dni === '' || this.password === '') {
         this.displayAlert("Empty fields", "Please complete all fields", "warn");
         return false;
@@ -82,25 +84,32 @@ export default {
      * It checks if the provided DNI and password match any user in the users array.
      * @author U202318274 Julca Minaya Sergio Gino
      */
-    validateLogin(){
+    validateLogin() {
       this.currentAlert = null;
-      if (!this.validateFilledFields()) { return;}
-      const foundUser = this.users.find( user => user.dni === this.dni && user.password === this.password);
-
-      if (foundUser) {
-        this.displayAlert("Succesfull login", `Welcome back, ${foundUser.name} ${foundUser.lastName}!`, "success");
-        console.log('Logged in user ', foundUser);
-
-        UserSessionService.setUserId(foundUser.id)
-
-        setTimeout(() => {
-          this.$router.push('/subscriptions');
-        }, 1500);
-
-      } else {
-        this.displayAlert("Invalid credentials", "Incorrect ID or password. Please verify your details", "error");
-        console.log('Login failed for user with DNI:', this.dni);
+      if (!this.validateFilledFields()) {
+        return;
       }
+      const authService = new AuthenticationService();
+      const signInRequest = new SignInRequest(this.dni, this.password);
+      authService.signIn(signInRequest)
+        .then(response => {
+          const token = response.data.token;
+          const userId = response.data.id;
+          if (token) {
+            sessionStorage.setItem('authToken', token);
+            UserSessionService.setUserId(userId);
+            this.displayAlert("Succesfull login", `Welcome to Vehix!`, "success");
+            setTimeout(() => {
+              this.$router.push('/subscriptions');
+            }, 1500);
+          } else {
+            this.displayAlert("Invalid credentials", "Incorrect ID or password. Please verify your details", "error");
+          }
+        })
+        .catch(error => {
+          this.displayAlert("Invalid credentials", "Incorrect ID or password. Please verify your details", "error");
+          console.log('Login failed:', error);
+        });
     },
 
     /**
@@ -124,24 +133,35 @@ export default {
       :type="currentAlert.type"
       :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
   ></alert-card>
-  <div v-if="currentAlert" class="modal-overlay"></div> <div class="login-container">
-  <pv-card class="login-card">
-    <template #title><h1>VEHIX</h1></template>
-    <template #subtitle><h1> {{ $t('login.title') }}</h1></template>
-    <template #content>
-      <div class="form-fields login-fields">
-        <pv-input-text :placeholder="$t('login.dni')" v-model="dni"></pv-input-text>
-        <pv-input-text :placeholder="$t('login.password')" type="password" v-model="password"></pv-input-text>
-      </div>
-    </template>
-    <template #footer>
-      <div class="buttons-container">
-        <pv-button :label="$t('login.loginButton')" @click="validateLogin()"></pv-button>
-        <pv-button :label="$t('login.registerButton')" @click="emitToggleMode()"></pv-button>
-      </div>
-    </template>
-  </pv-card>
-</div>
+  <div v-if="currentAlert" class="modal-overlay"></div>
+  <div class="login-container">
+
+    <video autoplay loop muted playsinline class="video-background">
+      <source
+          src="https://packaged-media.redd.it/biq46suadqaf1/pb/m2-res_360p.mp4?m=DASHPlaylist.mpd&v=1&e=1751594400&s=b7e7d28c0042e41351ee23c8f06328ac577529fe"
+          type="video/mp4">
+      Your navigator does not support the video tag.
+    </video>
+    <pv-card class="login-card" style="background: rgba(255, 255, 255, 0.3);">
+      <template #title>
+
+        <h1>VEHIX</h1>
+      </template>
+      <template #subtitle><h1> {{ $t('login.title') }}</h1></template>
+      <template #content>
+        <div class="form-fields login-fields">
+          <pv-input-text :placeholder="$t('login.dni')" v-model="dni"></pv-input-text>
+          <pv-input-text :placeholder="$t('login.password')" type="password" v-model="password"></pv-input-text>
+        </div>
+      </template>
+      <template #footer>
+        <div class="buttons-container">
+          <pv-button :label="$t('login.loginButton')" @click="validateLogin()" style="color: white"></pv-button>
+          <pv-button :label="$t('login.registerButton')" @click="emitToggleMode()"></pv-button>
+        </div>
+      </template>
+    </pv-card>
+  </div>
 </template>
 
 <style>
@@ -160,6 +180,18 @@ export default {
   height: 100vh;
   width: 100vw;
 }
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.6;
+}
+
 
 .login-card {
   display: flex;
@@ -197,3 +229,4 @@ export default {
   transition: opacity 0.3s ease;
 }
 </style>
+

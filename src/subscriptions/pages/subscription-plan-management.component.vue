@@ -1,9 +1,9 @@
 <script>
 import SubscriptionPlanList from "../components/subscription-plan-list.component.vue";
-import {UsersApiService} from "../../IAM/services/users-api.service.js";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
 import {SubscriptionPlanAssembler} from "../services/subscription-plan.assembler.js";
-import {SubscriptionPlanApiService} from "../services/subscription-plan-api.service.js";
+import {SubscriptionPlanService} from "../services/subscription-plan.service.js";
+import {UserService} from "../../IAM/services/user.service.js";
 
 export default {
   name: "subscription-plan-management",
@@ -19,8 +19,8 @@ export default {
   created() {
     //Initializing services and loading data
     this.userId = UserSessionService.getUserId();
-    this.userService = new UsersApiService();
-    this.subscriptionPlanService = new SubscriptionPlanApiService();
+    this.userService = new UserService();
+    this.subscriptionPlanService = new SubscriptionPlanService();
 
     //Subscriptions Plans loading
     this.subscriptionPlanService.getAll().then(response => {
@@ -35,7 +35,7 @@ export default {
     //User Service loading to verify if the user has a plan
     this.userService.getById(this.userId).then(response => {
       const user = response.data;
-      if (user.planId !== 0) {
+      if (user.planId !== 3) {
         this.$router.push("/home");
       }
     }).catch(error => {

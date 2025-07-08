@@ -22,9 +22,8 @@ defineProps(['name', 'address', 'distance', 'phone'])
 .card h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
-  font-weight: 500; /* Medium */
+  font-weight: 500;
   margin-bottom: 8px;
-  margin: 4px 0;
 }
 
 .card p {

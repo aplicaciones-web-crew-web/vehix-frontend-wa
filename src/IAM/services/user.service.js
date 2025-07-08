@@ -6,7 +6,7 @@ import httpInstance from "../../shared/services/http.instance.js";
  * @description This class provides methods to interact with the user API endpoint, allowing for CRUD operations on user resources.
  * @author u202318274 Julca Minaya Sergio Gino
  */
-export class UsersApiService {
+export class UserService {
     /**
      * @summary The endpoint path for user resources
      * @description This property holds the API endpoint path for user-related operations, sourced from environment variables.

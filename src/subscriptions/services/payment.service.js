@@ -2,12 +2,12 @@ import httpInstance from "../../shared/services/http.instance.js";
 
 
 /**
- * @class PaymentApiService
+ * @class PaymentService
  * @description Class for managing subscription plan resources through API calls.
  * This service provides methods to interact with the subscription plans endpoint, allowing for CRUD operations.
  * @author u202318274 Julca Minaya Sergio Gino
  */
-export class PaymentApiService {
+export class PaymentService {
     /**
      * @property {string} resourceEndPoint - The API endpoint for payments.
      * @description This endpoint is used to perform CRUD operations on payments .

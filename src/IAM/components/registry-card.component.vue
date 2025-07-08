@@ -1,10 +1,10 @@
 <script>
 
-import {UsersApiService} from "../services/users-api.service.js";
 import AlertCard from "../../shared/components/alert-card.component.vue";
 import {isNumeric} from "../../shared/utils/validation.util.js";
 import {isValidEmail} from "../../shared/utils/validation.util.js";
 import {UserAssembler} from "../services/user.assembler.js";
+import {UserService} from "../services/user.service.js";
 
 export default {
   name: "registry-card",
@@ -30,7 +30,7 @@ export default {
    * @author U202318274 Julca Minaya Sergio Gino
    */
   created() {
-    this.userApiService = new UsersApiService();
+    this.userApiService = new UserService();
     this.userApiService.getAll().then(response => {
       this.users = UserAssembler.toEntitiesFromResponse(response);
       console.log("Users loaded successfully: ", this.users);
@@ -162,8 +162,13 @@ export default {
       :type="currentAlert.type"
       :show-actions="currentAlert.type === 'error' || currentAlert.type === 'warn'" @closed="onAlertClosed"
   ></alert-card>
+  <video autoplay loop muted playsinline class="video-background">
+    <source src="https://preview.redd.it/hl0umqudjqaf1.gif?width=1920&format=mp4&s=953a6332be88407a82760aff925924fd1485c6be" type="video/mp4">
+    Your navigator does not support the video tag.
+  </video>
   <div class="registry-container">
-    <pv-card class="registry-card">
+
+    <pv-card class="registry-card" style="background: rgba(255,255,255,0.52)">
       <template #title><h1>VEHIX</h1></template>
       <template #subtitle><h1> {{ $t('register.title') }}</h1>
       </template>
@@ -197,7 +202,16 @@ export default {
   margin: 0;
   box-sizing: border-box;
 }
-
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.6;
+}
 .registry-container {
   text-align: center;
   display: flex;
@@ -212,6 +226,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 1;
+
 }
 
 .registry-fields {

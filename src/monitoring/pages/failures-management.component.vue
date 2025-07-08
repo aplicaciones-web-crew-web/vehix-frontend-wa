@@ -3,12 +3,9 @@
 import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
 import {VehicleFailureService} from "../services/vehicle-failure.service.js";
 import {FailureService} from "../services/failure.service.js";
-import {VehicleAssembler} from "../../assets-and-resources-management/services/vehicle.assembler.js";
 import {FailureAssembler} from "../services/failure.assembler.js";
 import {Button as PvButton} from "primevue";
 import {VehicleFailureAssembler} from "../services/vehicle-failure.assembler.js";
-import {Vehicle} from "../../assets-and-resources-management/model/vehicle.entity.js";
-import {VehicleFailure} from "../model/vehicle-failure.entity.js";
 import SimpleFailureComponent from "../components/simple-failure.component.vue";
 import SimpleFailure from "../components/simple-failure.component.vue";
 import {BadPracticeAssembler} from "../services/bad-practice.assembler.js";
@@ -186,7 +183,6 @@ export default {
       <div class="seek-help-btn-container">
         <button @click="openMechanicPage" class="seek-help-btn">Seek help</button>
       </div>
-
     </div>
   </div>
 
@@ -199,7 +195,7 @@ export default {
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 65px);
+  height: calc(110vh - 65px);
 }
 
 .column-1 {
@@ -208,7 +204,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100%;
-  border: 1px solid blue;
+
 }
 
 .column-2 {
@@ -217,8 +213,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 50%;
-
-  border: 1px solid blue;
+  margin-top: 4rem;
 
 }
 
@@ -227,18 +222,19 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 80%;
   height: 50%;
-  border: 1px solid blue;
+  margin-top: -3rem;
 }
 
 .column-4 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 200px;
   width: 30%;
   justify-content: center;
   height: 100%;
-  border: 1px solid red;
 }
 
 .seek-help-btn-container {
@@ -260,10 +256,10 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  gap: 1rem;
+  margin-top: 15%;
+  gap: 5rem;
   width: 30%;
-  height: 100%;
-  border: 1px solid blue;
+  height: 120%;
 }
 
 button {
