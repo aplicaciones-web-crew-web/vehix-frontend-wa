@@ -16,6 +16,16 @@ export class VehicleFailureService {
 
 
     /**
+     * @summary Fetches all vehicle failures by vehicle ID
+     * @description This method retrieves all vehicle failures associated with a specific vehicle ID from the API endpoint.
+     * @param vehicleId
+     * @return {Promise<axios.AxiosResponse<any>>}
+     */
+    getAllByVehicleId(vehicleId){
+        return httpInstance.get(`${this.resourceEndPoint}?vehicleId=${vehicleId}`);
+    }
+
+    /**
      * @summary Creates a new vehicle failure resource
      * @description This method sends a POST request to the API endpoint to create a new vehicle failure resource with the provided data.
      * @param resource

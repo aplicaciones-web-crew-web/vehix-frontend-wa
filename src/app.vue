@@ -3,13 +3,17 @@ import LanguageSwitcher from "./public/components/language-switcher.component.vu
 
 export default {
   name: 'App',
+  computed: {
+    routeKey() {
+      return this.$route.fullPath;
+    }
+  },
   components: {LanguageSwitcher},
   data() {
     return {
-      drawer: false,
       items: [
-        {label: 'option.home',       to: '/home', icon: 'pi pi-home'},
-        {label: 'option.library',      to: '/library', icon: 'pi pi-book'},
+        {label: 'option.home', to: '/home', icon: 'pi pi-home'},
+        {label: 'option.library', to: '/library', icon: 'pi pi-book'},
         {label: 'option.maintenance', to: '/maintenance', icon: 'pi pi-cog'},
         {label: 'option.sync', to: '/sync', icon: 'pi pi-sync'},
         {label: 'option.profile', to: '/profile', icon: 'pi pi-user'},
@@ -19,14 +23,7 @@ export default {
   },
 
   methods: {
-    /**
-     * Toggles the visibility of the drawer.
-     * This method is called when the menu button is clicked.
-     * @author U202318274 Julca Minaya Sergio Gino
-     */
-    toggleDrawer() {
-      this.drawer = !this.drawer
-    },
+
 
     /**
      * Determines if the navigation bar should be shown based on the current route.
@@ -34,8 +31,14 @@ export default {
      * @author U202318274 Julca Minaya Sergio Gino
      */
     shouldShowNavBar() {
-      const hiddenRoutes = ['/login','/subscriptions','/payment-management', '/subscription-plan-management'];
-      return !hiddenRoutes.includes(this.$route.path);
+      const hiddenRouteNames = ['log-in-management', 'subscription-plan-management', 'payment-management', 'not-found'];
+      return !hiddenRouteNames.includes(this.$route.name);
+    },
+
+    forceRepaint() {
+      document.body.style.display = 'none';
+      void document.body.offsetHeight;
+      document.body.style.display = '';
     }
   },
 
@@ -45,8 +48,9 @@ export default {
    * @author U202318274 Julca Minaya Sergio Gino
    */
   watch: {
-    '$route'(to, from) {
+    '$route'() {
       this.showNavBar = this.shouldShowNavBar();
+      this.forceRepaint();
     }
   },
 
@@ -55,9 +59,7 @@ export default {
    * It checks if the navigation bar should be shown based on the current route.
    * @author U202318274 Julca Minaya Sergio Gino
    */
-  mounted() {
-    this.showNavBar = this.shouldShowNavBar();
-  }
+
 }
 
 </script>
@@ -71,14 +73,15 @@ export default {
 
   <pv-toast/>
   <header v-if="showNavBar">
-    <pv-toolbar class="bg-white">
+    <pv-toolbar class="menu-toolbar-container">
       <template #start>
-        <pv-button class="p-button-text" icon="pi pi-bars" @click="toggleDrawer"/>
-        <h1>VEHIX</h1>
+        <div class="logo-container">
+          <h1>VEHIX</h1>
+        </div>
       </template>
       <template #center>
-        <div class="flex-column">
-          <pv-button v-for="item in items" :key="item.label" as-child v-slot="slotProps" class="bg-white">
+        <div class="menu-components-container">
+          <pv-button v-for="item in items" :key="item.label" as-child v-slot="slotProps" class="menu-button-container">
             <router-link :to="item.to" :class="slotProps['class']">
               <i :class="'pi pi-'+ item.icon"></i>
               {{ $t(item.label) }}
@@ -90,21 +93,18 @@ export default {
         <language-switcher/>
       </template>
     </pv-toolbar>
-    <pv-drawer v-model:visible="drawer"/>
   </header>
   <main>
-    <router-view/>
+    <router-view :key="$route.fullPath"/>
   </main>
 
 </template>
-<style scoped>
+<style>
 header {
   font-family: 'Montserrat', sans-serif;
-}
 
-h1 {
-  letter-spacing: 20px;
-  color: black;
+  flex: 0 0 auto;
+
 }
 
 main {
@@ -113,4 +113,51 @@ main {
   height: 100%;
 }
 
+.menu-toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.menu-components-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem
+}
+
+@media only screen and (max-width: 1100px) {
+  .menu-toolbar-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-toolbar-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menu-components-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+  }
+
+  .menu-button-container {
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+  }
+
+
+}
 </style>

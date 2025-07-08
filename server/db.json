@@ -10,127 +10,173 @@
       "dni": "72265874",
       "gender": "male",
       "planId": 2
+    },
+    {
+      "id": 2,
+      "name": "Antonio Jhair",
+      "lastName": "Navarro Chinga",
+      "email": "antonio@gmail.com",
+      "password": "123",
+      "phoneNumber": "123",
+      "dni": "123",
+      "gender": "male",
+      "planId": 1
+    },
+    {
+      "id": 3,
+      "name": "ANtonio navarro",
+      "lastName": "dsa",
+      "email": "dsa@gmail.com",
+      "password": "123",
+      "phoneNumber": "1234",
+      "dni": "1234",
+      "gender": "male",
+      "planId": 2
+    },
+    {
+      "id": 4,
+      "name": "asdada",
+      "lastName": "dsa",
+      "email": "01@gmail.com",
+      "password": "01",
+      "phoneNumber": "01",
+      "dni": "01",
+      "gender": "male",
+      "planId": 2
     }
   ],
   "plans": [
     {
       "id": 1,
       "name": "Plan Standard",
-      "price": 65
+      "price": 65,
+      "imageUrl": "https://preview.redd.it/bawz2az9poaf1.png?width=268&format=png&auto=webp&s=829fb0a6da1ff9da4af4bcb58807da9d8addac59"
     },
     {
       "id": 2,
       "name": "Plan Pro",
-      "price": 100
+      "price": 100,
+      "imageUrl": "https://preview.redd.it/fi7m6az9poaf1.png?width=268&format=png&auto=webp&s=5b56a46e051dcbfd000bc629e7327b8118ba6959"
     }
   ],
   "vehicles": [
     {
       "id": 1,
-      "userId": null,
-      "description": "das",
-      "name": "das",
-      "brand": "Mercedes-Benz",
-      "model": "CLK",
-      "mileage": "84217",
-      "year": "2000",
-      "image": "https://carfax-vrs.imgix.net/2006-Mercedes-Benz-CLK-EX-100559982-08.png"
+      "userId": 1,
+      "description": "Ford",
+      "name": "Ford",
+      "brand": "Nissan",
+      "model": "Quest",
+      "mileage": "53758",
+      "year": "2019",
+      "image": "https://e7.pngegg.com/pngimages/906/462/png-clipart-2015-nissan-quest-car-2009-nissan-quest-2008-nissan-quest-nissan-compact-car-van.png"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "description": "NISSAN",
+      "name": "NISSAN",
+      "brand": "Subaru",
+      "model": "Impreza",
+      "mileage": "15561",
+      "year": "2002",
+      "image": "https://pngimg.com/d/subaru_PNG11922.png"
     }
   ],
-  "statusCheck": [
+  "statusChecks": [
     {
-      "id": 1,
-      "engine": 75,
-      "transmission": 100,
-      "brakes": 100,
-      "electrical": 61,
-      "steering": 100,
-      "suspension": 90,
-      "fuel": 87,
-      "refrigeration": 80,
-      "vehicleId": 1
+      "vehicleId": 2,
+      "engine": 72,
+      "transmission": 87,
+      "brakes": 41,
+      "electrical": 49,
+      "steering": 27,
+      "suspension": 63,
+      "fuel": 67,
+      "refrigeration": 28,
+      "id": 1
     }
   ],
   "payments": [
     {
       "id": 1,
-      "userId": "3",
+      "userId": "2",
       "planId": 1,
       "amount": 115,
-      "date": "2025-06-21T07:41:12.098Z",
+      "date": "2025-07-06T20:47:27.407Z",
       "status": "COMPLETED"
     },
     {
       "id": 2,
-      "userId": "4",
+      "userId": "3",
       "planId": 2,
       "amount": 100,
-      "date": "2025-06-21T18:11:19.430Z",
+      "date": "2025-07-06T20:53:01.311Z",
       "status": "COMPLETED"
     },
     {
       "id": 3,
-      "userId": "1",
+      "userId": 4,
       "planId": 2,
       "amount": 100,
-      "date": "2025-06-23T00:49:48.740Z",
+      "date": "2025-07-06T20:54:16.534Z",
       "status": "COMPLETED"
     }
   ],
   "vehiclesFailures": [
     {
-      "vehicleId": 1,
-      "failureId": 6,
-      "date": "2025-06-25T16:22:10.729Z",
+      "vehicleId": 2,
+      "failureId": 1,
+      "date": "2025-07-04T23:01:01.594Z",
       "status": "Pending",
       "id": 1
     },
     {
-      "vehicleId": 1,
-      "failureId": 7,
-      "date": "2025-06-25T16:22:10.760Z",
+      "vehicleId": 2,
+      "failureId": 4,
+      "date": "2025-07-04T23:01:01.610Z",
       "status": "Pending",
       "id": 2
     },
     {
-      "vehicleId": 1,
-      "failureId": 3,
-      "date": "2025-06-25T16:23:18.007Z",
+      "vehicleId": 2,
+      "failureId": 8,
+      "date": "2025-07-04T23:08:17.814Z",
       "status": "Pending",
       "id": 3
     },
     {
-      "vehicleId": 1,
-      "failureId": 4,
-      "date": "2025-06-25T16:23:18.043Z",
+      "vehicleId": 2,
+      "failureId": 7,
+      "date": "2025-07-04T23:08:17.845Z",
       "status": "Pending",
       "id": 4
     },
     {
-      "vehicleId": 1,
-      "failureId": 1,
-      "date": "2025-06-25T16:23:26.194Z",
+      "vehicleId": 2,
+      "failureId": 5,
+      "date": "2025-07-05T01:09:02.825Z",
       "status": "Pending",
       "id": 5
     },
     {
-      "vehicleId": 1,
-      "failureId": 8,
-      "date": "2025-06-25T16:23:29.368Z",
+      "vehicleId": 2,
+      "failureId": 3,
+      "date": "2025-07-05T01:09:02.856Z",
       "status": "Pending",
       "id": 6
     },
     {
-      "vehicleId": 1,
-      "failureId": 5,
-      "date": "2025-06-25T16:23:29.396Z",
+      "vehicleId": 2,
+      "failureId": 2,
+      "date": "2025-07-05T01:09:02.863Z",
       "status": "Pending",
       "id": 7
     },
     {
-      "vehicleId": 1,
-      "failureId": 2,
-      "date": "2025-06-25T16:24:41.028Z",
+      "vehicleId": 2,
+      "failureId": 6,
+      "date": "2025-07-05T01:11:39.737Z",
       "status": "Pending",
       "id": 8
     }
@@ -285,79 +331,7 @@
       "errorType": "Network"
     }
   ],
-  "report": [
-    {
-      "id": 1,
-      "vehicleId": 1,
-      "title": "Low system voltage",
-      "description": "Check the speed sensor in the transmission.",
-      "suggestedSolution": "It may require replacement if damaged.",
-      "comment": "asas"
-    },
-    {
-      "id": 2,
-      "vehicleId": 1,
-      "title": "Low coolant temperature",
-      "description": "Check the engine thermostat.",
-      "suggestedSolution": "If it’s stuck open, it needs to be replaced.",
-      "comment": "ugiv"
-    },
-    {
-      "id": 3,
-      "vehicleId": 1,
-      "title": "Low oil pressure",
-      "description": "Check the oil level and pressure sensor.",
-      "suggestedSolution": "Do not continue driving if the problem persists. Take the vehicle to a workshop immediately.",
-      "comment": ""
-    },
-    {
-      "id": 4,
-      "vehicleId": 1,
-      "title": "Fuel sensor out of range",
-      "description": "Check the fuel tank float or sensor.",
-      "suggestedSolution": "It could be stuck.",
-      "comment": ""
-    }
-  ],
-  "simple_issues": [
-    {
-      "id": 1,
-      "vehicleId": 1,
-      "description": "Low tire pressure",
-      "urgency": "moderate"
-    },
-    {
-      "id": 2,
-      "vehicleId": 1,
-      "description": "Low battery",
-      "urgency": "moderate"
-    },
-    {
-      "id": 3,
-      "vehicleId": 1,
-      "description": "Check oil level",
-      "urgency": "moderate"
-    },
-    {
-      "id": 4,
-      "vehicleId": 1,
-      "description": "Coolant level low",
-      "urgency": "moderate"
-    },
-    {
-      "id": 5,
-      "vehicleId": 1,
-      "description": "Dirty air filter",
-      "urgency": "mild"
-    },
-    {
-      "id": 6,
-      "vehicleId": 1,
-      "description": "Low windshield washer fluid",
-      "urgency": "mild"
-    }
-  ],
-  "technical_errors": [
+  "technicalErrors": [
     {
       "id": 1,
       "vehicleId": 1,
@@ -389,246 +363,6 @@
       "description": "Fuel sensor out of range",
       "suggestion": "Check the fuel tank float or sensor. It could be stuck.",
       "urgency": "mild"
-    }
-  ],
-  "vehicle_life_data": [
-    {
-      "vehicleId": 1,
-      "owner": "Vitaly Baca",
-      "vehicleHealth": 85,
-      "monthlyMileage": [
-        {
-          "month": "Mar",
-          "distance": 900
-        },
-        {
-          "month": "Apr",
-          "distance": 850
-        },
-        {
-          "month": "May",
-          "distance": 900
-        }
-      ],
-      "lifeEstimate": {
-        "estimatedYears": 6.2,
-        "currentRemaining": 5.2,
-        "maxYears": 11
-      }
-    }
-  ],
-  "quick_diagnosis": [
-    {
-      "vehicleId": 1,
-      "owner": "Vitaly Baca",
-      "status": {
-        "engine": 80,
-        "battery": 85,
-        "brakeSystem": 90,
-        "activeSensors": 100
-      },
-      "resultSummary": "The vehicle is currently in good condition. However, over time, there may be significant failures in the electrical system or power steering."
-    }
-  ],
-  "failuresTemplate": [
-    {
-      "id": 1,
-      "name": "Spark plug failure",
-      "technicalCode": "P0300",
-      "description": "The spark plugs are worn out, causing the engine to misfire and run roughly. This can lead to reduced fuel efficiency and increased emissions. Ignoring this issue may result in further engine damage",
-      "severityLevel": "Moderate",
-      "image": "🔥",
-      "badPracticesTemplateId": 1,
-      "suggestSolutionsTemplateId": 1
-    },
-    {
-      "id": 2,
-      "name": "Overheating engine",
-      "technicalCode": "P0217",
-      "description": "The engine temperature has exceeded safe limits, risking severe internal damage. This often results from coolant leaks or a faulty thermostat. Prolonged overheating may lead to engine failure.",
-      "severityLevel": "Critical",
-      "image": "🌡️",
-      "badPracticesTemplateId": 2,
-      "suggestSolutionsTemplateId": 2
-    },
-    {
-      "id": 3,
-      "name": "Low oil pressure",
-      "technicalCode": "P0520",
-      "description": "Oil pressure is below the recommended level, risking insufficient lubrication of engine components. This can cause increased friction and rapid engine wear. Continuing to drive may result in engine seizure.",
-      "severityLevel": "Critical",
-      "image": "🛢️",
-      "badPracticesTemplateId": 3,
-      "suggestSolutionsTemplateId": 3
-    },
-    {
-      "id": 4,
-      "name": "Battery voltage low",
-      "technicalCode": "P0562",
-      "description": "The battery voltage has dropped below the required threshold, which can cause starting issues and electrical malfunctions. This may be due to an old battery or alternator problems. Persistent low voltage can leave you stranded.",
-      "severityLevel": "Moderate",
-      "image": "🔋",
-      "badPracticesTemplateId": 4,
-      "suggestSolutionsTemplateId": 4
-    },
-    {
-      "id": 5,
-      "name": "Loose fuel cap",
-      "technicalCode": "P0457",
-      "description": "The fuel cap is not properly tightened, allowing fuel vapors to escape. This can trigger the check engine light and reduce fuel efficiency. Over time, it may damage the emissions system.",
-      "severityLevel": "Mild",
-      "image": "⛽",
-      "badPracticesTemplateId": 5,
-      "suggestSolutionsTemplateId": 5
-    },
-    {
-      "id": 6,
-      "name": "Transmission slipping",
-      "technicalCode": "P0730",
-      "description": "The transmission is not shifting gears smoothly, which can cause jerking or loss of power. This may result from low transmission fluid or worn components. Ignoring the issue can lead to costly repairs.",
-      "severityLevel": "Critical",
-      "image": "⚙️",
-      "badPracticesTemplateId": 6,
-      "suggestSolutionsTemplateId": 6
-    },
-    {
-      "id": 7,
-      "name": "EGR valve fault",
-      "technicalCode": "P0401",
-      "description": "The EGR valve is malfunctioning, leading to increased emissions and reduced engine performance. This can cause rough idling and engine knocking. Prolonged issues may damage the catalytic converter.",
-      "severityLevel": "Moderate",
-      "image": "💨",
-      "badPracticesTemplateId": 7,
-      "suggestSolutionsTemplateId": 7
-    },
-    {
-      "id": 8,
-      "name": "Mass airflow sensor error",
-      "technicalCode": "P0101",
-      "description": "The mass airflow sensor is providing incorrect readings, affecting the air-fuel mixture. This can cause poor acceleration and stalling. If left unresolved, it may damage the engine.",
-      "severityLevel": "Moderate",
-      "image": "🌬️",
-      "badPracticesTemplateId": 8,
-      "suggestSolutionsTemplateId": 8
-    },
-    {
-      "id": 9,
-      "name": "Catalytic converter efficiency low",
-      "technicalCode": "P0420",
-      "description": "The catalytic converter is not operating efficiently, leading to increased emissions. This can result in a failed emissions test and reduced engine performance. Continued driving may cause further engine issues.",
-      "severityLevel": "Moderate",
-      "image": "♻️",
-      "badPracticesTemplateId": 9,
-      "suggestSolutionsTemplateId": 9
-    },
-    {
-      "id": 10,
-      "name": "Wheel speed sensor failure",
-      "technicalCode": "C0035",
-      "description": "A wheel speed sensor is not functioning, which can disable ABS and traction control systems. This increases the risk of skidding during braking. The issue may also trigger warning lights on the dashboard.",
-      "severityLevel": "Moderate",
-      "image": "🚗",
-      "badPracticesTemplateId": 10,
-      "suggestSolutionsTemplateId": 10
-    },
-    {
-      "id": 11,
-      "name": "Coolant temperature sensor fault",
-      "technicalCode": "P0118",
-      "description": "The coolant temperature sensor is giving inaccurate readings, which can affect engine performance and fuel efficiency. This may cause the engine to overheat or run too cold. Persistent faults can damage the engine.",
-      "severityLevel": "Moderate",
-      "image": "🌡️",
-      "badPracticesTemplateId": 11,
-      "suggestSolutionsTemplateId": 11
-    },
-    {
-      "id": 12,
-      "name": "Brake fluid low",
-      "technicalCode": "C1201",
-      "description": "Brake fluid levels are below the safe minimum, reducing braking effectiveness. This can increase stopping distances and risk of accidents. Leaks or worn brake components may be the cause.",
-      "severityLevel": "Critical",
-      "image": "🛑",
-      "badPracticesTemplateId": 12,
-      "suggestSolutionsTemplateId": 12
-    },
-    {
-      "id": 13,
-      "name": "Tire pressure low",
-      "technicalCode": "C0750",
-      "description": "One or more tires have low pressure, which can affect handling and fuel economy. Driving with underinflated tires increases the risk of blowouts. It also causes uneven tire wear.",
-      "severityLevel": "Mild",
-      "image": "🚨",
-      "badPracticesTemplateId": 13,
-      "suggestSolutionsTemplateId": 13
-    },
-    {
-      "id": 14,
-      "name": "Alternator failure",
-      "technicalCode": "P0620",
-      "description": "The alternator is not charging the battery properly, leading to electrical issues and potential stalling. This can leave you stranded if the battery depletes. Warning lights may appear on the dashboard.",
-      "severityLevel": "Critical",
-      "image": "⚡",
-      "badPracticesTemplateId": 14,
-      "suggestSolutionsTemplateId": 14
-    },
-    {
-      "id": 15,
-      "name": "Fuel pump malfunction",
-      "technicalCode": "P0230",
-      "description": "The fuel pump is not delivering adequate fuel to the engine, causing hesitation or stalling. This can make starting the car difficult. Prolonged issues may damage the engine.",
-      "severityLevel": "Critical",
-      "image": "⛽",
-      "badPracticesTemplateId": 15,
-      "suggestSolutionsTemplateId": 15
-    },
-    {
-      "id": 16,
-      "name": "Throttle position sensor error",
-      "technicalCode": "P0121",
-      "description": "The throttle position sensor is sending inconsistent signals, affecting acceleration and engine response. This can cause surging or hesitation while driving. Ignoring the issue may lead to unsafe driving conditions.",
-      "severityLevel": "Moderate",
-      "image": "🚦",
-      "badPracticesTemplate": 16,
-      "suggestSolutionsTemplateId": 16
-    }
-  ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "bad_practices": [
-    {
-      "id": 1,
-      "vehicleId": 1,
-      "description": "Not checking tire pressure regularly."
-    },
-    {
-      "id": 2,
-      "vehicleId": 1,
-      "description": "Driving with overloaded vehicle."
-    },
-    {
-      "id": 3,
-      "vehicleId": 1,
-      "description": "Ignoring seasonal temperature changes."
-    },
-    {
-      "id": 4,
-      "vehicleId": 1,
-      "description": "Ignoring early symptoms like strange noises or smells."
     }
   ]
 }

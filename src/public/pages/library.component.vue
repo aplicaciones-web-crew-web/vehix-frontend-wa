@@ -1,5 +1,5 @@
 <script>
-import ResourceView from '../../assets-and-resources-management/pages/library.component.vue';
+import ResourceView from '../../ASM/pages/library.component.vue';
 
 export default {
   name: "library",

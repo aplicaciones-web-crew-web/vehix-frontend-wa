@@ -12,15 +12,13 @@ const LibraryComponent = () => import('../public/pages/library.component.vue');
 const MaintenanceComponent = () => import('../public/pages/maintenance.component.vue');
 const ProfileComponent = () => import('../public/pages/profile.component.vue');
 const SyncComponent = () => import('../public/pages/sync.component.vue');
-const TapScanComponent = () => import('../monitoring/pages/tap-scan.vue');
 const MechanicComponent = () => import('../monitoring/pages/Mechanic.vue');
 const FailuresManagementComponent = () => import('../monitoring/pages/failures-management.component.vue');
-//const AuditComponent = () => import('../analytics/audit/pages/audit.component.vue');
-//const Useful_life = () => import('../analytics/car-usefull-life/pages/useful_life.vue');
-const FailureManagementComponent = () => import('../monitoring/pages/failure-management.component.vue');
+const RapidDiagnosticComponent = () => import('../monitoring/pages/rapid-diagnostic.component.vue');
+const RecentRepairsComponent = () => import('../monitoring/pages/recent-repairs.component.vue');
 const PaymentManagementComponent = () => import('../subscriptions/pages/payment-management.component.vue');
 const SubscriptionPlanManagementComponent = () => import('../subscriptions/pages/subscription-plan-management.component.vue');
-const VehicleRegistrationManagementComponent = () => import('../assets-and-resources-management/pages/vehicle-registration-management.component.vue');
+const VehicleRegistrationManagementComponent = () => import('../ASM/pages/vehicle-registration-management.component.vue');
 /**
  * Application routes configuration
  * @type {RouteConfig[]}
@@ -31,7 +29,9 @@ const VehicleRegistrationManagementComponent = () => import('../assets-and-resou
  * - Profile page route (/profile)
  * - Sync page route (/sync)
  */
-const ResourceView = () => import('../assets-and-resources-management/pages/library.component.vue');
+const PageNotFoundComponent = () => import('../public/pages/page-not-found.component.vue');
+
+const ResourceView = () => import('../ASM/pages/library.component.vue');
 
 const routes = [
     {path: '/', redirect: '/login'},
@@ -41,21 +41,23 @@ const routes = [
     {path: '/maintenance', name: 'maintenance', component: MaintenanceComponent, meta: {title: 'Maintenance'}},
     {path: '/profile', name: 'profile', component: ProfileComponent, meta: {title: 'Profile'}},
     {path: '/sync', name: 'sync', component: SyncComponent, meta: {title: 'Sync'}},
-    {path: '/diagnostic/tap-scan', name: 'tap-scan', component: TapScanComponent, meta: {title: 'Tap Scan'}},
+    { path: '/:pathMatch(.*)*',         name: 'not-found',  component: PageNotFoundComponent,       meta: { title: 'Page Not Found' }},
+
+
     {path: '/maintenance/failures', name: 'failures', component: FailuresManagementComponent, meta: {title: 'SimpleFailureComponent Management'}},
     {path: '/mechanic', name: 'mechanic', component: MechanicComponent, meta: {title: 'Mechanic Help'}},
-    //{path: '/diagnostic/audit-page', name: 'audit-page', component: AuditComponent, meta: {title: 'Audit Page'}},
-    //{path: '/diagnostic/useful_life', name: 'useful_life', component: Useful_life, meta: {title: 'Useful Life'}},
-    {path: '/car-failures', name: 'car_failures', component: FailureManagementComponent, meta: {title: 'SimpleFailureComponent Management'}},
     {path: '/payment-management', name: 'payment-management', component: PaymentManagementComponent, meta: {title: 'Payment Management'}},
     {path: '/subscriptions', name: 'subscription-plan-management', component: SubscriptionPlanManagementComponent, meta: {title: 'Subscription Plan Management'}},
     {path: '/vehicle-registration-management', name: 'vehicle-registration-management', component: VehicleRegistrationManagementComponent, meta: {title: 'Vehicle Registration Management'}},
-    { path: '/technical', name: 'technical', component: ResourceView, props: { titleKey: 'card.technical' }, meta: { title: 'Technical' } },
-    { path: '/news', name: 'news', component: ResourceView, props: { titleKey: 'card.news' }, meta: { title: 'News' } },
-    { path: '/advances', name: 'advances', component: ResourceView, props: { titleKey: 'card.advances' }, meta: { title: 'Advances' } },
-    { path: '/videos', name: 'videos', component: ResourceView, props: { titleKey: 'card.videos' }, meta: { title: 'Videos' } },
-    { path: '/manuals', name: 'manuals', component: ResourceView, props: { titleKey: 'card.manuals' }, meta: { title: 'Manuals' } },
-    { path: '/recommendations', name: 'recommendations', component: ResourceView, props: { titleKey: 'card.recommendations' }, meta: { title: 'Recommendations' } },
+    {path: '/library/technical', name: 'technical', component: ResourceView, props: {titleKey: 'card.technical'}, meta: {title: 'Technical'}},
+    {path: '/library/news', name: 'news', component: ResourceView, props: {titleKey: 'card.news'}, meta: {title: 'News'}},
+    {path: '/library/advances', name: 'advances', component: ResourceView, props: {titleKey: 'card.advances'}, meta: {title: 'Advances'}},
+    {path: '/library/videos', name: 'videos', component: ResourceView, props: {titleKey: 'card.videos'}, meta: {title: 'Videos'}},
+    {path: '/library/manuals', name: 'manuals', component: ResourceView, props: {titleKey: 'card.manuals'}, meta: {title: 'Manuals'}},
+    {path: '/library/recommendations', name: 'recommendations', component: ResourceView, props: {titleKey: 'card.recommendations'}, meta: {title: 'Recommendations'}},
+    {path: '/diagnostic/rapid_diagnostic', name: 'rapid-diagnostic', component: RapidDiagnosticComponent, meta: {title: 'Rapid Diagnostic'}},
+    {path: '/diagnostic/recents-repairs', name: 'recent-repairs', component: RecentRepairsComponent, meta: {title: 'Recent Repairs'}},
+
 ];
 
 /**

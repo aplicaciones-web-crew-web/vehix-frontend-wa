@@ -1,4 +1,5 @@
 import {createApp} from 'vue'
+import { createPinia } from 'pinia'
 import './style.css'
 import App from './app.vue'
 import PrimeVue from 'primevue/config';
@@ -67,19 +68,23 @@ import {
     Toolbar,
     DatePicker,
     ProgressSpinner,
-    ScrollPanel
+    ScrollPanel,
+    Knob
 } from "primevue";
 import i18n from "./i18n/index.js";
 import router from "./router/index.js";
-
+const pinia = createPinia();
 createApp(App)
+    .use(pinia)
     .use(PrimeVue, {
         theme: {
             preset: MyPreset,
             options: {
                 prefix: 'p',
-                darkModeSelector: 'system',
-                cssLayer: false
+                darkModeSelector: false,
+                cssLayer: false,
+                dark: false
+
             }
         }
     })
@@ -113,6 +118,7 @@ createApp(App)
     .component('pv-textarea', Textarea)
     .component('pv-toolbar', Toolbar)
     .component('pv-toast', Toast)
+    .component('pv-knob', Knob)
     .use(i18n)
     .use(router)
     .mount('#app')

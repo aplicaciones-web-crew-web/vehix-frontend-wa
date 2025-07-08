@@ -1,7 +1,7 @@
 <script>
 
 import {VehicleSessionService} from "../../shared/services/vehicle-session.service.js";
-import {VehicleService} from "../../assets-and-resources-management/services/vehicle.service.js";
+import {VehicleService} from "../../ASM/services/vehicle.service.js";
 
 export default {
   name: "vehicle-card",
@@ -56,7 +56,7 @@ export default {
 
 
 
-p {
+.vehicle-image-card p{
   text-align: center;
 }
 
@@ -89,6 +89,11 @@ p {
   animation: pulseAnimate 4s ease-out infinite;
   animation-delay: calc(var(--i) * 1s);
 
+}
+
+.vehicle-image {
+  width: 100%;
+  height: auto;
 }
 
 @keyframes pulseAnimate {
