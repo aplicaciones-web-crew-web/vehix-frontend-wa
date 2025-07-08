@@ -4,6 +4,8 @@ import AlertCard from "../../shared/components/alert-card.component.vue";
 import {UserAssembler} from "../services/user.assembler.js";
 import {isNumeric} from "../../shared/utils/validation.util.js";
 import {UserSessionService} from "../../shared/services/user-session.service.js";
+import {AuthenticationService} from "../services/authentication.service.js";
+import {SignInRequest} from "../model/sign-in.request.js";
 
 export default {
   name: "log-in-card",
@@ -87,22 +89,27 @@ export default {
       if (!this.validateFilledFields()) {
         return;
       }
-      const foundUser = this.users.find(user => user.dni === this.dni && user.password === this.password);
-
-      if (foundUser) {
-        this.displayAlert("Succesfull login", `Welcome back, ${foundUser.name} ${foundUser.lastName}!`, "success");
-        console.log('Logged in user ', foundUser);
-
-        UserSessionService.setUserId(foundUser.id)
-
-        setTimeout(() => {
-          this.$router.push('/subscriptions');
-        }, 1500);
-
-      } else {
-        this.displayAlert("Invalid credentials", "Incorrect ID or password. Please verify your details", "error");
-        console.log('Login failed for user with DNI:', this.dni);
-      }
+      const authService = new AuthenticationService();
+      const signInRequest = new SignInRequest(this.dni, this.password);
+      authService.signIn(signInRequest)
+        .then(response => {
+          const token = response.data.token;
+          const userId = response.data.id;
+          if (token) {
+            sessionStorage.setItem('authToken', token);
+            UserSessionService.setUserId(userId);
+            this.displayAlert("Succesfull login", `Welcome to Vehix!`, "success");
+            setTimeout(() => {
+              this.$router.push('/subscriptions');
+            }, 1500);
+          } else {
+            this.displayAlert("Invalid credentials", "Incorrect ID or password. Please verify your details", "error");
+          }
+        })
+        .catch(error => {
+          this.displayAlert("Invalid credentials", "Incorrect ID or password. Please verify your details", "error");
+          console.log('Login failed:', error);
+        });
     },
 
     /**
@@ -222,3 +229,4 @@ export default {
   transition: opacity 0.3s ease;
 }
 </style>
+
