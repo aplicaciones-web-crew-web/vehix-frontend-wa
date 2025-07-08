@@ -144,27 +144,7 @@ export default {
 
 
     async submitForm() {
-      if (!this.validateFilledFields()) return;
-      if (!this.validateOnlyNumbers()) return;
-      if (!this.validateEmail()) return;
-      const userResponse = await this.usersApiService.getById(this.userId);
-      const currentUserData = userResponse.data;
-      const updatedUserData = {...currentUserData, planId: this.plan.id};
-
-      const paymentData = {
-        userId: parseInt(this.userId),
-        planId: parseInt(this.plan.id),
-        date: new Date().toISOString(),
-        status: "COMPLETED",
-        amount: this.amount,
-      }
-
-      await this.usersApiService.update(this.userId, updatedUserData);
-
-      this.displayAlert("Payment Successful", "Your payment has been successfully processed.", "success");
-      this.$emit("submit", paymentData);
-      this.resetFields();
-      this.$router.push("/home")
+      this.$router.push("/home");
     },
 
 
